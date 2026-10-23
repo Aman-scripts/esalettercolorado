@@ -15,23 +15,25 @@ export function Header() {
   return (
     <>
       {/* Top Trust Notice Bar */}
-      <div className="bg-[#19354A] text-[#F7F5F0] text-sm py-2 px-4 border-b border-[#347C78]/30">
-        <div className="max-w-[1200px] mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex items-center gap-2 font-medium">
-            <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-            <span>Colorado HB26-1045 &amp; C.R.S. 24-34-502 Compliant</span>
-            <span className="hidden sm:inline text-white/40">•</span>
-            <span className="hidden sm:inline text-[#E8F0ED]">Licensed Colorado Mental Health Professionals</span>
+      <div className="bg-[#19354A] text-[#F7F5F0] text-xs sm:text-sm py-2 px-3 sm:px-4 border-b border-[#347C78]/30">
+        <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-2 sm:gap-4">
+          <div className="flex items-center gap-1.5 sm:gap-2 font-medium min-w-0">
+            <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#347C78] shrink-0" />
+            <span className="sm:hidden whitespace-nowrap">CO HB26-1045 Compliant</span>
+            <span className="hidden sm:inline md:hidden whitespace-nowrap">Colorado HB26-1045 Compliant</span>
+            <span className="hidden md:inline whitespace-nowrap">Colorado HB26-1045 &amp; C.R.S. 24-34-502 Compliant</span>
+            <span className="hidden lg:inline text-white/40">•</span>
+            <span className="hidden lg:inline text-[#E8F0ED] whitespace-nowrap">Licensed Colorado Mental Health Professionals</span>
           </div>
-          <div className="flex items-center gap-4 text-sm font-semibold">
+          <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold shrink-0">
             <a
               href={`tel:${siteConfig.phone.replace(/[^0-9]/g, "")}`}
-              className="flex items-center gap-1.5 hover:text-[#347C78] transition-colors"
+              className="flex items-center gap-1.5 hover:text-[#347C78] transition-colors whitespace-nowrap"
             >
-              <Phone className="w-4 h-4" />
+              <Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0 text-[#347C78]" />
               <span>{siteConfig.phone}</span>
             </a>
-            <span className="hidden md:inline bg-[#347C78]/40 px-2.5 py-0.5 rounded text-sm text-[#F7F5F0]">
+            <span className="hidden md:inline bg-[#347C78]/40 px-2.5 py-0.5 rounded text-xs sm:text-sm text-[#F7F5F0] whitespace-nowrap">
               Fast 24–48h Turnaround
             </span>
           </div>
