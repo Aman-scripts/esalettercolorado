@@ -6,7 +6,7 @@ import { siteConfig } from "@/data/site-config";
 
 export function Footer() {
   return (
-    <footer className="bg-[#19354A] text-[#F7F5F0] pt-16 pb-12 border-t border-[#347C78]/20">
+    <footer className="bg-[#19354A] text-[#F7F5F0] pt-16 pb-28 lg:pb-12 border-t border-[#347C78]/20">
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Branding & Trust Strip */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-[#347C78]/30">
