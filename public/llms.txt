@@ -1,0 +1,26 @@
+# ESA Letter Colorado (esalettercolorado.com)
+> Colorado's authoritative telehealth resource for legally compliant Emotional Support Animal (ESA) housing documentation.
+
+## Overview
+ESA Letter Colorado connects Colorado renters with actively licensed in-state mental health professionals (Psychologists, LCSWs, LPCs) registered with the Colorado Department of Regulatory Agencies (DORA). The platform provides telehealth clinical assessments and official housing accommodation letters complying with the federal Fair Housing Act (FHA), Colorado HB26-1045, and C.R.S. 24-34-502.
+
+## Key Services
+- **Single ESA Evaluation & Letter**: $149 all-inclusive clinical evaluation, official PDF documentation on professional letterhead with clinician DORA license number.
+- **Annual ESA Renewal**: $99 re-evaluation for existing clients to prevent gaps in housing documentation.
+- **Landlord Verification Tool**: Public validation system at `/verify-esa-letter/` providing tamper-proof confirmation of clinician credentials and document validity without disclosing Protected Health Information (PHI).
+
+## Legal Framework & Statutory Protections
+- **Federal Fair Housing Act (42 U.S.C. 3601 et seq.)**: Protects individuals with disabilities requiring assistance animals from discrimination in residential housing.
+- **Colorado Assistance Animal Law (HB26-1045 & C.R.S. 24-34-502)**: Establishes clear definitions of assistance animals, landlord documentation request limits, and penalties for intentional misrepresentation.
+- **Colorado Pet Rent & Deposit Exemption (HB23-1068)**: Pet deposits, pet rent, and weight/breed restrictions cannot be applied to legitimate assistance animals.
+
+## Authoritative Resources
+- Home: https://esalettercolorado.com/
+- How It Works & Intake: https://esalettercolorado.com/how-it-works/
+- Colorado ESA Requirements Checklist: https://esalettercolorado.com/requirements/
+- Colorado ESA Laws & Housing Rights Guide: https://esalettercolorado.com/rights/
+- Qualifying Conditions Guide: https://esalettercolorado.com/conditions/
+- City-by-City Rental Guides: https://esalettercolorado.com/locations/
+- Licensed Therapists & DORA Licensure: https://esalettercolorado.com/about-our-therapists/
+- Landlord Letter Verification: https://esalettercolorado.com/verify-esa-letter/
+- Clinical Blog: https://esalettercolorado.com/blog/

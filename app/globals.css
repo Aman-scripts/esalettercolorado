@@ -1,0 +1,653 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================================================
+   ESA Letter Colorado — Theme 01: Trust & Clarity
+   Design System Tokens & Typography
+   ========================================================================== */
+
+@theme inline {
+  /* Fonts */
+  --font-serif: var(--font-serif), Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-heading: var(--font-serif), Georgia, serif;
+  --font-body: var(--font-sans), sans-serif;
+
+  /* Theme 01 Color System */
+  --color-navy: #19354A;
+  --color-teal: #347C78;
+  --color-ivory: #F7F5F0;
+  --color-amber: #A65331;
+  --color-white: #FFFFFF;
+  --color-ink: #24333B;
+  --color-muted-text: #52616A;
+  --color-pale: #E8F0ED;
+  --color-line: #D5DFDB;
+  --color-soft-blue: #EAF0F3;
+  --color-error: #A33E35;
+  --color-success: #27654F;
+
+  /* Shadcn Semantic Mapping */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-destructive: var(--destructive);
+
+  /* Radii */
+  --radius-card: 18px;
+  --radius-btn: 9px;
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  /* Strict Font-Size Mapping: Only 7 Named Styles Permitted (Minimum is 14px Body Small) */
+  --text-xs: 14px;
+  --text-xs--line-height: 21px;
+  --text-sm: 14px;
+  --text-sm--line-height: 21px;
+  --text-base: 16px;
+  --text-base--line-height: 26px;
+  --text-lg: 18px;
+  --text-lg--line-height: 28px;
+  --text-xl: 20px;
+  --text-xl--line-height: 28px;
+}
+
+:root {
+  /* Fonts */
+  --font-serif: "DM Serif Display", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+
+  /* Colors */
+  --navy: #19354A;
+  --teal: #347C78;
+  --ivory: #F7F5F0;
+  --amber: #A65331;
+  --white: #FFFFFF;
+  --ink: #24333B;
+  --muted-text: #52616A;
+  --pale: #E8F0ED;
+  --line: #D5DFDB;
+  --soft-blue: #EAF0F3;
+  --error: #A33E35;
+  --success: #27654F;
+
+  /* Semantic UI Tokens */
+  --background: #F7F5F0;
+  --foreground: #24333B;
+  --card: #FFFFFF;
+  --card-foreground: #24333B;
+  --popover: #FFFFFF;
+  --popover-foreground: #24333B;
+  --primary: #19354A;
+  --primary-foreground: #FFFFFF;
+  --secondary: #347C78;
+  --secondary-foreground: #FFFFFF;
+  --muted: #E8F0ED;
+  --muted-foreground: #52616A;
+  --accent: #A65331;
+  --accent-foreground: #FFFFFF;
+  --destructive: #A33E35;
+  --border: #D5DFDB;
+  --input: #D5DFDB;
+  --ring: #347C78;
+  --radius: 0.5625rem; /* 9px */
+
+  /* Layout and Spacing Tokens */
+  --max-content-width: 1200px;
+}
+
+.dark {
+  --background: #11222E;
+  --foreground: #F7F5F0;
+  --card: #19354A;
+  --card-foreground: #F7F5F0;
+  --popover: #19354A;
+  --popover-foreground: #F7F5F0;
+  --primary: #F7F5F0;
+  --primary-foreground: #19354A;
+  --secondary: #347C78;
+  --secondary-foreground: #FFFFFF;
+  --muted: #24333B;
+  --muted-foreground: #D5DFDB;
+  --accent: #A65331;
+  --accent-foreground: #FFFFFF;
+  --destructive: #D9534F;
+  --border: rgba(213, 223, 219, 0.2);
+  --input: rgba(213, 223, 219, 0.25);
+  --ring: #347C78;
+}
+
+/* ==========================================================================
+   Base Elements & Semantic Typography Hierarchy
+   ========================================================================== */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: #24333B;
+    background-color: #F7F5F0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #24333B;
+    background-color: #F7F5F0;
+    margin: 0;
+  }
+
+  /* Headings: DM Serif Display 400 with Navy #19354A */
+  h1 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+    color: #19354A;
+    font-size: 36px;
+    line-height: 42px;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 44px;
+      line-height: 50px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 56px;
+      line-height: 60px;
+    }
+  }
+
+  h2 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+    color: #19354A;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+  }
+
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 36px;
+      line-height: 43px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h2 {
+      font-size: 44px;
+      line-height: 52px;
+    }
+  }
+
+  h3 {
+    font-family: var(--font-serif), Georgia, serif;
+    font-weight: 400;
+    color: #19354A;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (min-width: 768px) {
+    h3 {
+      font-size: 26px;
+      line-height: 34px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h3 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  /* H4: DM Sans 700 with Navy #19354A (Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
+  h4 {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-weight: 700;
+    color: #19354A;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  @media (min-width: 768px) {
+    h4 {
+      font-size: 19px;
+      line-height: 27px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    h4 {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+
+  p {
+    font-family: var(--font-sans), system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #24333B;
+  }
+
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* ==========================================================================
+   Seven Named Text Styles (Typography System)
+   Only use these seven named text styles across the site:
+   H1, H2, H3, H4, Body Large, Body Normal, Body Small
+   ========================================================================== */
+
+/* 1. H1 (DM Serif Display 400 | Desktop: 56/60px, Tablet: 44/50px, Mobile: 36/42px) */
+.text-h1,
+.h1 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  color: #19354A;
+  font-size: 36px;
+  line-height: 42px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .text-h1,
+  .h1 {
+    font-size: 44px;
+    line-height: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .text-h1,
+  .h1 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+}
+
+/* 2. H2 (DM Serif Display 400 | Desktop: 44/52px, Tablet: 36/43px, Mobile: 32/38px) */
+.text-h2,
+.h2 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  color: #19354A;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: -0.01em;
+}
+@media (min-width: 768px) {
+  .text-h2,
+  .h2 {
+    font-size: 36px;
+    line-height: 43px;
+  }
+}
+@media (min-width: 1024px) {
+  .text-h2,
+  .h2 {
+    font-size: 44px;
+    line-height: 52px;
+  }
+}
+
+/* 3. H3 (DM Serif Display 400 | Desktop: 28/36px, Tablet: 26/34px, Mobile: 24/32px) */
+.text-h3,
+.h3 {
+  font-family: var(--font-serif), Georgia, serif;
+  font-weight: 400;
+  color: #19354A;
+  font-size: 24px;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  .text-h3,
+  .h3 {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
+@media (min-width: 1024px) {
+  .text-h3,
+  .h3 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+}
+
+/* 4. H4 (DM Sans 700 | Desktop: 20/28px, Tablet: 19/27px, Mobile: 18/26px) */
+.text-h4,
+.h4 {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 700;
+  color: #19354A;
+  font-size: 18px;
+  line-height: 26px;
+}
+@media (min-width: 768px) {
+  .text-h4,
+  .h4 {
+    font-size: 19px;
+    line-height: 27px;
+  }
+}
+@media (min-width: 1024px) {
+  .text-h4,
+  .h4 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+/* 5. Body Large (DM Sans 400 | Desktop: 18/28px, Tablet: 17/27px, Mobile: 16/25px) */
+.text-body-large,
+.body-large {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 400;
+  color: #24333B;
+  font-size: 16px;
+  line-height: 25px;
+}
+@media (min-width: 768px) {
+  .text-body-large,
+  .body-large {
+    font-size: 17px;
+    line-height: 27px;
+  }
+}
+@media (min-width: 1024px) {
+  .text-body-large,
+  .body-large {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* 6. Body Normal (DM Sans 400 | Desktop: 16/26px, Tablet: 16/26px, Mobile: 16/26px) */
+.text-body-normal,
+.body-normal {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 400;
+  color: #24333B;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+/* 7. Body Small (DM Sans 400–600 | Desktop: 14/21px, Tablet: 14/21px, Mobile: 14/21px) */
+/* Used for metadata, helper text, and short legal notes */
+.text-body-small,
+.body-small {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 400;
+  color: #52616A;
+  font-size: 14px;
+  line-height: 21px;
+}
+.text-body-small-semibold,
+.body-small-semibold {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 600;
+  color: #52616A;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* ==========================================================================
+   STRICT FONT-SIZE ENFORCEMENT: ONLY 7 NAMED STYLES PERMITTED
+   No 10px, 11px, 12px, 13px, or 15px.
+   Minimum font size across the entire site is 14px (Body Small).
+   ========================================================================== */
+.text-xs,
+.text-sm,
+[class*="text-[10px]"],
+[class*="text-[11px]"],
+[class*="text-[12px]"],
+[class*="text-[13px]"] {
+  font-size: 14px !important;
+  line-height: 21px !important;
+}
+
+[class*="text-[15px]"] {
+  font-size: 16px !important;
+  line-height: 26px !important;
+}
+
+/* ==========================================================================
+   Design System Component Styles & Layout Utilities
+   ========================================================================== */
+
+/* Max Content Width (1200px) with responsive gutters */
+.content-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media (min-width: 768px) {
+  .content-container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media (min-width: 1024px) {
+  .content-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+/* Primary CTA Button: Amber #A65331, White text, 52px min-height, 9px radius, 5.38:1 contrast */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  background-color: #A65331;
+  color: #FFFFFF;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: #934628;
+}
+.btn-primary:focus-visible {
+  outline: 3px solid #347C78;
+  outline-offset: 2px;
+}
+
+/* Secondary CTA Button: Transparent/Ivory fill, Navy border #19354A, Navy text */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 24px;
+  background-color: transparent;
+  color: #19354A;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 9px;
+  border: 1.5px solid #19354A;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background-color: #E8F0ED;
+}
+.btn-secondary:focus-visible {
+  outline: 3px solid #347C78;
+  outline-offset: 2px;
+}
+
+/* Secondary Button on Dark Backgrounds */
+.btn-secondary.text-white,
+.btn-secondary-white,
+.btn-secondary-dark,
+[class*="bg-[#19354A]"] .btn-secondary,
+[class*="from-[#19354A]"] .btn-secondary,
+.bg-navy .btn-secondary,
+[class*="bg-navy"] .btn-secondary {
+  color: #FFFFFF !important;
+  border-color: rgba(255, 255, 255, 0.6) !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+.btn-secondary.text-white *,
+.btn-secondary-white *,
+.btn-secondary-dark *,
+[class*="bg-[#19354A]"] .btn-secondary *,
+[class*="from-[#19354A]"] .btn-secondary *,
+.bg-navy .btn-secondary *,
+[class*="bg-navy"] .btn-secondary * {
+  color: #FFFFFF !important;
+}
+.btn-secondary.text-white:hover,
+.btn-secondary-white:hover,
+.btn-secondary-dark:hover,
+[class*="bg-[#19354A]"] .btn-secondary:hover,
+[class*="from-[#19354A]"] .btn-secondary:hover,
+.bg-navy .btn-secondary:hover,
+[class*="bg-navy"] .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  border-color: #FFFFFF !important;
+  color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   High-Contrast Muted Text Enforcement (#52616A)
+   Strict WCAG AAA fix: Ensures 'text-muted' is always crisp, legible charcoal-slate (#52616A),
+   never the pale-mint background token (#E8F0ED).
+   ========================================================================== */
+.text-muted,
+[class~="text-muted"],
+.text-muted-foreground,
+[class~="text-muted-foreground"] {
+  color: #52616A !important;
+}
+
+/* Allow links with text-muted to transition to amber or navy on hover */
+a.text-muted:hover,
+a[class~="text-muted"]:hover,
+a.text-muted-foreground:hover {
+  color: #A65331 !important;
+}
+
+/* Dark mode / dark background contrast inversion */
+.dark .text-muted,
+.dark [class~="text-muted"],
+.dark .text-muted-foreground,
+[class*="bg-[#19354A]"] .text-muted,
+[class*="from-[#19354A]"] .text-muted,
+.bg-navy .text-muted,
+[class*="bg-navy"] .text-muted {
+  color: #D5DFDB !important;
+}
+
+/* ==========================================================================
+   Footer High-Contrast Color Enforcement
+   Ensures base 'p { color: #24333B }' never overrides text in dark footer
+   ========================================================================== */
+footer p {
+  color: #E8F0ED !important;
+}
+footer a:not(.btn-primary):not([class*="bg-"]) {
+  color: #E8F0ED !important;
+}
+footer a:not(.btn-primary):not([class*="bg-"]):hover {
+  color: #FFFFFF !important;
+}
+footer span:not([class*="text-"]) {
+  color: #E8F0ED;
+}
+
+/* Cards: White surface, 1px line border, 18px radius, 24-28px padding */
+.card-theme {
+  background-color: #FFFFFF;
+  border: 1px solid #D5DFDB;
+  border-radius: 18px;
+  padding: 24px;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+@media (min-width: 768px) {
+  .card-theme {
+    padding: 28px;
+  }
+}
+
+/* Trust Chips: White or Pale fill, Navy text, concise label & icon */
+.trust-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  background-color: #E8F0ED;
+  color: #19354A;
+  font-family: var(--font-sans), system-ui, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  border-radius: 9999px;
+  border: 1px solid #D5DFDB;
+}
+
+/* Section vertical padding */
+.section-padding {
+  padding-top: 52px;
+  padding-bottom: 52px;
+}
+@media (min-width: 768px) {
+  .section-padding {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+}
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+}
