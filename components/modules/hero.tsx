@@ -78,15 +78,15 @@ export function Hero({
                 {subhead}
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+              <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
                 <Link
                   href={ctaHref}
-                  className="btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-md hover:shadow-lg gap-2"
+                  className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center"
                 >
-                  <span>{ctaText}</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="leading-snug">{ctaText}</span>
+                  <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
-                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto">
+                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 text-center justify-center">
                   How the Evaluation Works
                 </Link>
               </div>
@@ -205,15 +205,15 @@ export function Hero({
               {subhead}
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
               <Link
                 href={ctaHref}
-                className="btn-primary w-full sm:w-auto text-base px-8 py-4 shadow-md hover:shadow-lg gap-2"
+                className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center"
               >
-                <span>{ctaText}</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="leading-snug">{ctaText}</span>
+                <ArrowRight className="w-4 h-4 shrink-0" />
               </Link>
-              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto">
+              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 text-center justify-center">
                 How the Evaluation Works
               </Link>
             </div>

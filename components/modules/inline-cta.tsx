@@ -29,7 +29,7 @@ export function InlineCta({
 
   return (
     <section
-      className={`my-12 rounded-3xl p-8 sm:p-12 relative overflow-hidden shadow-xl ${
+      className={`my-12 rounded-3xl p-6 sm:p-10 md:p-12 relative overflow-hidden shadow-xl ${
         isNavy
           ? "bg-gradient-to-br from-[#19354A] via-[#1E425E] to-[#152B3C] text-white border border-[#347C78]/30"
           : "bg-gradient-to-br from-[#E8F0ED] to-[#F7F5F0] text-[#19354A] border border-[#D5DFDB]"
@@ -81,17 +81,17 @@ export function InlineCta({
         </p>
 
         {/* Action Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
           <Link
             href="/how-it-works/#get-started"
-            className="btn-primary w-full sm:w-auto text-base px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold whitespace-nowrap text-white"
+            className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold text-center justify-center text-white"
           >
-            <span>{buttonText}</span>
-            <ArrowRight className="w-4 h-4" />
+            <span className="leading-snug">{buttonText}</span>
+            <ArrowRight className="w-4 h-4 shrink-0" />
           </Link>
           <Link
             href="/how-it-works/"
-            className={`w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 py-3.5 rounded-[9px] text-base font-bold whitespace-nowrap transition-all ${
+            className={`w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 sm:px-8 py-3.5 rounded-[9px] text-sm sm:text-base font-bold transition-all text-center ${
               isNavy
                 ? "bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white shadow-sm"
                 : "bg-transparent text-[#19354A] border-2 border-[#19354A] hover:bg-[#E8F0ED]"
