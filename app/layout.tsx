@@ -18,7 +18,7 @@ const dmSerifDisplay = localFont({
 
 const dmSans = localFont({
   src: "./fonts/dm-sans.woff2",
-  weight: "100 1000",
+  weight: "400 700",
   style: "normal",
   variable: "--font-sans",
   display: "swap",
