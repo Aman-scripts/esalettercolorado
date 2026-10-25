@@ -146,8 +146,8 @@ export function Hero({
                 <Image
                   src="/images/colorado-esa-hero.webp"
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
-                  width={640}
-                  height={520}
+                  width={1376}
+                  height={768}
                   sizes="(min-width: 1024px) 480px, 100vw"
                   className="w-full h-auto object-cover object-center max-h-[460px] transform hover:scale-102 transition-transform duration-500"
                 />
