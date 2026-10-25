@@ -92,6 +92,7 @@ export default function HowItWorksPage() {
               src="/images/colorado-intake-telehealth.jpg"
               alt=""
               fill
+              sizes="100vw"
               className="object-cover object-center opacity-25"
               priority
             />
@@ -130,6 +131,7 @@ export default function HowItWorksPage() {
                     src="/images/colorado-intake-telehealth.jpg"
                     alt="Colorado renter completing a confidential telehealth ESA evaluation from their living room"
                     fill
+                    sizes="(min-width: 1024px) 560px, 100vw"
                     className="object-cover object-center"
                     priority
                   />

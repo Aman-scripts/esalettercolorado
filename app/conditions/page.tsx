@@ -76,6 +76,7 @@ export default function ConditionsHubPage() {
                   src="/images/colorado-apartment-peaceful-esa.jpg"
                   alt="Colorado resident resting peacefully with their emotional support dog with Rocky Mountain views"
                   fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
                   className="object-cover object-center"
                   priority
                 />

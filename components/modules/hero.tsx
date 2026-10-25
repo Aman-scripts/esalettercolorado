@@ -43,6 +43,7 @@ export function Hero({
           src={resolvedBgImage}
           alt=""
           fill
+          sizes="100vw"
           className="object-cover object-center opacity-30"
           priority
         />

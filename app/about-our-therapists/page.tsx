@@ -55,6 +55,7 @@ export default function AboutOurTherapistsPage() {
               src="/images/colorado-apartment-peaceful-esa.jpg"
               alt=""
               fill
+              sizes="100vw"
               className="object-cover object-center opacity-25"
               priority
             />
@@ -93,6 +94,7 @@ export default function AboutOurTherapistsPage() {
                     src="/images/colorado-therapist-consultation.jpg"
                     alt="Licensed Colorado mental health professional in telehealth consultation"
                     fill
+                    sizes="(min-width: 1024px) 480px, 100vw"
                     className="object-cover object-center"
                     priority
                   />

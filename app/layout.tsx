@@ -96,7 +96,10 @@ export default function RootLayout({
         "font-sans"
       )}
     >
-      <body className="min-h-full flex flex-col bg-[#F7F5F0] text-[#24333B]">
+      <body
+        className="min-h-full flex flex-col bg-[#F7F5F0] text-[#24333B]"
+        suppressHydrationWarning
+      >
         <Suspense fallback={null}>
           <PageProgressLoader />
         </Suspense>

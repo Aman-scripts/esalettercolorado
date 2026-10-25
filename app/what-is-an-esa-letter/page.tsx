@@ -80,6 +80,7 @@ export default function WhatIsAnEsaLetterPage() {
                   src="/images/colorado-esa-hero.jpg"
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
                   fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
                   className="object-cover object-center"
                   priority
                 />

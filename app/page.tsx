@@ -222,6 +222,7 @@ export default function HomePage() {
             src="/images/colorado-happy-tenant-esa.jpg"
             alt="Colorado tenant enjoying apartment living with their emotional support animals"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>
@@ -337,6 +338,7 @@ export default function HomePage() {
                     src="/images/colorado-therapist-consultation.jpg"
                     alt="Licensed Colorado mental health professional conducting a telehealth ESA consultation"
                     fill
+                    sizes="(min-width: 1024px) 480px, 100vw"
                     className="object-cover object-center"
                     priority
                   />

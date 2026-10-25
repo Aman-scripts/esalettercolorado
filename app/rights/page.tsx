@@ -76,6 +76,7 @@ export default function RightsHubPage() {
                   src="/images/colorado-happy-tenant-esa.jpg"
                   alt="Colorado tenant happily holding apartment keys with her assistance animals in modern Denver home"
                   fill
+                  sizes="(min-width: 1024px) 560px, 100vw"
                   className="object-cover object-center"
                   priority
                 />
