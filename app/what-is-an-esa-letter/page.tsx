@@ -77,7 +77,6 @@ export default function WhatIsAnEsaLetterPage() {
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"
                   className="object-cover object-center"
-                  priority
                 />
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-sm z-10">
                   <span className="flex items-center gap-1.5 text-[#347C78]">

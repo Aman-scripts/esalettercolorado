@@ -16,8 +16,8 @@ export function Footer() {
                 <Image
                   src="/esa-letter-colorado-logo-image.png"
                   alt="ESA Letter Colorado"
-                  width={498}
-                  height={209}
+                  width={115}
+                  height={48}
                   className="h-10 w-auto object-contain"
                 />
               </div>

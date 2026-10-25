@@ -50,7 +50,9 @@ export function Hero({
           src={resolvedBgImage}
           alt=""
           fill
-          sizes="100vw"
+          sizes="(max-width: 768px) 200px, 1920px"
+          quality={50}
+          fetchPriority="high"
           className="object-cover object-center opacity-30"
           priority
         />
@@ -146,8 +148,8 @@ export function Hero({
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
                   width={640}
                   height={520}
+                  sizes="(min-width: 1024px) 480px, 100vw"
                   className="w-full h-auto object-cover object-center max-h-[460px] transform hover:scale-102 transition-transform duration-500"
-                  priority
                 />
 
                 {/* Subtle gradient overlay at bottom of photo */}

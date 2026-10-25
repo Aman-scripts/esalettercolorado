@@ -43,7 +43,9 @@ export default function AboutOurTherapistsPage() {
               src="/images/colorado-apartment-peaceful-esa.jpg"
               alt=""
               fill
-              sizes="100vw"
+              sizes="(max-width: 768px) 200px, 1920px"
+              quality={50}
+              fetchPriority="high"
               className="object-cover object-center opacity-25"
               priority
             />
@@ -84,7 +86,6 @@ export default function AboutOurTherapistsPage() {
                     fill
                     sizes="(min-width: 1024px) 480px, 100vw"
                     className="object-cover object-center"
-                    priority
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-xs z-10">
                     <span className="flex items-center gap-1.5">

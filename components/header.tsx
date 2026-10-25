@@ -52,8 +52,8 @@ export function Header() {
             <Image
               src="/esa-letter-colorado-logo-image.png"
               alt="ESA Letter Colorado - State-Licensed Evaluations"
-              width={498}
-              height={209}
+              width={115}
+              height={48}
               className="h-11 sm:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
               priority
             />
