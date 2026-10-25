@@ -5,7 +5,8 @@ import { conditionsList } from "@/data/conditions-data";
 import { coloradoCities } from "@/data/locations-data";
 import { blogCategories, blogPosts } from "@/data/blog-data";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+/** Every indexable URL, used by app/sitemap.xml/route.ts */
+export function sitemapEntries(): MetadataRoute.Sitemap {
   const baseUrl = siteConfig.url;
   const currentDate = new Date().toISOString().split("T")[0];
 
