@@ -62,7 +62,7 @@ export default function WhatIsAnEsaLetterPage() {
         h1={seo.h1}
         subhead="Learn the legal definition, statutory basis under the Fair Housing Act and Colorado HB26-1045, who can write a valid letter, and how to use it with your landlord."
         ctaText="Get Evaluated in Colorado ($149)"
-        bgImage="/images/colorado-esa-hero.jpg"
+        bgImage="/images/colorado-esa-hero.webp"
       />
 
       {/* Visual Showcase: The Real Difference of a Compliant Colorado Letter */}
@@ -72,7 +72,7 @@ export default function WhatIsAnEsaLetterPage() {
             <div className="lg:col-span-6 flex flex-col">
               <div className="rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-xl bg-[#E8F0ED] relative flex-1 min-h-[360px] sm:min-h-[420px]">
                 <Image
-                  src="/images/colorado-esa-hero.jpg"
+                  src="/images/colorado-esa-hero.webp"
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"

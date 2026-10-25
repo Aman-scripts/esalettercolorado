@@ -7,13 +7,13 @@ const seoByPath = new Map(seoSettings.map((page) => [page.path, page]));
 // Home page photos used as the share image on every page (the first is the primary)
 const OG_IMAGES = [
   {
-    url: "/images/colorado-esa-hero.jpg",
+    url: "/images/colorado-esa-hero.webp",
     width: 1376,
     height: 768,
     alt: "Colorado resident with emotional support golden retriever in sunlit Denver apartment",
   },
   {
-    url: "/images/colorado-happy-tenant-esa.jpg",
+    url: "/images/colorado-happy-tenant-esa.webp",
     width: 1376,
     height: 768,
     alt: "Colorado tenant enjoying apartment living with their emotional support animals",

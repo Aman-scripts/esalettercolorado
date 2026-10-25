@@ -24,7 +24,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
     "@type": "Product",
     name: "Colorado ESA Letter Telehealth Evaluation",
     description: "Official emotional support animal housing evaluation and recommendation letter by a licensed Colorado mental health professional.",
-    image: `${siteConfig.url}/esa-letter-colorado-logo-image.png`,
+    image: `${siteConfig.url}/esa-letter-colorado-logo-image.webp`,
     offers: {
       "@type": "Offer",
       price: siteConfig.pricing.single,

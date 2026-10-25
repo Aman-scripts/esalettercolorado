@@ -77,7 +77,7 @@ export default function HowItWorksPage() {
         <section className="relative overflow-hidden section-padding pt-10 pb-16 bg-[#F7F5F0] border-b border-[#D5DFDB]">
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
             <Image
-              src="/images/colorado-intake-telehealth.jpg"
+              src="/images/colorado-intake-telehealth.webp"
               alt=""
               fill
               sizes="(max-width: 768px) 200px, 1920px"
@@ -118,7 +118,7 @@ export default function HowItWorksPage() {
               <div className="lg:col-span-6 flex flex-col relative">
                 <div className="rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-xl bg-white relative flex-1 min-h-[360px] sm:min-h-[420px]">
                   <Image
-                    src="/images/colorado-intake-telehealth.jpg"
+                    src="/images/colorado-intake-telehealth.webp"
                     alt="Colorado renter completing a confidential telehealth ESA evaluation from their living room"
                     fill
                     sizes="(min-width: 1024px) 560px, 100vw"

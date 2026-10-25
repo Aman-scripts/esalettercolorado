@@ -58,7 +58,7 @@ export default function RightsHubPage() {
         h1={seo.h1}
         subhead="A comprehensive legal overview of tenant protections under the federal Fair Housing Act, Colorado HB26-1045, and Colorado Civil Rights Division regulations."
         ctaText="Protect Your Rights ($149)"
-        bgImage="/images/colorado-happy-tenant-esa.jpg"
+        bgImage="/images/colorado-happy-tenant-esa.webp"
       />
 
       {/* Featured Visual Split: Colorado Assistance Animal Rights */}
@@ -68,7 +68,7 @@ export default function RightsHubPage() {
             <div className="lg:col-span-6 flex flex-col">
               <div className="rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-xl bg-[#E8F0ED] relative flex-1 min-h-[360px] sm:min-h-[420px]">
                 <Image
-                  src="/images/colorado-happy-tenant-esa.jpg"
+                  src="/images/colorado-happy-tenant-esa.webp"
                   alt="Colorado tenant happily holding apartment keys with her assistance animals in modern Denver home"
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"

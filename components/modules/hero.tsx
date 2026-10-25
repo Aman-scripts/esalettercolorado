@@ -34,7 +34,7 @@ export function Hero({
 }: HeroProps) {
   const shortBadge = mobileBadge ?? (badge === DEFAULT_BADGE ? DEFAULT_MOBILE_BADGE : badge);
   const isFull = variant === "full";
-  const resolvedBgImage = bgImage || "/images/colorado-apartment-peaceful-esa.jpg";
+  const resolvedBgImage = bgImage || "/images/colorado-apartment-peaceful-esa.webp";
 
   return (
     <section
@@ -144,7 +144,7 @@ export function Hero({
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-2xl bg-[#E8F0ED]">
                 <Image
-                  src="/images/colorado-esa-hero.jpg"
+                  src="/images/colorado-esa-hero.webp"
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
                   width={640}
                   height={520}

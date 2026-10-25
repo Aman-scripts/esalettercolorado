@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       "Get a Colorado ESA letter from a licensed therapist. Compliant with Colorado HB26-1045, C.R.S. 24-34-502, and the federal Fair Housing Act.",
     images: [
       {
-        url: "/esa-letter-colorado-logo-image.png",
+        url: "/esa-letter-colorado-logo-image.webp",
         width: 1200,
         height: 630,
         alt: "ESA Letter Colorado - Licensed Clinical Evaluations",
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     title: "ESA Letter Colorado | Licensed Therapist Evaluation",
     description:
       "100% compliant Colorado ESA letters issued by state-licensed mental health professionals. No pet rent or pet deposits.",
-    images: ["/esa-letter-colorado-logo-image.png"],
+    images: ["/esa-letter-colorado-logo-image.webp"],
   },
 };
 

@@ -58,7 +58,7 @@ export default function ConditionsHubPage() {
         h1={seo.h1}
         subhead="Explore mental and emotional health conditions recognized under Colorado fair housing laws, how our clinicians evaluate clinical need, and how companion animals provide daily support."
         ctaText="Check Your Eligibility ($149)"
-        bgImage="/images/colorado-apartment-peaceful-esa.jpg"
+        bgImage="/images/colorado-apartment-peaceful-esa.webp"
       />
 
       {/* Visual Feature: Therapeutic Living & Co-Regulation */}
@@ -68,7 +68,7 @@ export default function ConditionsHubPage() {
             <div className="lg:col-span-6 flex flex-col">
               <div className="rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-xl bg-[#E8F0ED] relative flex-1 min-h-[360px] sm:min-h-[420px]">
                 <Image
-                  src="/images/colorado-apartment-peaceful-esa.jpg"
+                  src="/images/colorado-apartment-peaceful-esa.webp"
                   alt="Colorado resident resting peacefully with their emotional support dog with Rocky Mountain views"
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"

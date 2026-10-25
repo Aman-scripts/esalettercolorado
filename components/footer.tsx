@@ -14,7 +14,7 @@ export function Footer() {
             <Link href="/" className="inline-flex items-center group mb-2" aria-label="ESA Letter Colorado Homepage">
               <div className="bg-white px-3.5 py-2 rounded-xl inline-flex items-center shadow-xs transition-transform duration-200 group-hover:scale-[1.02]">
                 <Image
-                  src="/esa-letter-colorado-logo-image.png"
+                  src="/esa-letter-colorado-logo-image.webp"
                   alt="ESA Letter Colorado"
                   width={115}
                   height={48}

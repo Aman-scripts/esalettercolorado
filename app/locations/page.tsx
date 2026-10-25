@@ -58,7 +58,7 @@ export default function LocationsHubPage() {
         h1={seo.h1}
         subhead="Assistance animal protections apply statewide across every rental market. Browse local housing guides, rental statistics, and tenant resources for all 12 major Colorado cities."
         ctaText="Find Your City Guide ($149)"
-        bgImage="/images/colorado-apartment-peaceful-esa.jpg"
+        bgImage="/images/colorado-apartment-peaceful-esa.webp"
       />
 
       {/* Visual Showcase: Statewide Colorado Assistance Animal Protections */}
@@ -68,7 +68,7 @@ export default function LocationsHubPage() {
             <div className="lg:col-span-6 flex flex-col">
               <div className="rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-xl bg-[#E8F0ED] relative flex-1 min-h-[360px] sm:min-h-[420px]">
                 <Image
-                  src="/images/colorado-apartment-peaceful-esa.jpg"
+                  src="/images/colorado-apartment-peaceful-esa.webp"
                   alt="Colorado mountain apartment living with emotional support animal"
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"

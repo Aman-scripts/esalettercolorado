@@ -40,7 +40,7 @@ export default function AboutOurTherapistsPage() {
         <section className="relative overflow-hidden section-padding pt-10 pb-16 bg-[#F7F5F0] border-b border-[#D5DFDB]">
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
             <Image
-              src="/images/colorado-apartment-peaceful-esa.jpg"
+              src="/images/colorado-apartment-peaceful-esa.webp"
               alt=""
               fill
               sizes="(max-width: 768px) 200px, 1920px"
@@ -81,7 +81,7 @@ export default function AboutOurTherapistsPage() {
               <div className="lg:col-span-5 flex flex-col">
                 <div className="rounded-2xl overflow-hidden border-2 border-[#D5DFDB] shadow-lg relative bg-[#E8F0ED] flex-1 min-h-[300px] sm:min-h-[340px]">
                   <Image
-                    src="/images/colorado-therapist-consultation.jpg"
+                    src="/images/colorado-therapist-consultation.webp"
                     alt="Licensed Colorado mental health professional in telehealth consultation"
                     fill
                     sizes="(min-width: 1024px) 480px, 100vw"

@@ -225,7 +225,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden py-20 bg-[#19354A] text-white">
         <div className="absolute inset-0 z-0 opacity-20">
           <Image
-            src="/images/colorado-happy-tenant-esa.jpg"
+            src="/images/colorado-happy-tenant-esa.webp"
             alt="Colorado tenant enjoying apartment living with their emotional support animals"
             fill
             sizes="100vw"
@@ -341,7 +341,7 @@ export default function HomePage() {
               <div className="lg:col-span-5 flex flex-col">
                 <div className="rounded-2xl overflow-hidden border border-[#D5DFDB] shadow-md relative flex-1 min-h-[300px] sm:min-h-[340px] bg-[#E8F0ED]">
                   <Image
-                    src="/images/colorado-therapist-consultation.jpg"
+                    src="/images/colorado-therapist-consultation.webp"
                     alt="Licensed Colorado mental health professional conducting a telehealth ESA consultation"
                     fill
                     sizes="(min-width: 1024px) 480px, 100vw"

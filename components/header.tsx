@@ -50,7 +50,7 @@ export function Header() {
             aria-label="ESA Letter Colorado Homepage"
           >
             <Image
-              src="/esa-letter-colorado-logo-image.png"
+              src="/esa-letter-colorado-logo-image.webp"
               alt="ESA Letter Colorado - State-Licensed Evaluations"
               width={115}
               height={48}

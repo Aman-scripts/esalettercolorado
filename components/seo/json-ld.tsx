@@ -42,7 +42,7 @@ export function JsonLd({
           "@id": `${siteConfig.url}/#organization`,
           name: siteConfig.name,
           url: siteConfig.url,
-          logo: `${siteConfig.url}/esa-letter-colorado-logo-image.png`,
+          logo: `${siteConfig.url}/esa-letter-colorado-logo-image.webp`,
           telephone: siteConfig.phone,
           email: siteConfig.email,
           address: {
@@ -84,7 +84,7 @@ export function JsonLd({
         name: siteConfig.name,
         logo: {
           "@type": "ImageObject",
-          url: `${siteConfig.url}/esa-letter-colorado-logo-image.png`,
+          url: `${siteConfig.url}/esa-letter-colorado-logo-image.webp`,
         },
       },
     };
