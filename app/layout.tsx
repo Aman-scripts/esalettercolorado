@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Serif_Display, DM_Sans } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Header } from "@/components/header";
@@ -8,17 +8,19 @@ import { MobileStickyCta } from "@/components/mobile-sticky-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
 
-const dmSerifDisplay = DM_Serif_Display({
+const dmSerifDisplay = localFont({
+  src: "./fonts/dm-serif-display.woff2",
   weight: "400",
-  subsets: ["latin"],
+  style: "normal",
   variable: "--font-serif",
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  subsets: ["latin"],
+const dmSans = localFont({
+  src: "./fonts/dm-sans.woff2",
+  weight: "100 1000",
+  style: "normal",
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
