@@ -2,19 +2,11 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import { Eye, CheckCircle2 } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Accessibility Statement | ESA Letter Colorado",
-  description:
-    "ESA Letter Colorado is committed to an accessible website for everyone. Read our WCAG 2.1 AA commitment and how to report issues.",
-  robots: {
-    index: false,
-    follow: true,
-  },
-  alternates: {
-    canonical: `${siteConfig.url}/accessibility-statement/`,
-  },
-};
+const seo = getPageSeo("/accessibility-statement/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function AccessibilityStatementPage() {
   return (
@@ -25,7 +17,7 @@ export default function AccessibilityStatementPage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">WCAG 2.1 AA Standards</span>
-            <h1 className="h1 mb-3">Accessibility Statement</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">Last Updated: <strong>October 18, 2026</strong></p>
           </div>
 

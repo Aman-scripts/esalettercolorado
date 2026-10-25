@@ -4,7 +4,23 @@ import { seoSettings, type PageSeo } from "@/data/seo-settings";
 
 const seoByPath = new Map(seoSettings.map((page) => [page.path, page]));
 
-/** Looks up the sheet row for a route path such as "/" or "/rights/hoa-rules/". */
+// Home page photos used as the share image on every page (the first is the primary)
+const OG_IMAGES = [
+  {
+    url: "/images/colorado-esa-hero.jpg",
+    width: 1376,
+    height: 768,
+    alt: "Colorado resident with emotional support golden retriever in sunlit Denver apartment",
+  },
+  {
+    url: "/images/colorado-happy-tenant-esa.jpg",
+    width: 1376,
+    height: 768,
+    alt: "Colorado tenant enjoying apartment living with their emotional support animals",
+  },
+];
+
+/** Looks up the SEO row for a route path such as "/" or "/rights/hoa-rules/". */
 export function getPageSeo(path: string): PageSeo {
   const page = seoByPath.get(path);
   if (!page) {
@@ -13,39 +29,38 @@ export function getPageSeo(path: string): PageSeo {
   return page;
 }
 
-/** Same as getPageSeo, but returns undefined for routes that are not in the sheet. */
+/** Same as getPageSeo, but returns undefined for routes that have no SEO row. */
 export function findPageSeo(path: string): PageSeo | undefined {
   return seoByPath.get(path);
 }
 
-function parseRobots(value: string) {
+// One robots meta tag per page (spec section 7.1):
+// I/F  -> "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+// NI/F -> "noindex, follow"
+function buildRobots(value: string): Metadata["robots"] {
   const directives = value.split(",").map((d) => d.trim().toLowerCase());
+  const index = !directives.includes("noindex");
+  const follow = !directives.includes("nofollow");
+  if (!index) return { index, follow };
   return {
-    index: !directives.includes("noindex"),
-    follow: !directives.includes("nofollow"),
+    index,
+    follow,
+    "max-image-preview": "large",
+    "max-snippet": -1,
+    "max-video-preview": -1,
   };
 }
 
 export function buildMetadata(page: PageSeo): Metadata {
-  const robots = parseRobots(page.robots);
-
   return {
-    // Sheet titles already include the brand, so bypass the layout's title template
+    // Titles already include the brand, so bypass the layout's title template
     title: { absolute: page.title },
     description: page.description,
-    keywords: [page.primaryKeyword, ...page.secondaryKeywords],
+    ...(page.keywords && { keywords: page.keywords }),
     alternates: {
       canonical: page.canonical,
     },
-    robots: {
-      ...robots,
-      googleBot: {
-        ...robots,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-        "max-video-preview": -1,
-      },
-    },
+    robots: buildRobots(page.robots),
     openGraph: {
       type: "website",
       locale: "en_US",
@@ -53,13 +68,13 @@ export function buildMetadata(page: PageSeo): Metadata {
       url: page.canonical,
       title: page.ogTitle,
       description: page.ogDescription,
-      images: [{ url: page.ogImage, width: 1200, height: 630 }],
+      images: OG_IMAGES,
     },
     twitter: {
       card: "summary_large_image",
       title: page.ogTitle,
       description: page.ogDescription,
-      images: [page.ogImage],
+      images: [OG_IMAGES[0].url],
     },
   };
 }

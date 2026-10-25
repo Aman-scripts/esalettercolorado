@@ -38,17 +38,6 @@ export const metadata: Metadata = {
   },
   description:
     "Get a Colorado ESA letter from a licensed therapist. Learn your housing rights, how the evaluation works, and whether you qualify for an ESA.",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-      "max-video-preview": -1,
-    },
-  },
   openGraph: {
     type: "website",
     locale: "en_US",

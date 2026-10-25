@@ -2,19 +2,11 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import { Cookie } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Cookie Policy | ESA Letter Colorado",
-  description:
-    "Learn which cookies ESA Letter Colorado uses, why we use them, and how you can manage your cookie preferences.",
-  robots: {
-    index: false,
-    follow: true,
-  },
-  alternates: {
-    canonical: `${siteConfig.url}/cookie-policy/`,
-  },
-};
+const seo = getPageSeo("/cookie-policy/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function CookiePolicyPage() {
   return (
@@ -25,7 +17,7 @@ export default function CookiePolicyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">Browser Preferences</span>
-            <h1 className="h1 mb-3">Cookie Policy</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">Last Updated: <strong>October 18, 2026</strong></p>
           </div>
 

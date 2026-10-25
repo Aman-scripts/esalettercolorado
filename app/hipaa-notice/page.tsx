@@ -2,19 +2,11 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import { Lock, ShieldCheck } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "HIPAA Notice of Privacy Practices | ESA Letter Colorado",
-  description:
-    "How protected health information is handled, stored, and disclosed when you complete an ESA evaluation with ESA Letter Colorado.",
-  robots: {
-    index: false,
-    follow: true,
-  },
-  alternates: {
-    canonical: `${siteConfig.url}/hipaa-notice/`,
-  },
-};
+const seo = getPageSeo("/hipaa-notice/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function HipaaNoticePage() {
   return (
@@ -25,7 +17,7 @@ export default function HipaaNoticePage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">Healthcare Compliance</span>
-            <h1 className="h1 mb-3">HIPAA Notice of Privacy Practices</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">Last Updated: <strong>October 18, 2026</strong></p>
           </div>
 

@@ -1,6 +1,14 @@
 import React from "react";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Search, Home, FileText, MapPin, Heart, ArrowRight } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
+
+const seo = getPageSeo("/404/");
+
+// Next.js already emits <meta name="robots" content="noindex"> on 404s; drop ours so
+// the page keeps a single robots tag (follow is the crawler default)
+export const metadata: Metadata = { ...buildMetadata(seo), robots: undefined };
 
 export default function NotFound() {
   return (
@@ -10,7 +18,7 @@ export default function NotFound() {
           404
         </span>
         <h1 className="text-h1 mt-2 text-[#19354A]">
-          Page Not Found
+          {seo.h1}
         </h1>
         <p className="text-body-large text-[#52616A] mt-3">
           The Colorado assistance animal guide or page you are looking for may have been moved, renamed, or is temporarily unavailable.
