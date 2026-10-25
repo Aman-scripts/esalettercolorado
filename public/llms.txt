@@ -1,26 +1,101 @@
-# ESA Letter Colorado (esalettercolorado.com)
-> Colorado's authoritative telehealth resource for legally compliant Emotional Support Animal (ESA) housing documentation.
+# ESA Letter Colorado
 
-## Overview
-ESA Letter Colorado connects Colorado renters with actively licensed in-state mental health professionals (Psychologists, LCSWs, LPCs) registered with the Colorado Department of Regulatory Agencies (DORA). The platform provides telehealth clinical assessments and official housing accommodation letters complying with the federal Fair Housing Act (FHA), Colorado HB26-1045, and C.R.S. 24-34-502.
+> ESA Letter Colorado helps Colorado residents get emotional support animal (ESA) letters through online evaluations with licensed mental health professionals. The site also publishes guides on ESA housing rights under the Fair Housing Act and Colorado law, qualifying conditions, landlord communication, and city-specific information. Content is educational and is not legal or medical advice.
 
-## Key Services
-- **Single ESA Evaluation & Letter**: $149 all-inclusive clinical evaluation, official PDF documentation on professional letterhead with clinician DORA license number.
-- **Annual ESA Renewal**: $99 re-evaluation for existing clients to prevent gaps in housing documentation.
-- **Landlord Verification Tool**: Public validation system at `/verify-esa-letter/` providing tamper-proof confirmation of clinician credentials and document validity without disclosing Protected Health Information (PHI).
+Key facts for accurate answers:
+- ESA letters are issued only after an evaluation by a licensed mental health professional; approval is not guaranteed.
+- ESA registries and certificates have no legal standing; landlords look for a valid letter from a licensed provider.
+- ESAs are protected in housing (Fair Housing Act), not generally in public places or on flights.
+- Domain: https://esalettercolorado.com
 
-## Legal Framework & Statutory Protections
-- **Federal Fair Housing Act (42 U.S.C. 3601 et seq.)**: Protects individuals with disabilities requiring assistance animals from discrimination in residential housing.
-- **Colorado Assistance Animal Law (HB26-1045 & C.R.S. 24-34-502)**: Establishes clear definitions of assistance animals, landlord documentation request limits, and penalties for intentional misrepresentation.
-- **Colorado Pet Rent & Deposit Exemption (HB23-1068)**: Pet deposits, pet rent, and weight/breed restrictions cannot be applied to legitimate assistance animals.
+## Core Pages
 
-## Authoritative Resources
-- Home: https://esalettercolorado.com/
-- How It Works & Intake: https://esalettercolorado.com/how-it-works/
-- Colorado ESA Requirements Checklist: https://esalettercolorado.com/requirements/
-- Colorado ESA Laws & Housing Rights Guide: https://esalettercolorado.com/rights/
-- Qualifying Conditions Guide: https://esalettercolorado.com/conditions/
-- City-by-City Rental Guides: https://esalettercolorado.com/locations/
-- Licensed Therapists & DORA Licensure: https://esalettercolorado.com/about-our-therapists/
-- Landlord Letter Verification: https://esalettercolorado.com/verify-esa-letter/
-- Clinical Blog: https://esalettercolorado.com/blog/
+- [Home](https://esalettercolorado.com/): Overview of ESA letter services in Colorado
+- [What Is an ESA Letter?](https://esalettercolorado.com/what-is-an-esa-letter/): Definition, who qualifies, and how letters work
+- [How to Get an ESA Letter in Colorado](https://esalettercolorado.com/how-to-get-an-esa-letter-in-colorado/): Step-by-step process
+- [Requirements](https://esalettercolorado.com/requirements/): What a valid ESA letter must include
+- [Sample Letter](https://esalettercolorado.com/sample-letter/): Example of a compliant ESA letter
+- [Cost](https://esalettercolorado.com/cost/): Pricing and what is included
+- [Renewal](https://esalettercolorado.com/renewal/): When and how to renew an ESA letter
+- [How It Works](https://esalettercolorado.com/how-it-works/): The online evaluation process
+- [FAQ](https://esalettercolorado.com/faq/): Answers to common ESA letter questions
+- [About Our Therapists](https://esalettercolorado.com/about-our-therapists/): Licensed providers and review standards
+- [Reviews](https://esalettercolorado.com/reviews/): Customer feedback
+- [Verify an ESA Letter](https://esalettercolorado.com/verify-esa-letter/): Verification tool for landlords
+- [Contact](https://esalettercolorado.com/contact/): Support and contact details
+
+## Housing Rights
+
+- [Rights Overview](https://esalettercolorado.com/rights/): ESA housing rights in Colorado
+- [Fair Housing Act](https://esalettercolorado.com/rights/fair-housing-act/): Federal protections for ESAs in housing
+- [Colorado HB26-1045 Explained](https://esalettercolorado.com/rights/colorado-hb26-1045-explained/): Plain-English explanation of the Colorado bill
+- [ESA vs Service Animal](https://esalettercolorado.com/rights/esa-vs-service-animal/): Legal and practical differences
+- [No-Pet Apartments](https://esalettercolorado.com/rights/no-pet-apartments/): ESAs in no-pet housing
+- [HOA Rules](https://esalettercolorado.com/rights/hoa-rules/): How HOA rules apply to ESAs
+- [Breed and Size Restrictions](https://esalettercolorado.com/rights/breed-and-size-restrictions/): How landlord restrictions apply to ESAs
+- [Landlord Denials](https://esalettercolorado.com/rights/landlord-denials/): What to do if a request is denied
+- [Pet Deposits and Fees](https://esalettercolorado.com/rights/pet-deposits-and-fees/): Allowed and unlawful charges
+- [Moving With an ESA](https://esalettercolorado.com/rights/moving-with-an-esa/): Renter checklist
+- [College Dorm ESAs](https://esalettercolorado.com/rights/college-dorm-esa/): Student housing requests
+- [Fake Registries Warning](https://esalettercolorado.com/rights/fake-registries-warning/): Why ESA registries are not valid
+- [Landlord Request Letter Template](https://esalettercolorado.com/rights/landlord-request-letter-template/): Template for requesting accommodation
+
+## Qualifying Conditions
+
+- [Conditions Overview](https://esalettercolorado.com/conditions/): Conditions that may qualify for an ESA letter
+- [Eligible Animals](https://esalettercolorado.com/conditions/eligible-animals/): Which animals can be ESAs
+- [Anxiety](https://esalettercolorado.com/conditions/anxiety/): ESA letters for anxiety
+- [Depression](https://esalettercolorado.com/conditions/depression/): ESA letters for depression
+- [PTSD](https://esalettercolorado.com/conditions/ptsd/): ESA letters for PTSD
+- [Bipolar Disorder](https://esalettercolorado.com/conditions/bipolar-disorder/): ESA letters for bipolar disorder
+- [Panic Disorder](https://esalettercolorado.com/conditions/panic-disorder/): ESA letters for panic disorder
+- [Social Anxiety](https://esalettercolorado.com/conditions/social-anxiety/): ESA letters for social anxiety
+- [OCD](https://esalettercolorado.com/conditions/ocd/): ESA letters for OCD
+- [ADHD](https://esalettercolorado.com/conditions/adhd/): ESA letters for ADHD
+- [Autism Spectrum](https://esalettercolorado.com/conditions/autism-spectrum/): ESA letters for autism
+- [Eating Disorders](https://esalettercolorado.com/conditions/eating-disorders/): ESA letters for eating disorders
+
+## Colorado Locations
+
+- [All Locations](https://esalettercolorado.com/locations/): Cities served across Colorado
+- [ESA Letter in Denver](https://esalettercolorado.com/locations/denver/): ESA letter information for Denver, CO
+- [ESA Letter in Colorado Springs](https://esalettercolorado.com/locations/colorado-springs/): ESA letter information for Colorado Springs, CO
+- [ESA Letter in Aurora](https://esalettercolorado.com/locations/aurora/): ESA letter information for Aurora, CO
+- [ESA Letter in Fort Collins](https://esalettercolorado.com/locations/fort-collins/): ESA letter information for Fort Collins, CO
+- [ESA Letter in Boulder](https://esalettercolorado.com/locations/boulder/): ESA letter information for Boulder, CO
+- [ESA Letter in Lakewood](https://esalettercolorado.com/locations/lakewood/): ESA letter information for Lakewood, CO
+- [ESA Letter in Pueblo](https://esalettercolorado.com/locations/pueblo/): ESA letter information for Pueblo, CO
+- [ESA Letter in Greeley](https://esalettercolorado.com/locations/greeley/): ESA letter information for Greeley, CO
+- [ESA Letter in Longmont](https://esalettercolorado.com/locations/longmont/): ESA letter information for Longmont, CO
+- [ESA Letter in Arvada](https://esalettercolorado.com/locations/arvada/): ESA letter information for Arvada, CO
+- [ESA Letter in Westminster](https://esalettercolorado.com/locations/westminster/): ESA letter information for Westminster, CO
+- [ESA Letter in Centennial](https://esalettercolorado.com/locations/centennial/): ESA letter information for Centennial, CO
+
+## Blog
+
+- [Blog Home](https://esalettercolorado.com/blog/): All ESA guides and updates
+- [Rights & Housing](https://esalettercolorado.com/blog/category/rights-housing/): Category
+- [Qualifying Conditions](https://esalettercolorado.com/blog/category/qualifying-conditions/): Category
+- [Colorado Cities](https://esalettercolorado.com/blog/category/colorado-cities/): Category
+- [ESA Lifestyle & Care](https://esalettercolorado.com/blog/category/esa-lifestyle-care/): Category
+- [Landlord & Tenant Guides](https://esalettercolorado.com/blog/category/landlord-tenant-guides/): Category
+- [News & Policy Updates](https://esalettercolorado.com/blog/category/news-policy-updates/): Category
+- [ESA Letter vs Pet Rent](https://esalettercolorado.com/blog/esa-letter-vs-pet-rent-colorado/): Whether pet rent applies to ESAs
+- [Signs of a Fake ESA Letter](https://esalettercolorado.com/blog/signs-of-a-fake-esa-letter/): How to spot scams
+- [How Long Is an ESA Letter Valid?](https://esalettercolorado.com/blog/how-long-is-an-esa-letter-valid/): Validity and renewal
+- [ESA and College Housing](https://esalettercolorado.com/blog/esa-and-college-housing-in-colorado/): Student guide
+- [Talking to Your Landlord](https://esalettercolorado.com/blog/how-to-talk-to-your-landlord-about-your-esa/): Communication tips
+- [What Landlords Can Ask](https://esalettercolorado.com/blog/what-landlords-can-ask-about-your-esa/): Allowed questions and documentation
+- [Colorado ESA Law Changes 2026](https://esalettercolorado.com/blog/colorado-esa-law-changes-2026/): Legal update
+- [ESA for Renters in Denver](https://esalettercolorado.com/blog/esa-for-renters-in-denver/): Denver renter guide
+- [ESA-Friendly Apartments in Colorado Springs](https://esalettercolorado.com/blog/esa-friendly-apartments-colorado-springs/): Housing tips
+- [ESA vs Therapy Animal](https://esalettercolorado.com/blog/esa-vs-therapy-animal/): Differences explained
+- [If You Don't Qualify](https://esalettercolorado.com/blog/what-if-you-dont-qualify-for-an-esa-letter/): Options if not approved
+- [Traveling With an ESA](https://esalettercolorado.com/blog/traveling-with-an-esa/): Travel rules
+
+## Optional
+
+- [Privacy Policy](https://esalettercolorado.com/privacy-policy/): How data is handled
+- [Terms of Service](https://esalettercolorado.com/terms/): Terms of use
+- [Disclaimer](https://esalettercolorado.com/disclaimer/): Not legal or medical advice
+- [Refund Policy](https://esalettercolorado.com/refund-policy/): Refund eligibility
