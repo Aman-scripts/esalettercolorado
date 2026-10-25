@@ -33,7 +33,7 @@ import { PricingBlock } from "@/components/modules/pricing-block";
 import { InlineCta } from "@/components/modules/inline-cta";
 import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { LatestBlog } from "@/components/modules/latest-blog";
-import { AssessmentForm } from "@/components/modules/assessment-form";
+import { DeferredAssessmentForm } from "@/components/modules/deferred-assessment-form";
 import { CalloutBox } from "@/components/modules/callout-box";
 import { therapists } from "@/data/therapists-data";
 import { coloradoCities } from "@/data/locations-data";
@@ -604,7 +604,7 @@ export default function HomePage() {
       {/* 15. Conversion Intake Assessment Form */}
       <section className="section-padding bg-white border-t border-[#D5DFDB]">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
-          <AssessmentForm />
+          <DeferredAssessmentForm />
         </div>
       </section>
 
