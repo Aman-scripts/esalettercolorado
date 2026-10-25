@@ -8,6 +8,8 @@ interface HeroProps {
   h1: string;
   subhead: string;
   badge?: string;
+  /** Shorter label shown below sm so the badge stays on one line */
+  mobileBadge?: string;
   ctaText?: string;
   ctaHref?: string;
   showReviews?: boolean;
@@ -15,17 +17,22 @@ interface HeroProps {
   bgOverlay?: "ivory" | "navy";
 }
 
+const DEFAULT_BADGE = "State-Licensed Colorado Telehealth Evaluation";
+const DEFAULT_MOBILE_BADGE = "State-Licensed Telehealth Evaluation";
+
 export function Hero({
   variant = "compact",
   h1,
   subhead,
-  badge = "State-Licensed Colorado Telehealth Evaluation",
+  badge = DEFAULT_BADGE,
+  mobileBadge,
   ctaText = "Get Your ESA Letter ($149)",
   ctaHref = "/how-it-works/#get-started",
   showReviews = true,
   bgImage,
   bgOverlay = "ivory",
 }: HeroProps) {
+  const shortBadge = mobileBadge ?? (badge === DEFAULT_BADGE ? DEFAULT_MOBILE_BADGE : badge);
   const isFull = variant === "full";
   const resolvedBgImage = bgImage || "/images/colorado-apartment-peaceful-esa.jpg";
 
@@ -65,9 +72,10 @@ export function Hero({
             {/* Left Column: Copy & CTAs */}
             <div className="lg:col-span-7 text-left">
               {badge && (
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
-                  <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-                  <span>{badge}</span>
+                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap max-w-full mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
+                  <ShieldCheck className="w-4 h-4 shrink-0 text-[#347C78]" />
+                  <span className="sm:hidden truncate">{shortBadge}</span>
+                  <span className="hidden sm:inline">{badge}</span>
                 </div>
               )}
 
@@ -146,20 +154,23 @@ export function Hero({
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#19354A]/80 to-transparent pointer-events-none" />
 
                 {/* Bottom caption overlay */}
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-white text-xs">
-                  <span className="font-medium drop-shadow-md flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#347C78]" />
-                    Denver, CO &bull; Protected under FHA
+                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2 text-white text-xs">
+                  <span className="font-medium drop-shadow-md flex items-center gap-1.5 min-w-0">
+                    <Sparkles className="w-3.5 h-3.5 text-[#347C78] shrink-0" />
+                    <span className="truncate">Denver, CO &bull; Protected under FHA</span>
                   </span>
-                  <span className="bg-[#347C78]/90 text-white font-bold px-2 py-0.5 rounded text-[11px] shadow-xs">
+                  {/* Hidden from sm up, where the floating bottom badge covers this corner */}
+                  <span className="sm:hidden shrink-0 bg-[#347C78]/90 text-white font-bold px-2 py-0.5 rounded text-[11px] shadow-xs">
                     Fair Housing Act
                   </span>
                 </div>
               </div>
 
+              {/* Trust badges: a row below the photo on mobile, floating over its corners from sm up */}
+              <div className="mt-3 grid grid-cols-2 gap-2 sm:contents">
               {/* Floating Top Trust Pill */}
-              <div className="absolute -top-3 -left-3 sm:-left-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-lg flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-[#E8F0ED] text-[#347C78] flex items-center justify-center font-bold">
+              <div className="sm:absolute sm:-top-3 sm:-left-4 bg-white/95 backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-sm sm:shadow-lg flex items-center gap-2 min-w-0">
+                <div className="w-7 h-7 shrink-0 rounded-full bg-[#E8F0ED] text-[#347C78] flex items-center justify-center font-bold">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
                 <div className="text-left">
@@ -173,8 +184,8 @@ export function Hero({
               </div>
 
               {/* Floating Bottom Right Badge */}
-              <div className="absolute -bottom-3 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-lg flex items-center gap-2">
-                <div className="w-7 h-7 rounded-full bg-[#E8F0ED] text-[#A65331] flex items-center justify-center">
+              <div className="sm:absolute sm:-bottom-3 sm:-right-4 bg-white/95 backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-sm sm:shadow-lg flex items-center gap-2 min-w-0">
+                <div className="w-7 h-7 shrink-0 rounded-full bg-[#E8F0ED] text-[#A65331] flex items-center justify-center">
                   <ShieldCheck className="w-4 h-4 text-[#347C78]" />
                 </div>
                 <div className="text-left">
@@ -186,15 +197,17 @@ export function Hero({
                   </p>
                 </div>
               </div>
+              </div>
             </div>
           </div>
         ) : (
           /* Compact Subpage Variant */
           <div className="max-w-3xl mx-auto">
             {badge && (
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-sm font-semibold mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
-                <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-                <span>{badge}</span>
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap max-w-full mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
+                <ShieldCheck className="w-4 h-4 shrink-0 text-[#347C78]" />
+                <span className="sm:hidden truncate">{shortBadge}</span>
+                <span className="hidden sm:inline">{badge}</span>
               </div>
             )}
 

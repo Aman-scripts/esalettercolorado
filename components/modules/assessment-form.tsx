@@ -102,8 +102,9 @@ export function AssessmentForm() {
         {/* Header Strip */}
         <div className="border-b border-[#D5DFDB] pb-6 mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-[#347C78] uppercase tracking-wider bg-[#E8F0ED] px-2.5 py-1 rounded-full mb-2">
-              <ShieldCheck className="w-3.5 h-3.5" /> Confidential Colorado Telehealth Intake
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold text-[#347C78] uppercase tracking-wide sm:tracking-wider whitespace-nowrap bg-[#E8F0ED] px-2.5 py-1 rounded-full mb-2">
+              <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
+              <span>Confidential <span className="hidden sm:inline">Colorado </span>Telehealth Intake</span>
             </div>
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#19354A]">
               Colorado ESA Pre-Screening Assessment
@@ -119,19 +120,19 @@ export function AssessmentForm() {
         </div>
 
         {/* Multi-step indicator */}
-        <div className="flex items-center justify-between mb-8 text-xs font-bold">
-          <div className={`flex items-center gap-2 ${step >= 1 ? "text-[#347C78]" : "text-[#52616A]"}`}>
-            <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${step >= 1 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>1</span>
+        <div className="flex items-start sm:items-center justify-between mb-8 text-[11px] sm:text-xs font-bold">
+          <div className={`flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center whitespace-nowrap ${step >= 1 ? "text-[#347C78]" : "text-[#52616A]"}`}>
+            <span className={`w-6 h-6 shrink-0 rounded-full flex items-center justify-center text-xs ${step >= 1 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>1</span>
             <span>Eligibility</span>
           </div>
-          <div className="h-0.5 flex-1 bg-[#D5DFDB] mx-2" />
-          <div className={`flex items-center gap-2 ${step >= 2 ? "text-[#347C78]" : "text-[#52616A]"}`}>
-            <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${step >= 2 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>2</span>
+          <div className="h-0.5 flex-1 bg-[#D5DFDB] mx-2 mt-3 sm:mt-0 min-w-4" />
+          <div className={`flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center whitespace-nowrap ${step >= 2 ? "text-[#347C78]" : "text-[#52616A]"}`}>
+            <span className={`w-6 h-6 shrink-0 rounded-full flex items-center justify-center text-xs ${step >= 2 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>2</span>
             <span>Animal Info</span>
           </div>
-          <div className="h-0.5 flex-1 bg-[#D5DFDB] mx-2" />
-          <div className={`flex items-center gap-2 ${step >= 3 ? "text-[#347C78]" : "text-[#52616A]"}`}>
-            <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs ${step >= 3 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>3</span>
+          <div className="h-0.5 flex-1 bg-[#D5DFDB] mx-2 mt-3 sm:mt-0 min-w-4" />
+          <div className={`flex flex-col sm:flex-row items-center gap-1 sm:gap-2 text-center whitespace-nowrap ${step >= 3 ? "text-[#347C78]" : "text-[#52616A]"}`}>
+            <span className={`w-6 h-6 shrink-0 rounded-full flex items-center justify-center text-xs ${step >= 3 ? "bg-[#347C78] text-white" : "bg-[#D5DFDB]"}`}>3</span>
             <span>Contact</span>
           </div>
         </div>
