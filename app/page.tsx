@@ -639,7 +639,7 @@ export default function HomePage() {
               href="/how-it-works/"
               className="w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 sm:px-8 py-3.5 sm:py-4 rounded-[9px] text-sm sm:text-base font-bold text-white bg-white/10 hover:bg-white/20 border-2 border-white/60 hover:border-white transition-all shadow-sm text-center"
             >
-              <span className="text-white font-bold">Learn More</span>
+              <span className="text-white font-bold">How It Works</span>
             </Link>
           </div>
         </div>
