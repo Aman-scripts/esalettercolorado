@@ -2,23 +2,11 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import Link from "next/link";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Privacy Policy | ESA Letter Colorado",
-  description:
-    "How ESA Letter Colorado collects, uses, and protects your personal information, including data you submit during your ESA assessment.",
-  alternates: {
-    canonical: `${siteConfig.url}/privacy-policy/`,
-  },
-  openGraph: {
-    title: "Privacy Policy | ESA Letter Colorado",
-    description:
-      "How ESA Letter Colorado collects, uses, and protects your personal information, including data you submit during your ESA assessment.",
-    url: `${siteConfig.url}/privacy-policy/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/privacy-policy/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function PrivacyPolicyPage() {
   return (
@@ -30,7 +18,7 @@ export default function PrivacyPolicyPage() {
           {/* M1 Hero compact */}
           <div className="mb-10">
             <span className="trust-chip mb-3">Legal &amp; Data Protection</span>
-            <h1 className="h1 mb-3">Privacy Policy</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">
               Effective Date: <strong>October 1, 2026</strong> | Last Updated: <strong>October 18, 2026</strong>
             </p>

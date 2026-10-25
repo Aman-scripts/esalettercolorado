@@ -11,17 +11,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { rightsSpokes } from "@/data/rights-data";
-import { siteConfig } from "@/data/site-config";
 import { Scale, Building, ShieldCheck, CheckCircle2, AlertTriangle, ArrowRight } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Colorado ESA Laws & Housing Rights: Complete Guide [50 chars]",
-  description:
-    "Understand ESA housing rights in Colorado: Fair Housing Act protections, state law, what landlords can and cannot do, and what to do if denied. [143 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/rights/`,
-  },
-};
+const seo = getPageSeo("/rights/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function RightsHubPage() {
   const childGridItems: SiloChildItem[] = rightsSpokes.map((spoke) => ({
@@ -51,16 +46,16 @@ export default function RightsHubPage() {
     <>
       <JsonLd
         type="article"
-        title="Colorado ESA Laws & Housing Rights: Complete Guide"
-        description="Understand ESA housing rights in Colorado: Fair Housing Act protections, state law, what landlords can and cannot do, and what to do if denied."
-        url={`${siteConfig.url}/rights/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs items={[{ label: "Your Rights" }]} />
 
       <Hero
         variant="compact"
-        h1="Colorado ESA Laws &amp; Housing Rights: Complete Guide"
+        h1={seo.h1}
         subhead="A comprehensive legal overview of tenant protections under the federal Fair Housing Act, Colorado HB26-1045, and Colorado Civil Rights Division regulations."
         ctaText="Protect Your Rights ($149)"
         bgImage="/images/colorado-happy-tenant-esa.jpg"

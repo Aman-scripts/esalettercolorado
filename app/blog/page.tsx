@@ -6,17 +6,12 @@ import { Hero } from "@/components/modules/hero";
 import { InlineCta } from "@/components/modules/inline-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { blogCategories, blogPosts } from "@/data/blog-data";
-import { siteConfig } from "@/data/site-config";
 import { Calendar, Clock, ArrowRight, Tag, BookOpen } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Blog: Colorado Housing Rights, Guides & Updates [51 chars]",
-  description:
-    "Guides, news, and landlord-tenant tips for Colorado ESA owners. Learn about housing rights, qualifying conditions, and ESA care. [128 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/blog/`,
-  },
-};
+const seo = getPageSeo("/blog/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function BlogHubPage() {
   const featuredPost = blogPosts[0];
@@ -28,7 +23,7 @@ export default function BlogHubPage() {
 
       <Hero
         variant="compact"
-        h1="Colorado ESA Blog: Housing Rights, Guides &amp; Updates"
+        h1={seo.h1}
         subhead="Plain-language legal guides, mental health qualification advice, landlord-tenant communication tips, and state regulatory updates for Colorado renters."
         ctaText="Get Evaluated in Colorado ($149)"
       />

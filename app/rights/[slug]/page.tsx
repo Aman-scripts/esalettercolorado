@@ -10,7 +10,7 @@ import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { rightsSpokes, RightsPage } from "@/data/rights-data";
-import { siteConfig } from "@/data/site-config";
+import { getPageSeo, pageMetadata } from "@/lib/seo";
 
 interface SpokeProps {
   params: Promise<{ slug: string }>;
@@ -27,13 +27,7 @@ export async function generateMetadata({ params }: SpokeProps): Promise<Metadata
   const spoke = rightsSpokes.find((s) => s.slug === slug);
   if (!spoke) return {};
 
-  return {
-    title: spoke.metaTitle,
-    description: spoke.metaDescription,
-    alternates: {
-      canonical: `${siteConfig.url}/rights/${spoke.slug}/`,
-    },
-  };
+  return pageMetadata(`/rights/${spoke.slug}/`);
 }
 
 export default async function RightsSpokePage({ params }: SpokeProps) {
@@ -43,6 +37,8 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
   if (!spoke) {
     notFound();
   }
+
+  const seo = getPageSeo(`/rights/${spoke.slug}/`);
 
   // Related pages: must link up to hub (/rights/) plus matching sibling spokes
   const relatedLinks = [
@@ -59,9 +55,9 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
     <>
       <JsonLd
         type="article"
-        title={spoke.h1}
-        description={spoke.metaDescription}
-        url={`${siteConfig.url}/rights/${spoke.slug}/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -73,7 +69,7 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
 
       <Hero
         variant="compact"
-        h1={spoke.h1}
+        h1={seo.h1}
         subhead={spoke.shortDesc}
         ctaText="Get Your Colorado ESA Letter ($149)"
       />

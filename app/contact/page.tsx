@@ -4,23 +4,11 @@ import { FaqAccordion } from "@/components/modules/faq-accordion";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
 import { Mail, Phone, MapPin, Clock, ShieldAlert, Send } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact ESA Letter Colorado | Support & Questions",
-  description:
-    "Questions about your ESA letter? Contact the ESA Letter Colorado support team by form or email. We reply to most messages within one business day.",
-  alternates: {
-    canonical: `${siteConfig.url}/contact/`,
-  },
-  openGraph: {
-    title: "Contact ESA Letter Colorado | Support & Questions",
-    description:
-      "Questions about your ESA letter? Contact the ESA Letter Colorado support team by form or email. We reply to most messages within one business day.",
-    url: `${siteConfig.url}/contact/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/contact/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 const contactFaqs = [
   {
@@ -72,7 +60,7 @@ export default function ContactPage() {
         <section className="section-padding pt-6 pb-12">
           <div className="max-w-4xl mx-auto text-center">
             <span className="trust-chip mb-3">Support &amp; Inquiries</span>
-            <h1 className="h1 mb-4">Contact ESA Letter Colorado</h1>
+            <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
               Have questions about Colorado housing laws, the assessment process, or landlord communication? We are here to help.
             </p>

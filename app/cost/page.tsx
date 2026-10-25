@@ -10,17 +10,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { CheckCircle2, ShieldCheck, AlertCircle, HeartHandshake } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letter Cost in Colorado: Pricing & Inclusions [49 chars]",
-  description:
-    "See what an ESA letter costs in Colorado, what is included, the refund policy, and why free or very cheap letters often get rejected by landlords. [146 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/cost/`,
-  },
-};
+const seo = getPageSeo("/cost/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function CostPage() {
   const faqs = [
@@ -53,7 +48,7 @@ export default function CostPage() {
 
       <Hero
         variant="compact"
-        h1="ESA Letter Cost in Colorado: Transparent Pricing & Inclusions"
+        h1={seo.h1}
         subhead="Clear, flat-rate pricing. $149 for first-time evaluations, $99 for annual lease renewals. No subscriptions, no hidden fees, and a 100% money-back guarantee."
         ctaText="Start Evaluation ($149)"
       />

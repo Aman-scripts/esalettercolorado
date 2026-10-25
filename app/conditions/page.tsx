@@ -11,17 +11,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { conditionsList } from "@/data/conditions-data";
-import { siteConfig } from "@/data/site-config";
 import { Heart, Stethoscope, ShieldCheck, CheckCircle2, Sparkles, Brain } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Who Qualifies for an ESA in Colorado? Conditions List [53 chars]",
-  description:
-    "See which mental and emotional health conditions can support an ESA letter in Colorado, how a licensed therapist evaluates you, and what to expect. [147 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/conditions/`,
-  },
-};
+const seo = getPageSeo("/conditions/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function ConditionsHubPage() {
   const childGridItems: SiloChildItem[] = conditionsList.map((cond) => ({
@@ -51,16 +46,16 @@ export default function ConditionsHubPage() {
     <>
       <JsonLd
         type="article"
-        title="Who Qualifies for an Emotional Support Animal in Colorado?"
-        description="See which mental and emotional health conditions can support an ESA letter in Colorado, how a licensed therapist evaluates you, and what to expect."
-        url={`${siteConfig.url}/conditions/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs items={[{ label: "Qualifying Conditions" }]} />
 
       <Hero
         variant="compact"
-        h1="Who Qualifies for an Emotional Support Animal in Colorado?"
+        h1={seo.h1}
         subhead="Explore mental and emotional health conditions recognized under Colorado fair housing laws, how our clinicians evaluate clinical need, and how companion animals provide daily support."
         ctaText="Check Your Eligibility ($149)"
         bgImage="/images/colorado-apartment-peaceful-esa.jpg"

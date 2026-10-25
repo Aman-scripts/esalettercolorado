@@ -11,23 +11,11 @@ import { AssessmentForm } from "@/components/modules/assessment-form";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
 import { Clock, ShieldCheck, FileCheck, CheckCircle2, Sparkles, Video, Lock } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "How It Works: Get Your ESA Letter in Colorado",
-  description:
-    "See how to get your Colorado ESA letter: complete a short assessment, get reviewed by a licensed therapist, and receive your letter.",
-  alternates: {
-    canonical: `${siteConfig.url}/how-it-works/`,
-  },
-  openGraph: {
-    title: "How It Works: Get Your ESA Letter in Colorado",
-    description:
-      "See how to get your Colorado ESA letter: complete a short assessment, get reviewed by a licensed therapist, and receive your letter.",
-    url: `${siteConfig.url}/how-it-works/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/how-it-works/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 const processFaqs = [
   {
@@ -101,7 +89,7 @@ export default function HowItWorksPage() {
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <span className="trust-chip mb-3">Transparent 3-Step Process</span>
-            <h1 className="h1 mb-4">How It Works: Get Your ESA Letter in Colorado</h1>
+            <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
               Follow our compliant, HIPAA-secure clinical workflow to connect with a licensed Colorado mental health provider and secure your housing rights.
             </p>

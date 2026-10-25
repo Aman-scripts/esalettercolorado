@@ -10,17 +10,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { CheckCircle2, Clock, FileCheck, ArrowRight, AlertTriangle } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "How to Get an ESA Letter in Colorado: Step-by-Step [50 chars]",
-  description:
-    "Learn how to get a valid ESA letter in Colorado: check eligibility, complete an evaluation with a licensed therapist, and receive your letter. [142 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/how-to-get-an-esa-letter-in-colorado/`,
-  },
-};
+const seo = getPageSeo("/how-to-get-an-esa-letter-in-colorado/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function HowToGetAnEsaLetterPage() {
   const faqs = [
@@ -49,9 +44,9 @@ export default function HowToGetAnEsaLetterPage() {
     <>
       <JsonLd
         type="howto"
-        title="How to Get an ESA Letter in Colorado: Step-by-Step"
-        description="Learn how to get a valid ESA letter in Colorado: check eligibility, complete an evaluation with a licensed therapist, and receive your letter."
-        url={`${siteConfig.url}/how-to-get-an-esa-letter-in-colorado/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -60,7 +55,7 @@ export default function HowToGetAnEsaLetterPage() {
 
       <Hero
         variant="compact"
-        h1="How to Get an ESA Letter in Colorado: Step-by-Step Guide"
+        h1={seo.h1}
         subhead="Follow Colorado's legal process to complete a clinical evaluation with a state-licensed therapist and secure compliant housing documentation."
         ctaText="Start Your 5-Minute Intake ($149)"
       />

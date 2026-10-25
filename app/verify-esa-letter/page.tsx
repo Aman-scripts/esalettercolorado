@@ -6,23 +6,11 @@ import { RelatedPages } from "@/components/modules/related-pages";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
 import { ShieldCheck, Lock, FileText, CheckCircle2 } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Verify an ESA Letter: Landlord Verification Tool",
-  description:
-    "Landlords can confirm the authenticity of an ESA letter issued through ESA Letter Colorado. Enter the letter ID to verify its details.",
-  alternates: {
-    canonical: `${siteConfig.url}/verify-esa-letter/`,
-  },
-  openGraph: {
-    title: "Verify an ESA Letter: Landlord Verification Tool",
-    description:
-      "Landlords can confirm the authenticity of an ESA letter issued through ESA Letter Colorado. Enter the letter ID to verify its details.",
-    url: `${siteConfig.url}/verify-esa-letter/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/verify-esa-letter/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 const landlordFaqs = [
   {
@@ -64,7 +52,7 @@ export default function VerifyEsaLetterPage() {
         <section className="section-padding pt-6 pb-10">
           <div className="max-w-4xl mx-auto text-center">
             <span className="trust-chip mb-3">Housing Provider Portal</span>
-            <h1 className="h1 mb-4">Verify an ESA Letter: Landlord Verification Tool</h1>
+            <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
               Housing providers and property managers can verify the authenticity of an official ESA accommodation letter issued through ESA Letter Colorado.
             </p>

@@ -10,17 +10,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { FileCheck, ShieldCheck, CheckCircle2 } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letter Sample for Colorado Renters (Annotated) [50 chars]",
-  description:
-    "View an annotated sample ESA letter for Colorado housing. See each element a landlord looks for and how a valid letter is structured. [133 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/sample-letter/`,
-  },
-};
+const seo = getPageSeo("/sample-letter/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function SampleLetterPage() {
   const faqs = [
@@ -49,9 +44,9 @@ export default function SampleLetterPage() {
     <>
       <JsonLd
         type="article"
-        title="ESA Letter Sample for Colorado Renters (Annotated)"
-        description="View an annotated sample ESA letter for Colorado housing. See each element a landlord looks for and how a valid letter is structured."
-        url={`${siteConfig.url}/sample-letter/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -60,7 +55,7 @@ export default function SampleLetterPage() {
 
       <Hero
         variant="compact"
-        h1="ESA Letter Sample for Colorado Renters (Annotated Preview)"
+        h1={seo.h1}
         subhead="Inspect an authentic, compliant Colorado emotional support animal letter. Learn how every legal element is structured to ensure 100% landlord acceptance."
         ctaText="Get Your Official Letter ($149)"
       />

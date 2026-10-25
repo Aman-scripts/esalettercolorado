@@ -1,23 +1,10 @@
 import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { siteConfig } from "@/data/site-config";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Medical & Legal Disclaimer | ESA Letter Colorado",
-  description:
-    "Important disclaimer: ESA Letter Colorado content is informational and is not medical or legal advice. Read the full notice here.",
-  alternates: {
-    canonical: `${siteConfig.url}/disclaimer/`,
-  },
-  openGraph: {
-    title: "Medical & Legal Disclaimer | ESA Letter Colorado",
-    description:
-      "Important disclaimer: ESA Letter Colorado content is informational and is not medical or legal advice. Read the full notice here.",
-    url: `${siteConfig.url}/disclaimer/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/disclaimer/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function DisclaimerPage() {
   return (
@@ -28,7 +15,7 @@ export default function DisclaimerPage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">Notice</span>
-            <h1 className="h1 mb-3">Medical &amp; Legal Disclaimer</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">Last Updated: <strong>October 18, 2026</strong></p>
           </div>
 

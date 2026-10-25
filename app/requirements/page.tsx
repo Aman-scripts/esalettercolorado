@@ -9,17 +9,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { CheckCircle2, ShieldCheck, AlertCircle, FileCheck } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Colorado ESA Letter Requirements: Valid Letter Checklist [56 chars]",
-  description:
-    "See what a valid Colorado ESA letter must include, who can write it, how long it lasts, and the red flags that landlords use to spot invalid letters. [149 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/requirements/`,
-  },
-};
+const seo = getPageSeo("/requirements/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function RequirementsPage() {
   const checklist = [
@@ -59,9 +54,9 @@ export default function RequirementsPage() {
     <>
       <JsonLd
         type="article"
-        title="Colorado ESA Letter Requirements: Valid Letter Checklist"
-        description="See what a valid Colorado ESA letter must include, who can write it, how long it lasts, and the red flags that landlords use to spot invalid letters."
-        url={`${siteConfig.url}/requirements/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -70,7 +65,7 @@ export default function RequirementsPage() {
 
       <Hero
         variant="compact"
-        h1="Colorado ESA Letter Requirements: Valid Letter Checklist"
+        h1={seo.h1}
         subhead="Ensure your emotional support animal documentation meets all state and federal standards under Colorado HB26-1045, C.R.S. 24-34-502, and HUD guidance."
         ctaText="Get a Compliant Letter ($149)"
       />

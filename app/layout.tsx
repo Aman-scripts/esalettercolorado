@@ -73,9 +73,6 @@ export const metadata: Metadata = {
       "100% compliant Colorado ESA letters issued by state-licensed mental health professionals. No pet rent or pet deposits.",
     images: ["/esa-letter-colorado-logo-image.png"],
   },
-  alternates: {
-    canonical: siteConfig.url,
-  },
 };
 
 import { Suspense } from "react";

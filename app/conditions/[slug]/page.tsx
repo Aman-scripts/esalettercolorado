@@ -10,7 +10,7 @@ import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { conditionsList, ConditionPage } from "@/data/conditions-data";
-import { siteConfig } from "@/data/site-config";
+import { getPageSeo, pageMetadata } from "@/lib/seo";
 import { Heart, Stethoscope, CheckCircle2, ShieldCheck, AlertCircle } from "lucide-react";
 
 interface ConditionSpokeProps {
@@ -28,13 +28,7 @@ export async function generateMetadata({ params }: ConditionSpokeProps): Promise
   const cond = conditionsList.find((c) => c.slug === slug);
   if (!cond) return {};
 
-  return {
-    title: cond.metaTitle,
-    description: cond.metaDescription,
-    alternates: {
-      canonical: `${siteConfig.url}/conditions/${cond.slug}/`,
-    },
-  };
+  return pageMetadata(`/conditions/${cond.slug}/`);
 }
 
 export default async function ConditionSpokePage({ params }: ConditionSpokeProps) {
@@ -44,6 +38,8 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
   if (!cond) {
     notFound();
   }
+
+  const seo = getPageSeo(`/conditions/${cond.slug}/`);
 
   // Cross-silo mandatory internal linking rules:
   // Must link up to /conditions/, across to /requirements/ and /how-it-works/
@@ -61,9 +57,9 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
     <>
       <JsonLd
         type="article"
-        title={cond.h1}
-        description={cond.metaDescription}
-        url={`${siteConfig.url}/conditions/${cond.slug}/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -75,7 +71,7 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
 
       <Hero
         variant="compact"
-        h1={cond.h1}
+        h1={seo.h1}
         subhead={cond.shortDesc}
         ctaText="Check Your Eligibility ($149)"
       />

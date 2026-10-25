@@ -7,6 +7,7 @@ import { InlineCta } from "@/components/modules/inline-cta";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
+import { buildMetadata, findPageSeo } from "@/lib/seo";
 import { Calendar, Clock, ArrowRight, BookOpen, ShieldCheck, CheckCircle2 } from "lucide-react";
 
 interface BlogPostPageProps {
@@ -24,6 +25,22 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) return {};
 
+  const seo = findPageSeo(`/blog/${post.slug}/`);
+  if (seo) {
+    const metadata = buildMetadata(seo);
+    return {
+      ...metadata,
+      openGraph: {
+        ...metadata.openGraph,
+        type: "article",
+        publishedTime: post.publishDate,
+        modifiedTime: post.updatedDate,
+        authors: [post.authorName],
+      },
+    };
+  }
+
+  // Posts not listed in the SEO sheet keep their own metadata
   return {
     title: post.metaTitle.replace(/\s*\[\d+\s*chars\]/i, ""),
     description: post.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
@@ -48,6 +65,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
+  const seo = findPageSeo(`/blog/${post.slug}/`);
+  const h1 = seo?.h1 ?? post.title;
+
   // Related posts: strictly same category only (Spec rule)
   const relatedPosts = blogPosts
     .filter((p) => p.categorySlug === post.categorySlug && p.slug !== post.slug)
@@ -57,8 +77,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      headline: post.title,
-      description: post.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
+      headline: h1,
+      description: seo?.description ?? post.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
       datePublished: post.publishDate,
       dateModified: post.updatedDate,
       mainEntityOfPage: {
@@ -109,7 +129,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </span>
               </div>
 
-              <h1 className="h1 mb-6">{post.title}</h1>
+              <h1 className="h1 mb-6">{h1}</h1>
 
               {/* Author & Reviewer meta pill */}
               <div className="flex flex-wrap items-center justify-between gap-4 p-4 rounded-xl bg-white border border-[#D5DFDB] shadow-2xs">

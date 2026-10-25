@@ -9,17 +9,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { Calendar, RefreshCw, CheckCircle2, ShieldCheck, Clock } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letter Renewal in Colorado: When & How to Renew [51 chars]",
-  description:
-    "Find out when your Colorado ESA letter needs renewal, how re-evaluation works, what it costs, and how to avoid a gap in housing documentation. [142 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/renewal/`,
-  },
-};
+const seo = getPageSeo("/renewal/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function RenewalPage() {
   const faqs = [
@@ -48,9 +43,9 @@ export default function RenewalPage() {
     <>
       <JsonLd
         type="article"
-        title="ESA Letter Renewal in Colorado: When & How to Renew"
-        description="Find out when your Colorado ESA letter needs renewal, how re-evaluation works, what it costs, and how to avoid a gap in housing documentation."
-        url={`${siteConfig.url}/renewal/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -59,7 +54,7 @@ export default function RenewalPage() {
 
       <Hero
         variant="compact"
-        h1="ESA Letter Renewal in Colorado: When &amp; How to Renew"
+        h1={seo.h1}
         subhead="Avoid gaps in housing documentation. Maintain uninterrupted protections against pet rent, deposits, and animal restrictions across Colorado."
         ctaText="Renew Your Colorado Letter ($99)"
         ctaHref="/how-it-works/#get-started"

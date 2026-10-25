@@ -11,17 +11,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { coloradoCities } from "@/data/locations-data";
-import { siteConfig } from "@/data/site-config";
 import { MapPin, Building2, ShieldCheck, CheckCircle2, Mountain, Compass } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letters in Colorado: City-by-City Guide [43 chars]",
-  description:
-    "ESA housing rules apply statewide in Colorado. Browse city guides for Denver, Colorado Springs, Aurora, Boulder, Fort Collins and more. [135 chars]",
-  alternates: {
-    canonical: `${siteConfig.url}/locations/`,
-  },
-};
+const seo = getPageSeo("/locations/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function LocationsHubPage() {
   const childGridItems: SiloChildItem[] = coloradoCities.map((city) => ({
@@ -51,16 +46,16 @@ export default function LocationsHubPage() {
     <>
       <JsonLd
         type="service"
-        title="ESA Letters in Colorado: City-by-City Guide"
-        description="ESA housing rules apply statewide in Colorado. Browse city guides for Denver, Colorado Springs, Aurora, Boulder, Fort Collins and more."
-        url={`${siteConfig.url}/locations/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs items={[{ label: "Colorado Locations" }]} />
 
       <Hero
         variant="compact"
-        h1="ESA Letters in Colorado: City-by-City Housing Guide"
+        h1={seo.h1}
         subhead="Assistance animal protections apply statewide across every rental market. Browse local housing guides, rental statistics, and tenant resources for all 12 major Colorado cities."
         ctaText="Find Your City Guide ($149)"
         bgImage="/images/colorado-apartment-peaceful-esa.jpg"

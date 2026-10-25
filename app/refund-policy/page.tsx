@@ -3,23 +3,11 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import Link from "next/link";
 import { ShieldCheck, CheckCircle2 } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Refund & Satisfaction Policy | ESA Letter Colorado",
-  description:
-    "Read our refund and satisfaction policy, including when you are eligible for a refund if you do not qualify for an ESA letter.",
-  alternates: {
-    canonical: `${siteConfig.url}/refund-policy/`,
-  },
-  openGraph: {
-    title: "Refund & Satisfaction Policy | ESA Letter Colorado",
-    description:
-      "Read our refund and satisfaction policy, including when you are eligible for a refund if you do not qualify for an ESA letter.",
-    url: `${siteConfig.url}/refund-policy/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/refund-policy/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function RefundPolicyPage() {
   return (
@@ -30,7 +18,7 @@ export default function RefundPolicyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">Guarantee &amp; Satisfaction</span>
-            <h1 className="h1 mb-3">Refund &amp; Satisfaction Policy</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">Last Updated: <strong>October 18, 2026</strong></p>
           </div>
 

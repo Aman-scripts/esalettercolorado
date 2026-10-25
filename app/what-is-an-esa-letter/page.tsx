@@ -10,17 +10,12 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { siteConfig } from "@/data/site-config";
 import { CheckCircle2, AlertTriangle, ShieldCheck, FileText, ArrowRight, Sparkles } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "What Is an ESA Letter? A Colorado Renter's Guide",
-  description:
-    "An ESA letter is documentation from a licensed professional supporting an emotional support animal. Learn how it works under the FHA in Colorado.",
-  alternates: {
-    canonical: `${siteConfig.url}/what-is-an-esa-letter/`,
-  },
-};
+const seo = getPageSeo("/what-is-an-esa-letter/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function WhatIsAnEsaLetterPage() {
   const faqs = [
@@ -53,9 +48,9 @@ export default function WhatIsAnEsaLetterPage() {
     <>
       <JsonLd
         type="article"
-        title="What Is an ESA Letter? A Colorado Renter's Guide"
-        description="An ESA letter is documentation from a licensed professional supporting an emotional support animal. Learn how it works under the FHA in Colorado."
-        url={`${siteConfig.url}/what-is-an-esa-letter/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
       />
 
       <Breadcrumbs
@@ -64,7 +59,7 @@ export default function WhatIsAnEsaLetterPage() {
 
       <Hero
         variant="compact"
-        h1="What Is an ESA Letter? A Colorado Renter's Complete Guide"
+        h1={seo.h1}
         subhead="Learn the legal definition, statutory basis under the Fair Housing Act and Colorado HB26-1045, who can write a valid letter, and how to use it with your landlord."
         ctaText="Get Evaluated in Colorado ($149)"
         bgImage="/images/colorado-esa-hero.jpg"

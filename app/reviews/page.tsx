@@ -5,23 +5,11 @@ import { InlineCta } from "@/components/modules/inline-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
 import { Star, CheckCircle, ShieldCheck, MessageSquare } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letter Colorado Reviews & Customer Stories",
-  description:
-    "Read feedback from Colorado renters who completed their ESA evaluation, plus how we collect and display reviews.",
-  alternates: {
-    canonical: `${siteConfig.url}/reviews/`,
-  },
-  openGraph: {
-    title: "ESA Letter Colorado Reviews & Customer Stories",
-    description:
-      "Read feedback from Colorado renters who completed their ESA evaluation, plus how we collect and display reviews.",
-    url: `${siteConfig.url}/reviews/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/reviews/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 const customerReviews = [
   {
@@ -126,7 +114,7 @@ export default function ReviewsPage() {
         <section className="section-padding pt-6 pb-12">
           <div className="max-w-4xl mx-auto text-center">
             <span className="trust-chip mb-3">Verified Colorado Renters</span>
-            <h1 className="h1 mb-4">ESA Letter Colorado Reviews &amp; Stories</h1>
+            <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
               Real feedback from Colorado residents who successfully navigated apartment accommodations, HOA approvals, and pet deposit exemptions with our licensed therapists.
             </p>

@@ -2,23 +2,11 @@ import { Metadata } from "next";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { siteConfig } from "@/data/site-config";
 import Link from "next/link";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Terms & Conditions | ESA Letter Colorado",
-  description:
-    "The terms that govern your use of ESA Letter Colorado, including services, payments, eligibility, and your responsibilities.",
-  alternates: {
-    canonical: `${siteConfig.url}/terms/`,
-  },
-  openGraph: {
-    title: "Terms & Conditions | ESA Letter Colorado",
-    description:
-      "The terms that govern your use of ESA Letter Colorado, including services, payments, eligibility, and your responsibilities.",
-    url: `${siteConfig.url}/terms/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/terms/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function TermsPage() {
   return (
@@ -29,7 +17,7 @@ export default function TermsPage() {
         <div className="max-w-4xl mx-auto">
           <div className="mb-10">
             <span className="trust-chip mb-3">Service Terms</span>
-            <h1 className="h1 mb-3">Terms &amp; Conditions</h1>
+            <h1 className="h1 mb-3">{seo.h1}</h1>
             <p className="body-small text-muted">
               Effective Date: <strong>October 1, 2026</strong> | Last Updated: <strong>October 18, 2026</strong>
             </p>

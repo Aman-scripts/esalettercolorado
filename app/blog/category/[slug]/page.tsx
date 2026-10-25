@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { InlineCta } from "@/components/modules/inline-cta";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
+import { getPageSeo, pageMetadata } from "@/lib/seo";
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -22,20 +23,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const category = blogCategories.find((c) => c.slug === slug);
   if (!category) return {};
 
-  return {
-    title: category.metaTitle.replace(/\s*\[\d+\s*chars\]/i, ""),
-    description: category.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
-    alternates: {
-      canonical: `${siteConfig.url}/blog/category/${category.slug}/`,
-    },
-    openGraph: {
-      title: category.metaTitle.replace(/\s*\[\d+\s*chars\]/i, ""),
-      description: category.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
-      url: `${siteConfig.url}/blog/category/${category.slug}/`,
-      siteName: siteConfig.name,
-      type: "website",
-    },
-  };
+  return pageMetadata(`/blog/category/${category.slug}/`);
 }
 
 export default async function BlogCategoryPage({ params }: CategoryPageProps) {
@@ -43,15 +31,16 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
   const category = blogCategories.find((c) => c.slug === slug);
   if (!category) notFound();
 
+  const seo = getPageSeo(`/blog/category/${category.slug}/`);
   const posts = blogPosts.filter((p) => p.categorySlug === category.slug);
 
   const jsonLdData = [
     {
       "@context": "https://schema.org",
       "@type": "CollectionPage",
-      name: category.h1,
-      description: category.metaDescription.replace(/\s*\[\d+\s*chars\]/i, ""),
-      url: `${siteConfig.url}/blog/category/${category.slug}/`,
+      name: seo.h1,
+      description: seo.description,
+      url: seo.canonical,
       isPartOf: {
         "@type": "WebSite",
         name: siteConfig.name,
@@ -89,7 +78,7 @@ export default async function BlogCategoryPage({ params }: CategoryPageProps) {
             {/* Header section */}
             <div className="max-w-3xl mb-12">
               <span className="trust-chip mb-3">Blog Category</span>
-              <h1 className="h1 mb-4">{category.h1}</h1>
+              <h1 className="h1 mb-4">{seo.h1}</h1>
               <p className="body-large text-muted">{category.intro}</p>
             </div>
 

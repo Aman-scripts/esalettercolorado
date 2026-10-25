@@ -7,23 +7,11 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { therapists } from "@/data/therapists-data";
 import { siteConfig } from "@/data/site-config";
 import { ShieldCheck, ExternalLink, Award, FileBadge, CheckCircle2 } from "lucide-react";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Meet Our Licensed Therapists: Credentials & Verification",
-  description:
-    "Meet the licensed Colorado mental health professionals who review ESA requests, and learn how their credentials and licenses can be verified.",
-  alternates: {
-    canonical: `${siteConfig.url}/about-our-therapists/`,
-  },
-  openGraph: {
-    title: "Meet Our Licensed Therapists: Credentials & Verification",
-    description:
-      "Meet the licensed Colorado mental health professionals who review ESA requests, and learn how their credentials and licenses can be verified.",
-    url: `${siteConfig.url}/about-our-therapists/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/about-our-therapists/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function AboutOurTherapistsPage() {
   const jsonLdData = [
@@ -69,7 +57,7 @@ export default function AboutOurTherapistsPage() {
                   <ShieldCheck className="w-3.5 h-3.5" />
                   DORA-Licensed Healthcare Professionals
                 </span>
-                <h1 className="h1 mb-4">Meet Our Licensed Colorado Therapists</h1>
+                <h1 className="h1 mb-4">{seo.h1}</h1>
                 <p className="body-large text-[#52616A] leading-relaxed">
                   Every ESA evaluation on our platform is conducted by an actively licensed Colorado psychologist, clinical social worker (LCSW), or professional counselor (LPC) registered with the Colorado Division of Professions and Occupations (DORA).
                 </p>

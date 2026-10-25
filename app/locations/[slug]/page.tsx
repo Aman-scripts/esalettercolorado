@@ -11,7 +11,7 @@ import { RelatedPages } from "@/components/modules/related-pages";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { coloradoCities, CityInfo } from "@/data/locations-data";
-import { siteConfig } from "@/data/site-config";
+import { getPageSeo, pageMetadata } from "@/lib/seo";
 import { Building2, ShieldCheck, MapPin, CheckCircle2 } from "lucide-react";
 
 interface CitySpokeProps {
@@ -29,13 +29,7 @@ export async function generateMetadata({ params }: CitySpokeProps): Promise<Meta
   const city = coloradoCities.find((c) => c.slug === slug);
   if (!city) return {};
 
-  return {
-    title: city.metaTitle,
-    description: city.metaDescription,
-    alternates: {
-      canonical: `${siteConfig.url}/locations/${city.slug}/`,
-    },
-  };
+  return pageMetadata(`/locations/${city.slug}/`);
 }
 
 export default async function CitySpokePage({ params }: CitySpokeProps) {
@@ -45,6 +39,8 @@ export default async function CitySpokePage({ params }: CitySpokeProps) {
   if (!city) {
     notFound();
   }
+
+  const seo = getPageSeo(`/locations/${city.slug}/`);
 
   // Cross-silo mandatory internal linking:
   // Must link up to /locations/, across to /rights/ pages
@@ -60,9 +56,9 @@ export default async function CitySpokePage({ params }: CitySpokeProps) {
     <>
       <JsonLd
         type="service"
-        title={city.h1}
-        description={city.metaDescription}
-        url={`${siteConfig.url}/locations/${city.slug}/`}
+        title={seo.h1}
+        description={seo.description}
+        url={seo.canonical}
         cityServed={city.name}
       />
 
@@ -75,7 +71,7 @@ export default async function CitySpokePage({ params }: CitySpokeProps) {
 
       <Hero
         variant="compact"
-        h1={city.h1}
+        h1={seo.h1}
         subhead={`Renting in ${city.name}? Learn how Colorado assistance animal laws protect you from pet rent, pet deposits, and breed bans.`}
         ctaText={`Get Evaluated in ${city.name} ($149)`}
       />

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -39,6 +40,7 @@ import { coloradoCities } from "@/data/locations-data";
 import { conditionsList } from "@/data/conditions-data";
 import { rightsSpokes } from "@/data/rights-data";
 import { allFaqs } from "@/data/faq-data";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
 const conditionIconMap: Record<string, LucideIcon> = {
   anxiety: Brain,
@@ -48,6 +50,10 @@ const conditionIconMap: Record<string, LucideIcon> = {
   "panic-disorder": Zap,
   "social-anxiety": Users,
 };
+
+const seo = getPageSeo("/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 export default function HomePage() {
   const homeFaqs = allFaqs.slice(0, 8);
@@ -59,7 +65,7 @@ export default function HomePage() {
       {/* 1. M1 Hero (full) */}
       <Hero
         variant="full"
-        h1="ESA Letter Colorado: Legitimate Housing Protections by State-Licensed Therapists"
+        h1={seo.h1}
         subhead="Secure a verifiable emotional support animal letter compliant with Colorado HB26-1045, C.R.S. 24-34-502, and the federal Fair Housing Act. Live with your companion animal free of pet rent, pet deposits, or breed restrictions."
         ctaText="Get Your Colorado ESA Letter ($149)"
         ctaHref="/how-it-works/#get-started"

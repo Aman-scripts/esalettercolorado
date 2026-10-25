@@ -5,25 +5,12 @@ import { InlineCta } from "@/components/modules/inline-cta";
 import { RelatedPages } from "@/components/modules/related-pages";
 import { JsonLd } from "@/components/seo/json-ld";
 import { allFaqs } from "@/data/faq-data";
-import { siteConfig } from "@/data/site-config";
 import Link from "next/link";
+import { buildMetadata, getPageSeo } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "ESA Letter Colorado FAQ: Rights, Cost & Process",
-  description:
-    "Answers to common questions about ESA letters in Colorado: who qualifies, cost, validity, landlord rights, and how the evaluation works.",
-  alternates: {
-    canonical: `${siteConfig.url}/faq/`,
-  },
-  openGraph: {
-    title: "ESA Letter Colorado FAQ: Rights, Cost & Process",
-    description:
-      "Answers to common questions about ESA letters in Colorado: who qualifies, cost, validity, landlord rights, and how the evaluation works.",
-    url: `${siteConfig.url}/faq/`,
-    siteName: siteConfig.name,
-    type: "website",
-  },
-};
+const seo = getPageSeo("/faq/");
+
+export const metadata: Metadata = buildMetadata(seo);
 
 const categories = ["Basics", "Qualifying", "Cost & Refunds", "Housing Rights", "Renewal"] as const;
 
@@ -52,7 +39,7 @@ export default function FaqPage() {
         {/* Hero Section */}
         <section className="section-padding pt-6 pb-12">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="h1 mb-4">ESA Letter Colorado FAQ: Rights, Cost &amp; Process</h1>
+            <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
               Clear answers to the most common questions regarding emotional support animal evaluations, Colorado tenant housing protections, and state laws.
             </p>
