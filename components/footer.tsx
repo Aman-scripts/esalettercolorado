@@ -16,8 +16,10 @@ export function Footer() {
                 <Image
                   src="/esa-letter-colorado-logo-image.webp"
                   alt="ESA Letter Colorado"
-                  width={115}
-                  height={48}
+                  width={230}
+                  height={96}
+                  quality={95}
+                  sizes="120px"
                   className="h-10 w-auto object-contain"
                 />
               </div>
@@ -38,9 +40,9 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold tracking-wider uppercase text-white/90">
+            <p className="text-sm font-semibold tracking-wider uppercase text-white/90">
               Colorado Office &amp; Telehealth
-            </h4>
+            </p>
             <div className="space-y-2 text-sm text-[#E8F0ED]">
               <p className="flex items-start gap-2 text-[#E8F0ED]">
                 <MapPin className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
@@ -62,15 +64,15 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <h4 className="text-sm font-semibold tracking-wider uppercase text-white/90">
+            <p className="text-sm font-semibold tracking-wider uppercase text-white/90">
               Provider Verification
-            </h4>
+            </p>
             <p className="text-sm text-[#E8F0ED] leading-relaxed">
               Every evaluator holds an active Colorado DORA license. Landlords can verify authentic letters 24/7.
             </p>
             <Link
               href="/verify-esa-letter/"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#F7F5F0] bg-[#347C78] hover:bg-[#347C78]/80 px-3.5 py-2 rounded-md transition-colors"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#F7F5F0] bg-[#2A6763] hover:bg-[#235653] px-3.5 py-2 rounded-md transition-colors"
             >
               <FileCheck className="w-4 h-4" /> Landlord Verification Tool
             </Link>
@@ -81,9 +83,9 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 py-12 border-b border-[#347C78]/30">
           {/* Column 1: Core Pages */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Core Guides
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
               <li>
                 <Link href="/what-is-an-esa-letter/" className="hover:text-white transition-colors">
@@ -120,9 +122,9 @@ export function Footer() {
 
           {/* Column 2: Your Rights */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Your Rights
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
               <li>
                 <Link href="/rights/fair-housing-act/" className="hover:text-white transition-colors">
@@ -164,9 +166,9 @@ export function Footer() {
 
           {/* Column 3: Qualifying Conditions */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Qualifying Conditions
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
               <li>
                 <Link href="/conditions/anxiety/" className="hover:text-white transition-colors">
@@ -208,9 +210,9 @@ export function Footer() {
 
           {/* Column 4: Company & Support */}
           <div>
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Company &amp; Support
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
               <li>
                 <Link href="/about-our-therapists/" className="hover:text-white transition-colors">

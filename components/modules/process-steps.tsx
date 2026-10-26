@@ -54,7 +54,7 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
               >
                 <div>
                   <div className="flex items-center justify-between mb-6">
-                    <span className="font-serif text-3xl font-bold text-[#347C78]/60 group-hover:text-[#347C78] transition-colors">
+                    <span className="font-serif text-3xl font-bold text-[#2A6763] group-hover:text-[#19354A] transition-colors">
                       {step.num}
                     </span>
                     <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#19354A] flex items-center justify-center group-hover:bg-[#19354A] group-hover:text-white transition-colors duration-200">
@@ -71,7 +71,7 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
                   </p>
                 </div>
 
-                <div className="mt-6 pt-4 border-t border-[#D5DFDB]/60 flex items-center text-xs font-semibold text-[#347C78]">
+                <div className="mt-6 pt-4 border-t border-[#D5DFDB]/60 flex items-center text-xs font-semibold text-[#2A6763]">
                   <span>Step {step.num} of 3</span>
                 </div>
               </div>

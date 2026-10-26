@@ -7,8 +7,8 @@ import { siteConfig } from "@/data/site-config";
 export function AssessmentForm() {
   return (
     <div className="max-w-3xl mx-auto my-12">
-      <div className="card-theme bg-white border-2 border-[#347C78] shadow-lg p-6 sm:p-10 text-center">
-        <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold text-[#347C78] uppercase tracking-wide sm:tracking-wider whitespace-nowrap bg-[#E8F0ED] px-2.5 py-1 rounded-full mb-3">
+      <div className="card-theme bg-white border-2 border-[#2A6763] shadow-lg p-6 sm:p-10 text-center">
+        <div className="inline-flex items-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-bold text-[#2A6763] uppercase tracking-wide sm:tracking-wider whitespace-nowrap bg-[#E8F0ED] px-2.5 py-1 rounded-full mb-3">
           <ShieldCheck className="w-3.5 h-3.5 shrink-0" />
           <span>Confidential <span className="hidden sm:inline">Colorado </span>Telehealth Intake</span>
         </div>
@@ -28,7 +28,7 @@ export function AssessmentForm() {
         </Link>
 
         <p className="mt-4 flex items-center justify-center gap-1.5 text-xs font-semibold text-[#52616A]">
-          <Lock className="w-3.5 h-3.5 text-[#347C78]" />
+          <Lock className="w-3.5 h-3.5 text-[#2A6763]" />
           256-Bit SSL Encrypted
         </p>
       </div>

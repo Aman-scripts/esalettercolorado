@@ -35,7 +35,7 @@ export function LatestBlog({
           </div>
           <Link
             href="/blog/"
-            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#347C78] hover:text-[#19354A] transition-colors shrink-0"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#2A6763] hover:text-[#19354A] transition-colors shrink-0"
           >
             <span>View All Articles</span>
             <ArrowRight className="w-4 h-4" />
@@ -46,7 +46,7 @@ export function LatestBlog({
           {displayPosts.map((post) => (
             <article
               key={post.slug}
-              className="card-theme flex flex-col justify-between group hover:border-[#347C78] hover:shadow-md transition-all duration-200"
+              className="card-theme flex flex-col justify-between group hover:border-[#2A6763] hover:shadow-md transition-all duration-200"
             >
               <div>
                 <div className="flex items-center gap-2 mb-3">
@@ -54,11 +54,11 @@ export function LatestBlog({
                     {post.categoryName}
                   </span>
                   <span className="text-sm text-[#52616A] flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#347C78]" /> {post.readTime}
+                    <Clock className="w-3.5 h-3.5 text-[#2A6763]" /> {post.readTime}
                   </span>
                 </div>
 
-                <h3 className="text-base sm:text-lg font-bold text-[#19354A] group-hover:text-[#347C78] transition-colors leading-snug line-clamp-2">
+                <h3 className="text-base sm:text-lg font-bold text-[#19354A] group-hover:text-[#2A6763] transition-colors leading-snug line-clamp-2">
                   <Link href={`/blog/${post.slug}/`}>
                     {post.title}
                   </Link>
@@ -71,12 +71,12 @@ export function LatestBlog({
 
               <div className="mt-6 pt-3 border-t border-[#D5DFDB]/60 flex items-center justify-between text-sm text-[#52616A]">
                 <span className="flex items-center gap-1">
-                  <Calendar className="w-4 h-4 text-[#347C78]" />
+                  <Calendar className="w-4 h-4 text-[#2A6763]" />
                   {post.publishDate}
                 </span>
                 <Link
                   href={`/blog/${post.slug}/`}
-                  className="font-bold text-[#347C78] hover:text-[#19354A] flex items-center gap-1"
+                  className="font-bold text-[#2A6763] hover:text-[#19354A] flex items-center gap-1"
                 >
                   Read →
                 </Link>

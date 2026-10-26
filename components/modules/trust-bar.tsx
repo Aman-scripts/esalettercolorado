@@ -43,9 +43,9 @@ export function TrustBar() {
                   <Icon className="w-5 h-5" />
                 </div>
                 <div className="min-w-0">
-                  <h4 className="text-xs sm:text-sm font-bold text-[#19354A] leading-tight group-hover:text-[#347C78] transition-colors">
+                  <p className="text-xs sm:text-sm font-bold text-[#19354A] leading-tight group-hover:text-[#2A6763] transition-colors">
                     {item.title}
-                  </h4>
+                  </p>
                   <p className="text-[11px] sm:text-xs text-[#52616A] mt-0.5 leading-snug">
                     {item.desc}
                   </p>

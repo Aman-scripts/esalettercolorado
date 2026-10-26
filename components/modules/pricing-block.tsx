@@ -74,9 +74,9 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
               </div>
 
               <div className="py-6 space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
                   Everything Included:
-                </h4>
+                </p>
                 <ul className="text-base space-y-2.5 text-[#24333B]">
                   {inclusions.slice(0, 6).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
@@ -123,9 +123,9 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
               </div>
 
               <div className="py-6 space-y-3">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
                   Renewal Features:
-                </h4>
+                </p>
                 <ul className="text-base space-y-2.5 text-[#24333B]">
                   <li className="flex items-start gap-2.5">
                     <div className="w-4 h-4 rounded-full bg-[#E8F0ED] text-[#27654F] flex items-center justify-center shrink-0 mt-0.5">
