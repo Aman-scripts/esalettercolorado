@@ -31,7 +31,7 @@ export function Footer() {
             </p>
             <div className="mt-4 flex flex-wrap gap-4 text-base text-[#E8F0ED]">
               <span className="flex items-center gap-1.5">
-                <ShieldCheck className="w-4 h-4 text-[#347C78]" /> 100% Legal Housing Compliance
+                <ShieldCheck className="w-4 h-4 text-[#347C78]" /> Evaluations Guided by Applicable Housing Laws
               </span>
               <span className="flex items-center gap-1.5">
                 <Heart className="w-4 h-4 text-[#A65331]" /> Money-Back Guarantee
