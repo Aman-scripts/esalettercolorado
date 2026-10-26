@@ -49,7 +49,7 @@ export default function VerifyEsaLetterPage() {
         <Breadcrumbs items={[{ label: "Verify an ESA Letter" }]} />
 
         {/* Hero Section */}
-        <section className="section-padding pt-6 pb-10">
+        <section className="px-4 pt-6 lg:pt-10 pb-4">
           <div className="max-w-4xl mx-auto text-center">
             <span className="trust-chip mb-3">Housing Provider Portal</span>
             <h1 className="h1 mb-4">{seo.h1}</h1>
@@ -60,7 +60,7 @@ export default function VerifyEsaLetterPage() {
         </section>
 
         {/* Verification Form Section */}
-        <main className="section-padding py-6">
+        <main className="px-4 pb-10 lg:pb-14">
           <div className="max-w-4xl mx-auto">
             <VerificationTool />
           </div>
