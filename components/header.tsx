@@ -284,7 +284,7 @@ export function Header() {
           <div className="hidden lg:flex items-center gap-4 shrink-0">
             <Link
               href={siteConfig.surveyUrl}
-              className="btn-primary text-sm font-bold px-5 py-2.5 min-h-[44px] whitespace-nowrap shadow-xs hover:shadow-md"
+              className="btn-primary font-bold px-5 py-2.5 min-h-[44px] whitespace-nowrap shadow-xs hover:shadow-md"
             >
               Get Your ESA Letter
             </Link>

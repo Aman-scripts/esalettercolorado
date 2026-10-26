@@ -524,6 +524,17 @@
   outline-offset: 2px;
 }
 
+/* All CTA button text is 16px site-wide, overriding text-sm/text-xs utilities on the button or its children.
+   .btn-cta marks button-styled links that don't use .btn-primary/.btn-secondary. */
+.btn-primary,
+.btn-secondary,
+.btn-cta,
+.btn-primary *,
+.btn-secondary *,
+.btn-cta * {
+  font-size: 16px !important;
+}
+
 /* Secondary Button on Dark Backgrounds */
 .btn-secondary.text-white,
 .btn-secondary-white,

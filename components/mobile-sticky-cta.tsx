@@ -38,7 +38,7 @@ export function MobileStickyCta() {
         {/* Not using .btn-primary: its unlayered CSS overrides the compact Tailwind sizing */}
         <Link
           href="/how-it-works/#get-started"
-          className="inline-flex items-center justify-center rounded-[9px] bg-[#99DDE4] hover:bg-[#7FD1DA] text-[#19354A] text-sm font-bold px-4 min-h-[44px] shrink-0 gap-1.5 shadow-sm whitespace-nowrap transition-colors focus-visible:outline-3 focus-visible:outline-[#347C78] focus-visible:outline-offset-2"
+          className="btn-cta inline-flex items-center justify-center rounded-[9px] bg-[#99DDE4] hover:bg-[#7FD1DA] text-[#19354A] font-bold px-4 min-h-[44px] shrink-0 gap-1.5 shadow-sm whitespace-nowrap transition-colors focus-visible:outline-3 focus-visible:outline-[#347C78] focus-visible:outline-offset-2"
         >
           <span>Get Your Letter</span>
           <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 shrink-0" />

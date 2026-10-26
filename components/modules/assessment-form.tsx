@@ -21,7 +21,7 @@ export function AssessmentForm() {
 
         <Link
           href={siteConfig.surveyUrl}
-          className="btn-primary mt-8 inline-flex w-full sm:w-auto text-sm sm:text-base px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 justify-center whitespace-nowrap"
+          className="btn-primary mt-8 inline-flex w-full sm:w-auto text-base px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 justify-center whitespace-nowrap"
         >
           Start the Assessment
           <ArrowRight className="w-4 h-4 shrink-0" />

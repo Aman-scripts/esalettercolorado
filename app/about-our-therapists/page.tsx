@@ -146,7 +146,7 @@ export default function AboutOurTherapistsPage() {
                       href={therapist.verificationUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn-secondary text-xs flex items-center justify-center gap-1.5 w-full md:w-auto"
+                      className="btn-secondary flex items-center justify-center gap-1.5 w-full md:w-auto"
                     >
                       <span>Verify on DORA</span>
                       <ExternalLink className="w-3.5 h-3.5" />

@@ -89,15 +89,15 @@ export function Hero({
                 {subhead}
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+              <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-center gap-3 w-full sm:w-auto">
                 <Link
                   href={ctaHref}
-                  className="btn-primary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
+                  className="btn-primary w-full sm:w-auto text-base px-6 sm:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
                 >
                   <span className="leading-snug">{ctaText}</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
-                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
+                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-base px-6 sm:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
                   How the Evaluation Works
                 </Link>
               </div>
@@ -191,15 +191,15 @@ export function Hero({
               {subhead}
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
+            <div className="mt-8 flex flex-col sm:flex-row sm:flex-wrap items-center gap-3 w-full sm:w-auto">
               <Link
                 href={ctaHref}
-                className="btn-primary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
+                className="btn-primary w-full sm:w-auto text-base px-6 sm:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
               >
                 <span className="leading-snug">{ctaText}</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
               </Link>
-              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
+              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-base px-6 sm:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
                 How the Evaluation Works
               </Link>
             </div>

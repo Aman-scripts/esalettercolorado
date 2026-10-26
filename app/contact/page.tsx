@@ -224,7 +224,7 @@ export default function ContactPage() {
                 <p className="body-small text-muted mb-4">
                   Assessments are accessible 24/7 online. Complete your pre-screening questionnaire to begin immediately.
                 </p>
-                <a href="/how-it-works/#get-started" className="btn-secondary text-xs w-full text-center block">
+                <a href="/how-it-works/#get-started" className="btn-secondary w-full text-center block">
                   Go to Assessment Portal
                 </a>
               </div>

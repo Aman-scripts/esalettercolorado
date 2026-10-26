@@ -220,7 +220,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                       <p className="text-sm text-[#52616A] mb-4 leading-relaxed font-normal">
                         Connect with a licensed Colorado telehealth provider who verifies your eligibility under state guidelines.
                       </p>
-                      <Link href="/how-it-works/#get-started" className="btn-primary text-sm py-2 px-5 inline-flex items-center gap-1.5">
+                      <Link href="/how-it-works/#get-started" className="btn-primary py-2 px-5 inline-flex items-center gap-1.5">
                         <span>Start Your Assessment</span>
                         <span>→</span>
                       </Link>

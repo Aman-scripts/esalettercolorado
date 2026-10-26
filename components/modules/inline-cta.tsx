@@ -84,14 +84,14 @@ export function InlineCta({
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
           <Link
             href="/how-it-works/#get-started"
-            className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold text-center justify-center"
+            className="btn-primary w-full sm:w-auto text-base px-6 sm:px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold text-center justify-center"
           >
             <span className="leading-snug">{buttonText}</span>
             <ArrowRight className="w-4 h-4 shrink-0" />
           </Link>
           <Link
             href="/how-it-works/"
-            className={`w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 sm:px-8 py-3.5 rounded-[9px] text-sm sm:text-base font-bold transition-all text-center ${
+            className={`btn-cta w-full sm:w-auto inline-flex items-center justify-center min-h-[52px] px-6 sm:px-8 py-3.5 rounded-[9px] font-bold transition-all text-center ${
               isNavy
                 ? "bg-white/10 hover:bg-white/20 text-white border-2 border-white/60 hover:border-white shadow-sm"
                 : "bg-transparent text-[#19354A] border-2 border-[#19354A] hover:bg-[#E8F0ED]"
