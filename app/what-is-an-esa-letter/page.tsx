@@ -154,13 +154,13 @@ export default function WhatIsAnEsaLetterPage() {
               <div className="my-4 space-y-3">
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A]">1. The Federal Fair Housing Act (FHA)</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A] mt-1">
+                  <p className="text-base text-[#52616A] mt-1">
                     Enforced by HUD, the FHA prohibits discrimination against individuals with disabilities in all private and public housing. It mandates that housing providers grant &ldquo;reasonable accommodations&rdquo; by waiving pet prohibitions and fees.
                   </p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A]">2. Colorado HB26-1045 &amp; C.R.S. § 24-34-502</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A] mt-1">
+                  <p className="text-base text-[#52616A] mt-1">
                     Colorado state law explicitly defines assistance animals and requires that documentation be issued by healthcare providers who hold an active license in Colorado and have conducted a bona fide clinical assessment.
                   </p>
                 </div>
@@ -233,7 +233,7 @@ export default function WhatIsAnEsaLetterPage() {
               <p>
                 When you rent an apartment or house in Colorado, provide a copy of your official ESA letter alongside a written request for reasonable accommodation. Once submitted:
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#24333B]">
+              <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
                   <span>The landlord must waive all pet deposits and monthly pet rent.</span>

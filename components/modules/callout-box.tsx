@@ -79,7 +79,7 @@ export function CalloutBox({
               {title || config.defaultTitle}
             </h4>
           </div>
-          <div className="text-sm sm:text-base text-[#24333B] leading-relaxed">
+          <div className="text-base text-[#24333B] leading-relaxed">
             {children}
           </div>
           {cite && (

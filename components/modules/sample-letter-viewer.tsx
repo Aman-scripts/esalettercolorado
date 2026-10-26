@@ -171,7 +171,7 @@ export function SampleLetterViewer() {
           <h3 className="font-serif text-xl sm:text-2xl font-normal mt-1">
             What Colorado Landlords Look For
           </h3>
-          <p className="text-sm text-[#D5DFDB] mt-2">
+          <p className="text-base text-[#D5DFDB] mt-2">
             Click any numbered pin to inspect the five mandatory legal components required for full housing compliance.
           </p>
         </div>
@@ -201,7 +201,7 @@ export function SampleLetterViewer() {
                     <h4 className="text-sm font-bold text-[#19354A]">
                       {pin.title}
                     </h4>
-                    <p className="text-sm text-[#52616A] mt-1 leading-relaxed">
+                    <p className="text-base text-[#52616A] mt-1 leading-relaxed">
                       {pin.desc}
                     </p>
                   </div>

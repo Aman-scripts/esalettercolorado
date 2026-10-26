@@ -104,7 +104,7 @@ export default async function CitySpokePage({ params }: CitySpokeProps) {
                 How {city.name} Property Managers Handle ESA Requests
               </h2>
               <p>{city.propertyManagerPractices}</p>
-              <div className="my-4 p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] space-y-2 text-sm text-[#24333B]">
+              <div className="text-base my-4 p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] space-y-2 text-[#24333B]">
                 <div className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#27654F] shrink-0 mt-0.5" />
                   <span>Landlords cannot ask for your medical diagnosis or therapy session notes.</span>

@@ -66,7 +66,7 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
                     {step.title}
                   </h3>
 
-                  <p className="text-sm text-[#52616A] leading-relaxed">
+                  <p className="text-base text-[#52616A] leading-relaxed">
                     {expanded ? step.longDesc : step.shortDesc}
                   </p>
                 </div>

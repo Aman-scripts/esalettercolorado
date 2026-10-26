@@ -144,12 +144,12 @@ export default function ConditionsHubPage() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
-                  <h3 className="font-bold text-sm text-[#19354A] mb-1">Functional Impairment</h3>
-                  <p className="text-xs text-[#52616A]">A diagnosed mental or emotional health condition that substantially limits life functions such as sleep, social interaction, mood stability, or concentration.</p>
+                  <h3 className="text-lg font-bold text-[#19354A] mb-1">Functional Impairment</h3>
+                  <p className="text-base text-[#52616A]">A diagnosed mental or emotional health condition that substantially limits life functions such as sleep, social interaction, mood stability, or concentration.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
-                  <h3 className="font-bold text-sm text-[#19354A] mb-1">Therapeutic Nexus</h3>
-                  <p className="text-xs text-[#52616A]">A direct clinical connection showing that the animal&apos;s companion presence mitigates functional symptoms and allows equal enjoyment of the dwelling.</p>
+                  <h3 className="text-lg font-bold text-[#19354A] mb-1">Therapeutic Nexus</h3>
+                  <p className="text-base text-[#52616A]">A direct clinical connection showing that the animal&apos;s companion presence mitigates functional symptoms and allows equal enjoyment of the dwelling.</p>
                 </div>
               </div>
             </section>

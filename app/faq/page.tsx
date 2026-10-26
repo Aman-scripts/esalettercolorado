@@ -123,7 +123,7 @@ export default function FaqPage() {
         <section className="p-12 bg-navy text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-serif mb-4 text-white">Get Verified for Colorado Housing</h2>
-            <p className="text-line text-sm max-w-xl mx-auto mb-8">
+            <p className="text-base text-line max-w-xl mx-auto mb-8">
               Start your free confidential screening today. Guaranteed Colorado DORA therapist review.
             </p>
             <Link href="/how-it-works/#get-started" className="btn-primary">

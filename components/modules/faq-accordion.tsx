@@ -96,7 +96,7 @@ export function FAQAccordion({
                   </div>
                 </button>
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-sm sm:text-base text-[#52616A] leading-relaxed border-t border-gray-100 animate-in fade-in duration-200">
+                  <div className="text-base px-6 pb-6 pt-1 text-[#52616A] leading-relaxed border-t border-gray-100 animate-in fade-in duration-200">
                     <p>{aText}</p>
                   </div>
                 )}

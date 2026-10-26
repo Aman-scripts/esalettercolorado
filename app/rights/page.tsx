@@ -161,20 +161,20 @@ export default function RightsHubPage() {
               </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div className="p-4 rounded-xl bg-[#F0F7F4] border border-[#27654F]/30">
-                  <h3 className="font-bold text-sm text-[#27654F] mb-2 flex items-center gap-1.5">
+                  <h3 className="text-lg font-bold text-[#27654F] mb-2 flex items-center gap-1.5">
                     <CheckCircle2 className="w-4 h-4" /> What Landlords CAN Do:
                   </h3>
-                  <ul className="space-y-1.5 text-xs text-[#24333B]">
+                  <ul className="text-base space-y-1.5 text-[#24333B]">
                     <li>• Request a clinical letter from an active Colorado-licensed provider.</li>
                     <li>• Contact the provider to authenticate that the letter is genuine.</li>
                     <li>• Charge for actual physical property damage caused by the animal upon move-out.</li>
                   </ul>
                 </div>
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
-                  <h3 className="font-bold text-sm text-[#A33E35] mb-2 flex items-center gap-1.5">
+                  <h3 className="text-lg font-bold text-[#A33E35] mb-2 flex items-center gap-1.5">
                     <AlertTriangle className="w-4 h-4" /> What Landlords CANNOT Do:
                   </h3>
-                  <ul className="space-y-1.5 text-xs text-[#24333B]">
+                  <ul className="text-base space-y-1.5 text-[#24333B]">
                     <li>• Cannot charge pet deposits, pet fees, or monthly pet rent.</li>
                     <li>• Cannot demand medical records, diagnostic charts, or therapy notes.</li>
                     <li>• Cannot enforce dog breed bans or weight caps on an individual ESA.</li>
@@ -191,7 +191,7 @@ export default function RightsHubPage() {
               <p>
                 Colorado renters who experience unlawful accommodation denials, retaliatory eviction threats, or unauthorized pet fees have two enforcement bodies available to investigate claims free of charge:
               </p>
-              <ul className="mt-2 space-y-1.5 text-sm text-[#24333B]">
+              <ul className="text-base mt-2 space-y-1.5 text-[#24333B]">
                 <li>• <strong>Colorado Civil Rights Division (CCRD):</strong> Enforces C.R.S. § 24-34-502 across all Colorado municipalities.</li>
                 <li>• <strong>U.S. Department of Housing &amp; Urban Development (HUD):</strong> Enforces federal Fair Housing Act compliance.</li>
               </ul>

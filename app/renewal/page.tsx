@@ -79,17 +79,17 @@ export default function RenewalPage() {
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] text-center">
                   <Calendar className="w-6 h-6 text-[#347C78] mx-auto mb-2" />
                   <strong className="text-sm text-[#19354A] block">Annual Lease Renewal</strong>
-                  <p className="text-xs text-[#52616A] mt-1">30–60 days before your current lease term expires.</p>
+                  <p className="text-base text-[#52616A] mt-1">30–60 days before your current lease term expires.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] text-center">
                   <RefreshCw className="w-6 h-6 text-[#347C78] mx-auto mb-2" />
                   <strong className="text-sm text-[#19354A] block">Moving to a New Rental</strong>
-                  <p className="text-xs text-[#52616A] mt-1">When signing a new lease with a different Colorado landlord.</p>
+                  <p className="text-base text-[#52616A] mt-1">When signing a new lease with a different Colorado landlord.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] text-center">
                   <Clock className="w-6 h-6 text-[#347C78] mx-auto mb-2" />
                   <strong className="text-sm text-[#19354A] block">Management Transition</strong>
-                  <p className="text-xs text-[#52616A] mt-1">When a new property management company audits animal files.</p>
+                  <p className="text-base text-[#52616A] mt-1">When a new property management company audits animal files.</p>
                 </div>
               </div>
             </section>
@@ -102,7 +102,7 @@ export default function RenewalPage() {
               <p>
                 Renewing an existing letter is faster than your initial assessment. Because your clinical baseline has already been established:
               </p>
-              <ol className="mt-3 space-y-3 list-decimal list-inside text-sm text-[#24333B]">
+              <ol className="text-base mt-3 space-y-3 list-decimal list-inside text-[#24333B]">
                 <li><strong>Submit an Annual Check-In:</strong> Complete an abbreviated questionnaire detailing how your animal supported you over the past year.</li>
                 <li><strong>Telehealth Clinician Reassessment:</strong> An active Colorado-licensed therapist reviews your ongoing functional need.</li>
                 <li><strong>Receive Your Updated Letter:</strong> Get a newly dated letter with updated clinician credentials and a fresh 12-month validity window.</li>
@@ -123,7 +123,7 @@ export default function RenewalPage() {
               <p>
                 While first-time comprehensive clinical evaluations are $149, our annual renewal fee is discounted to a flat <strong>$99</strong>. This includes:
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#24333B]">
+              <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#27654F]" />
                   <span>Newly dated official letter valid for another 12 months.</span>

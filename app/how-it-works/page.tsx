@@ -151,7 +151,7 @@ export default function HowItWorksPage() {
                   You never have to travel across town, sit in sterile clinical waiting rooms, or stress your companion animal with an office visit. Under Colorado telehealth laws, our licensed clinicians conduct your evaluation via secure, private digital intake and remote consultation.
                 </p>
 
-                <div className="space-y-3 mt-6 text-sm text-[#24333B]">
+                <div className="text-base space-y-3 mt-6 text-[#24333B]">
                   <div className="flex items-start gap-2.5">
                     <CheckCircle2 className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
                     <span><strong>Bona Fide Patient-Provider Nexus:</strong> We establish a legitimate clinical relationship recognized under Colorado HB26-1045.</span>
@@ -286,7 +286,7 @@ export default function HowItWorksPage() {
         <section className="p-12 bg-navy text-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-serif mb-4 text-white">Ready to Protect Your Pet in Colorado Housing?</h2>
-            <p className="text-line text-sm max-w-xl mx-auto mb-8">
+            <p className="text-base text-line max-w-xl mx-auto mb-8">
               Join thousands of Colorado tenants living peacefully with their emotional support animals.
             </p>
             <Link href="#get-started" className="btn-primary">

@@ -68,7 +68,7 @@ export default function TermsPage() {
 
             <section className="border-t border-line pt-6">
               <h2 className="h4 mb-2 text-navy">Questions?</h2>
-              <p className="text-sm text-muted">
+              <p className="text-base text-muted">
                 Contact our legal department at <a href={`mailto:${siteConfig.email}`} className="text-amber font-semibold">{siteConfig.email}</a>.
               </p>
             </section>

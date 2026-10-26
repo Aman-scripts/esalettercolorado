@@ -76,7 +76,7 @@ export default function VerifyEsaLetterPage() {
                   <CheckCircle2 className="w-6 h-6" />
                   <h3 className="h4 text-navy">What Verification Confirms</h3>
                 </div>
-                <ul className="space-y-3 text-sm text-ink">
+                <ul className="text-base space-y-3 text-ink">
                   <li className="flex items-start gap-2">
                     <span className="text-teal font-bold">✓</span>
                     <span>The letter was authored by a state-licensed healthcare provider in Colorado.</span>
@@ -101,7 +101,7 @@ export default function VerifyEsaLetterPage() {
                   <Lock className="w-6 h-6" />
                   <h3 className="h4 text-navy">What Verification Does NOT Disclose</h3>
                 </div>
-                <ul className="space-y-3 text-sm text-ink">
+                <ul className="text-base space-y-3 text-ink">
                   <li className="flex items-start gap-2">
                     <span className="text-muted font-bold">✗</span>
                     <span>Protected health information (PHI) or private psychological diagnoses.</span>

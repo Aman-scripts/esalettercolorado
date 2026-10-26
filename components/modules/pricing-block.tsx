@@ -77,7 +77,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
                   Everything Included:
                 </h4>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-[#24333B]">
+                <ul className="text-base space-y-2.5 text-[#24333B]">
                   {inclusions.slice(0, 6).map((item, idx) => (
                     <li key={idx} className="flex items-start gap-2.5">
                       <div className="w-4 h-4 rounded-full bg-[#E8F0ED] text-[#27654F] flex items-center justify-center shrink-0 mt-0.5">
@@ -126,7 +126,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
                 <h4 className="text-xs font-bold uppercase tracking-wider text-[#19354A]">
                   Renewal Features:
                 </h4>
-                <ul className="space-y-2.5 text-xs sm:text-sm text-[#24333B]">
+                <ul className="text-base space-y-2.5 text-[#24333B]">
                   <li className="flex items-start gap-2.5">
                     <div className="w-4 h-4 rounded-full bg-[#E8F0ED] text-[#27654F] flex items-center justify-center shrink-0 mt-0.5">
                       <Check className="w-3 h-3" />
@@ -172,7 +172,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
         {/* Why Cheap $29 Letters Fail Note */}
         <div className="mt-12 max-w-3xl mx-auto rounded-xl p-5 bg-[#E8F0ED] border border-[#D5DFDB] flex items-start gap-3.5">
           <HeartHandshake className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
-          <div className="text-xs sm:text-sm text-[#24333B] leading-relaxed">
+          <div className="text-base text-[#24333B] leading-relaxed">
             <strong className="text-[#19354A] block mb-1">
               Why Free or Very Cheap $29 Letters Frequently Get Rejected:
             </strong>

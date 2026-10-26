@@ -149,7 +149,7 @@ export default function LocationsHubPage() {
               <p>
                 While the legal protections are statewide, local market conditions create unique hurdles for renters:
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#24333B]">
+              <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li>• <strong>High-Density Institutional Portals (Denver, Aurora):</strong> Corporate landlords frequently use automated verification portals like PetScreening.com.</li>
                 <li>• <strong>College Campuses &amp; Student Housing (Boulder, Fort Collins, Greeley):</strong> High volumes of student requests require early coordination with campus disability offices.</li>
                 <li>• <strong>Military &amp; Veteran Rentals (Colorado Springs):</strong> Off-base military rentals are fully subject to FHA rules despite military chain-of-command rules.</li>

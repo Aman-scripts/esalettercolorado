@@ -219,7 +219,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     <div className="my-8 p-6 sm:p-7 rounded-2xl bg-[#E8F0ED]/60 border border-[#D5DFDB] shadow-xs flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
                       <div>
                         <p className="font-bold text-base text-[#19354A] mb-1.5">Need a legally sound ESA letter in Colorado?</p>
-                        <p className="text-sm text-[#52616A] leading-relaxed font-normal">
+                        <p className="text-base text-[#52616A] leading-relaxed font-normal">
                           Connect with a licensed Colorado telehealth provider who verifies your eligibility under state guidelines.
                         </p>
                       </div>
@@ -298,7 +298,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <h2 className="text-2xl sm:text-3xl font-serif font-normal mb-3 text-white">
                 Get Your Colorado ESA Letter Today
               </h2>
-              <p className="text-line text-sm max-w-xl mx-auto mb-6">
+              <p className="text-base text-line max-w-xl mx-auto mb-6">
                 Quick, secure intake with 100% money-back guarantee if you are not approved by a licensed Colorado professional.
               </p>
               <Link href="/how-it-works/#get-started" className="btn-primary">

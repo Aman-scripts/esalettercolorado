@@ -24,7 +24,7 @@ export default function CookiePolicyPage() {
           <div className="card-theme p-6 sm:p-10 space-y-8 body-normal text-ink">
             <div className="p-5 rounded-xl bg-pale border border-line flex items-center gap-3">
               <Cookie className="w-6 h-6 text-teal shrink-0" />
-              <p className="text-xs text-muted leading-relaxed">
+              <p className="text-base text-muted leading-relaxed">
                 This Cookie Policy explains how ESA Letter Colorado uses cookies and similar tracking technologies to recognize you when you visit our website.
               </p>
             </div>
@@ -38,7 +38,7 @@ export default function CookiePolicyPage() {
 
             <section>
               <h2 className="h3 mb-3 text-navy">2. Types of Cookies We Use</h2>
-              <ul className="space-y-3 text-sm text-ink">
+              <ul className="text-base space-y-3 text-ink">
                 <li>
                   <strong>Essential / Strictly Necessary Cookies:</strong> These cookies are critical to provide you with services available through our site, such as authenticating your session and keeping the assessment form secure.
                 </li>
@@ -57,7 +57,7 @@ export default function CookiePolicyPage() {
 
             <section className="border-t border-line pt-6">
               <h2 className="h4 mb-2 text-navy">Contact Us</h2>
-              <p className="text-sm text-muted">
+              <p className="text-base text-muted">
                 If you have questions about our use of cookies, contact us at <a href={`mailto:${siteConfig.email}`} className="text-amber font-semibold">{siteConfig.email}</a>.
               </p>
             </section>

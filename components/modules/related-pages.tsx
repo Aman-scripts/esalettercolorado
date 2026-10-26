@@ -33,7 +33,7 @@ export function RelatedPages({
         </div>
         <div>
           <h4 className="text-base font-bold text-[#19354A] leading-tight">{title}</h4>
-          {subtitle && <p className="text-xs text-[#52616A]">{subtitle}</p>}
+          {subtitle && <p className="text-base text-[#52616A]">{subtitle}</p>}
         </div>
       </div>
 

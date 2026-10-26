@@ -28,7 +28,7 @@ export default function RefundPolicyPage() {
               <ShieldCheck className="w-8 h-8 text-teal shrink-0 mt-1" />
               <div>
                 <h2 className="text-xl font-serif font-bold text-navy mb-2">100% Clinical Evaluation Guarantee</h2>
-                <p className="text-sm text-ink leading-relaxed">
+                <p className="text-base text-ink leading-relaxed">
                   We believe no Colorado resident should pay for an ESA assessment if their evaluating mental health professional determines an emotional support animal is not clinically suitable.
                 </p>
               </div>
@@ -37,7 +37,7 @@ export default function RefundPolicyPage() {
             <section>
               <h2 className="h3 mb-3 text-navy">1. When You Are Eligible for a Full Refund</h2>
               <p className="leading-relaxed mb-3">You will receive a prompt 100% refund of your evaluation fee if:</p>
-              <ul className="space-y-2 text-sm text-ink">
+              <ul className="text-base space-y-2 text-ink">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
                   <span>The evaluating Colorado-licensed clinician determines that you do not qualify for an ESA letter based on clinical intake criteria.</span>
@@ -52,7 +52,7 @@ export default function RefundPolicyPage() {
             <section>
               <h2 className="h3 mb-3 text-navy">2. When Refunds Do Not Apply</h2>
               <p className="leading-relaxed mb-3">Refunds cannot be issued once:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm text-muted">
+              <ul className="text-base list-disc pl-5 space-y-1.5 text-muted">
                 <li>Your assigned licensed clinician has completed the clinical review and officially issued and signed your ESA letter.</li>
                 <li>You provided fraudulent, deceptive, or misrepresented medical or housing information during the evaluation.</li>
                 <li>A landlord rejection occurs due to behavioral damage or direct threats posed by the animal, or under statutory landlord exemptions (e.g. owner-occupied buildings with 4 or fewer units).</li>

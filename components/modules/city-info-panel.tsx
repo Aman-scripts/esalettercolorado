@@ -75,7 +75,7 @@ export function CityInfoPanel({ city }: CityInfoPanelProps) {
           <h4 className="text-sm font-bold text-[#19354A] mb-2 flex items-center gap-1.5">
             <ShieldCheck className="w-4 h-4 text-[#347C78]" /> Local Municipal Animal Rules
           </h4>
-          <p className="text-sm text-[#52616A] leading-relaxed">
+          <p className="text-base text-[#52616A] leading-relaxed">
             {city.localOrdinances}
           </p>
         </div>
@@ -84,7 +84,7 @@ export function CityInfoPanel({ city }: CityInfoPanelProps) {
           <h4 className="text-sm font-bold text-[#19354A] mb-2 flex items-center gap-1.5">
             <FileText className="w-4 h-4 text-[#347C78]" /> Local Housing Resources
           </h4>
-          <ul className="space-y-2 text-sm">
+          <ul className="text-base space-y-2">
             {city.localResources.map((res, idx) => (
               <li key={idx} className="flex items-start justify-between gap-2">
                 <div>

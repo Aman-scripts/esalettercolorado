@@ -124,7 +124,7 @@ export default function AboutOurTherapistsPage() {
                           <CheckCircle2 className="w-3.5 h-3.5 text-success" /> Active CO License
                         </span>
                       </div>
-                      <p className="text-sm font-semibold text-teal mb-3">{therapist.title}</p>
+                      <p className="text-base font-semibold text-teal mb-3">{therapist.title}</p>
                       <p className="body-normal text-muted mb-4 max-w-2xl">{therapist.bio}</p>
 
                       <div className="flex flex-wrap gap-4 text-xs text-muted">
@@ -169,7 +169,7 @@ export default function AboutOurTherapistsPage() {
               <p className="body-normal text-muted mb-4">
                 Before joining our clinical network, every mental health professional undergoes strict primary-source credential verification:
               </p>
-              <ul className="space-y-2 text-sm text-ink">
+              <ul className="text-base space-y-2 text-ink">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
                   <span>Direct license verification via the Colorado Department of Regulatory Agencies (DORA).</span>
@@ -197,7 +197,7 @@ export default function AboutOurTherapistsPage() {
               <p className="body-normal text-muted mb-4">
                 Our clinicians operate under the highest ethical standards of the American Psychological Association (APA) and National Association of Social Workers (NASW):
               </p>
-              <ul className="space-y-2 text-sm text-ink">
+              <ul className="text-base space-y-2 text-ink">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
                   <span>Thorough assessment of functional impairment in major life activities within the residence.</span>

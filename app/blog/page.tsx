@@ -128,7 +128,7 @@ export default function BlogHubPage() {
                     </Link>
                   </h3>
 
-                  <p className="text-sm text-[#52616A] mt-2.5 line-clamp-3 leading-relaxed">
+                  <p className="text-base text-[#52616A] mt-2.5 line-clamp-3 leading-relaxed">
                     {post.metaDescription}
                   </p>
                 </div>

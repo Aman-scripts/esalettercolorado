@@ -37,7 +37,7 @@ export default function PrivacyPolicyPage() {
               <p className="leading-relaxed mb-3">
                 We only collect information necessary to facilitate your clinical evaluation and housing accommodation letter:
               </p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm text-muted">
+              <ul className="text-base list-disc pl-5 space-y-1.5 text-muted">
                 <li><strong>Contact Information:</strong> Name, Colorado residential address, phone number, and email.</li>
                 <li><strong>Clinical Intake Data:</strong> Responses to our mental health pre-screening assessment, daily functioning challenges, and companion animal details.</li>
                 <li><strong>Transaction Records:</strong> Billing details handled through PCI-compliant payment gateways. We never store credit card numbers on our servers.</li>
@@ -55,7 +55,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="h3 mb-3 text-navy">4. How We Use Your Information</h2>
               <p className="leading-relaxed mb-3">Your information is used solely to:</p>
-              <ul className="list-disc pl-5 space-y-1.5 text-sm text-muted">
+              <ul className="text-base list-disc pl-5 space-y-1.5 text-muted">
                 <li>Enable licensed Colorado mental health professionals to conduct clinical reviews.</li>
                 <li>Issue compliant, verifiable housing accommodation letters under Colorado C.R.S. 24-34-502.</li>
                 <li>Provide document verification when authorized by landlords or housing providers.</li>
@@ -79,7 +79,7 @@ export default function PrivacyPolicyPage() {
 
             <section className="border-t border-line pt-6">
               <h2 className="h4 mb-2 text-navy">Contact Privacy Officer</h2>
-              <p className="text-sm text-muted">
+              <p className="text-base text-muted">
                 For questions regarding your privacy rights, email <a href={`mailto:${siteConfig.email}`} className="text-amber font-semibold">{siteConfig.email}</a> or write to our Denver office at {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}.
               </p>
             </section>

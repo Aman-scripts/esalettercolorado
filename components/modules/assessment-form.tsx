@@ -15,7 +15,7 @@ export function AssessmentForm() {
         <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#19354A]">
           Start Your Colorado ESA Assessment
         </h3>
-        <p className="text-sm sm:text-base text-[#52616A] mt-2 max-w-xl mx-auto">
+        <p className="text-base text-[#52616A] mt-2 max-w-xl mx-auto">
           Takes about 3 minutes. Your answers are confidential and reviewed by a Colorado-licensed provider.
         </p>
 

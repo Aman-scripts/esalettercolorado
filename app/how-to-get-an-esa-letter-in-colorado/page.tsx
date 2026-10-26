@@ -93,7 +93,7 @@ export default function HowToGetAnEsaLetterPage() {
               <p>
                 In Colorado, a valid ESA evaluation must establish a bona fide patient-provider clinical relationship. Through our secure HIPAA-compliant platform:
               </p>
-              <ol className="mt-4 space-y-4 list-decimal list-inside text-sm text-[#24333B]">
+              <ol className="text-base mt-4 space-y-4 list-decimal list-inside text-[#24333B]">
                 <li className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <strong>Complete the Assessment:</strong> Answer structured questions about your emotional challenges, medical history, and how your animal provides therapeutic comfort.
                 </li>
@@ -140,7 +140,7 @@ export default function HowToGetAnEsaLetterPage() {
               <h2 className="text-h2 text-[#19354A] mb-4">
                 What You Receive With Your Colorado ESA Letter
               </h2>
-              <ul className="space-y-2.5 text-sm text-[#24333B]">
+              <ul className="text-base space-y-2.5 text-[#24333B]">
                 <li className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
                   <span>Official clinical letter signed by an active Colorado-licensed therapist (Psy.D., LCSW, or LPC).</span>
@@ -165,7 +165,7 @@ export default function HowToGetAnEsaLetterPage() {
               <h2 className="text-h2 text-[#19354A] mb-4">
                 Common Mistakes to Avoid
               </h2>
-              <div className="p-5 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30 space-y-3 text-xs sm:text-sm text-[#24333B]">
+              <div className="text-base p-5 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30 space-y-3 text-[#24333B]">
                 <div className="flex items-start gap-2">
                   <AlertTriangle className="w-4 h-4 text-[#A33E35] shrink-0 mt-0.5" />
                   <span><strong>Do not buy online registry certificates:</strong> Certificates and ID cards have zero legal standing under the Fair Housing Act and will be rejected.</span>

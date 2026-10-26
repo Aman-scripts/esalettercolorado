@@ -167,7 +167,7 @@ export default function ContactPage() {
             <div className="md:col-span-5 space-y-6">
               <div className="card-theme">
                 <h3 className="h4 mb-4">Direct Contact Information</h3>
-                <ul className="space-y-4 text-sm">
+                <ul className="text-base space-y-4">
                   <li className="flex items-start gap-3">
                     <div className="w-9 h-9 rounded-lg bg-softBlue text-teal flex items-center justify-center shrink-0">
                       <Mail className="w-4 h-4" />

@@ -88,7 +88,7 @@ export default function SampleLetterPage() {
                   <h3 className="font-bold text-base text-[#19354A] mb-1">
                     1. Professional Practice Letterhead
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">
+                  <p className="text-base text-[#52616A]">
                     Contains the clinician&apos;s legal practice name, physical Colorado office location, professional email, and phone number so housing managers can verify authenticity.
                   </p>
                 </div>
@@ -96,7 +96,7 @@ export default function SampleLetterPage() {
                   <h3 className="font-bold text-base text-[#19354A] mb-1">
                     2. State Regulatory Board &amp; License Number
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">
+                  <p className="text-base text-[#52616A]">
                     Explicitly states the clinician&apos;s license type (Psy.D., LCSW, LPC), issuing state (Colorado), and active license number, enabling 24/7 verification via DORA.
                   </p>
                 </div>
@@ -104,7 +104,7 @@ export default function SampleLetterPage() {
                   <h3 className="font-bold text-base text-[#19354A] mb-1">
                     3. Protected Disability Need Statement
                   </h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">
+                  <p className="text-base text-[#52616A]">
                     Confirms you are under clinical care and experience an emotional impairment that substantially limits major life activities without disclosing confidential medical details.
                   </p>
                 </div>
@@ -124,7 +124,7 @@ export default function SampleLetterPage() {
               <p>
                 Institutional property managers across Denver, Boulder, and Colorado Springs frequently submit ESA letters to screening companies (such as PetScreening.com). These services check for three key things:
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#24333B]">
+              <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#27654F] shrink-0 mt-0.5" />
                   <span><strong>Active In-State License:</strong> They verify the license is current in the Colorado DORA database.</span>

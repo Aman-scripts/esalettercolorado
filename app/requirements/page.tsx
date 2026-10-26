@@ -103,7 +103,7 @@ export default function RequirementsPage() {
               <p>
                 Only professionals licensed under Title 12 of the Colorado Revised Statutes can issue valid assistance animal recommendations. This includes:
               </p>
-              <ul className="mt-3 space-y-2 text-sm text-[#24333B]">
+              <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li>• <strong>Licensed Clinical Psychologists (Psy.D., Ph.D.)</strong></li>
                 <li>• <strong>Licensed Clinical Social Workers (LCSW)</strong></li>
                 <li>• <strong>Licensed Professional Counselors (LPC)</strong></li>
@@ -138,18 +138,18 @@ export default function RequirementsPage() {
               <h2 className="text-h2 text-[#19354A] mb-4">
                 Red Flags That Cause Landlords to Reject Letters
               </h2>
-              <div className="space-y-3 text-sm">
+              <div className="text-base space-y-3">
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
                   <strong className="text-[#A33E35] block mb-1">1. Missing Colorado License Credentials</strong>
-                  <p className="text-xs text-[#52616A]">Letters that omit the clinician&apos;s license number or state of licensing fail state statutory requirements under HB26-1045.</p>
+                  <p className="text-base text-[#52616A]">Letters that omit the clinician&apos;s license number or state of licensing fail state statutory requirements under HB26-1045.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
                   <strong className="text-[#A33E35] block mb-1">2. Instant Purchase Without Clinical Review</strong>
-                  <p className="text-xs text-[#52616A]">Websites that sell downloadable letters within 2 minutes without clinician review provide invalid documents that property management portals flag immediately.</p>
+                  <p className="text-base text-[#52616A]">Websites that sell downloadable letters within 2 minutes without clinician review provide invalid documents that property management portals flag immediately.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
                   <strong className="text-[#A33E35] block mb-1">3. Registry IDs and Certificates Attached</strong>
-                  <p className="text-xs text-[#52616A]">Attaching a &ldquo;National ESA Registry&rdquo; certificate or badge is a primary indicator to landlords of a fraudulent online purchase.</p>
+                  <p className="text-base text-[#52616A]">Attaching a &ldquo;National ESA Registry&rdquo; certificate or badge is a primary indicator to landlords of a fraudulent online purchase.</p>
                 </div>
               </div>
             </section>

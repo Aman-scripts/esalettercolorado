@@ -47,7 +47,7 @@ export function VerificationTool() {
       <h3 className="font-serif text-2xl font-bold text-[#19354A]">
         Landlord &amp; Property Manager Verification
       </h3>
-      <p className="text-sm text-[#52616A] mt-1.5 leading-relaxed">
+      <p className="text-base text-[#52616A] mt-1.5 leading-relaxed">
         Enter the 8-to-12 character Document ID located at the top-right corner of the clinical ESA letter to authenticate provider credentials.
       </p>
 
@@ -90,7 +90,7 @@ export function VerificationTool() {
           <AlertCircle className="w-5 h-5 shrink-0 mt-0.5" />
           <div>
             <span className="font-bold block">Document ID Not Recognized</span>
-            <p className="mt-1 text-sm text-[#24333B]">
+            <p className="text-base mt-1 text-[#24333B]">
               Please ensure the Document ID is typed correctly, or contact our Denver verification desk at{" "}
               <strong>(720) 445-5620</strong>.
             </p>

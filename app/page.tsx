@@ -121,7 +121,7 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
                 Colorado HB26-1045 Compliant
               </h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 Colorado&apos;s assistance animal laws require providers to hold in-state licensing and conduct thorough clinical assessments. Our letters meet every statutory standard.
               </p>
             </div>
@@ -133,7 +133,7 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
                 Direct Landlord Verification
               </h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 Every letter includes a verifiable Document ID, allowing Colorado landlords and property managers to authenticate your documentation 24/7 without exposing private health records.
               </p>
             </div>
@@ -145,7 +145,7 @@ export default function HomePage() {
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
                 Full Money-Back Guarantee
               </h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 If your evaluating clinician determines during your assessment that an ESA is not clinically appropriate for your situation, you receive an immediate, 100% refund.
               </p>
             </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
               <p className="text-body-large text-[#52616A] mt-4 leading-relaxed">
                 An Emotional Support Animal (ESA) letter is a formal medical recommendation issued by a licensed mental health professional (LMHP) or physician. It confirms that the handler has a diagnosed mental or emotional health condition and that the animal provides therapeutic relief that alleviates symptoms.
               </p>
-              <div className="space-y-3 mt-6 text-sm text-[#24333B]">
+              <div className="text-base space-y-3 mt-6 text-[#24333B]">
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
                   <span><strong>Housing Classification:</strong> ESAs are classified as assistance animals under the Fair Housing Act, not pets.</span>
@@ -193,7 +193,7 @@ export default function HomePage() {
               <h3 className="font-serif text-xl font-bold text-[#19354A] mb-4">
                 What an ESA Letter Is NOT:
               </h3>
-              <div className="space-y-4 text-xs sm:text-sm text-[#52616A]">
+              <div className="text-base space-y-4 text-[#52616A]">
                 <div className="p-3.5 rounded-lg bg-[#FDF0EE] border border-[#A33E35]/30 flex items-start gap-3">
                   <AlertTriangle className="w-5 h-5 text-[#A33E35] shrink-0 mt-0.5" />
                   <div>
@@ -301,7 +301,7 @@ export default function HomePage() {
                     <h3 className="text-xl font-bold text-[#19354A] group-hover:text-[#347C78] transition-colors">
                       {cond.name}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#52616A] mt-2 line-clamp-3 leading-relaxed">
+                    <p className="text-base text-[#52616A] mt-2 line-clamp-3 leading-relaxed">
                       {cond.shortDesc}
                     </p>
                   </div>
@@ -364,7 +364,7 @@ export default function HomePage() {
                 <h3 className="font-serif text-2xl font-bold text-[#19354A]">
                   Real Clinical Telehealth Evaluations — Never Automated Quizzes
                 </h3>
-                <p className="text-sm text-[#52616A] mt-3 leading-relaxed">
+                <p className="text-base text-[#52616A] mt-3 leading-relaxed">
                   Unlike illegitimate online certificate mills that sell instant PDFs or lifetime registry cards, Colorado law requires a bona fide patient-provider relationship. Our evaluators are state-licensed clinicians (LPC, LCSW, LMFT, PsyD) who assess your real mental health needs and stand behind your letter if a landlord requests legal verification.
                 </p>
 
@@ -406,7 +406,7 @@ export default function HomePage() {
                   <p className="text-sm text-[#52616A] mt-1 font-mono">
                     {therapist.licenseNumber} ({therapist.licenseState})
                   </p>
-                  <p className="text-sm text-[#52616A] mt-3 leading-relaxed">
+                  <p className="text-base text-[#52616A] mt-3 leading-relaxed">
                     {therapist.bio}
                   </p>
                 </div>
@@ -452,7 +452,7 @@ export default function HomePage() {
             <div className="card-theme bg-white">
               <Scale className="w-8 h-8 text-[#347C78] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">Fair Housing Act (FHA)</h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 Federal law establishes that assistance animals are auxiliary aids. Landlords are legally required to provide reasonable accommodation in housing.
               </p>
               <Link href="/rights/fair-housing-act/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
@@ -463,7 +463,7 @@ export default function HomePage() {
             <div className="card-theme bg-white">
               <Building className="w-8 h-8 text-[#347C78] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">Colorado HB26-1045</h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 Colorado&apos;s updated assistance animal statute mandates that letters be issued by clinicians with active Colorado licenses, protecting legitimate tenants.
               </p>
               <Link href="/rights/colorado-hb26-1045-explained/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
@@ -474,7 +474,7 @@ export default function HomePage() {
             <div className="card-theme bg-white">
               <ShieldCheck className="w-8 h-8 text-[#347C78] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">No Pet Fees or Rent</h3>
-              <p className="text-xs sm:text-sm text-[#52616A] leading-relaxed">
+              <p className="text-base text-[#52616A] leading-relaxed">
                 Landlords cannot charge pet security deposits or monthly pet rent for emotional support animals under HUD guidelines and Colorado HB23-1068.
               </p>
               <Link href="/rights/pet-deposits-and-fees/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
@@ -559,7 +559,7 @@ export default function HomePage() {
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-[#24333B] leading-relaxed italic">
+              <p className="text-base text-[#24333B] leading-relaxed italic">
                 &ldquo;My Denver property manager originally tried to charge $50/mo pet rent plus a $400 deposit for my Golden Retriever. Dr. Vance&apos;s letter was verified the next day, and every fee was completely waived.&rdquo;
               </p>
               <div className="mt-4 pt-3 border-t border-[#D5DFDB] text-xs">
@@ -574,7 +574,7 @@ export default function HomePage() {
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-[#24333B] leading-relaxed italic">
+              <p className="text-base text-[#24333B] leading-relaxed italic">
                 &ldquo;Living in an apartment near Fort Carson, I needed an ESA evaluation for severe PTSD symptoms. Marcus was compassionate, professional, and knowledgeable about Colorado housing statutes.&rdquo;
               </p>
               <div className="mt-4 pt-3 border-t border-[#D5DFDB] text-xs">
@@ -589,7 +589,7 @@ export default function HomePage() {
                   <Star key={i} className="w-4 h-4 fill-current" />
                 ))}
               </div>
-              <p className="text-xs sm:text-sm text-[#24333B] leading-relaxed italic">
+              <p className="text-base text-[#24333B] leading-relaxed italic">
                 &ldquo;As a CU Boulder student, finding pet-friendly housing was nearly impossible. This evaluation was fast, respectful, and accepted without issue by my off-campus leasing office.&rdquo;
               </p>
               <div className="mt-4 pt-3 border-t border-[#D5DFDB] text-xs">

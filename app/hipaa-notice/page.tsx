@@ -24,7 +24,7 @@ export default function HipaaNoticePage() {
           <div className="card-theme p-6 sm:p-10 space-y-8 body-normal text-ink">
             <div className="p-5 rounded-xl bg-pale border border-line flex items-center gap-3">
               <Lock className="w-6 h-6 text-teal shrink-0" />
-              <p className="text-xs text-muted leading-relaxed">
+              <p className="text-base text-muted leading-relaxed">
                 This notice describes how medical and mental health information about you may be used and disclosed and how you can get access to this information. Please review it carefully.
               </p>
             </div>
@@ -59,7 +59,7 @@ export default function HipaaNoticePage() {
 
             <section className="border-t border-line pt-6">
               <h2 className="h4 mb-2 text-navy">HIPAA Compliance Contact</h2>
-              <p className="text-sm text-muted">
+              <p className="text-base text-muted">
                 Questions or concerns regarding our privacy practices should be directed to our Privacy Officer at <a href={`mailto:${siteConfig.email}`} className="text-amber font-semibold">{siteConfig.email}</a>.
               </p>
             </section>

@@ -71,19 +71,19 @@ export default function CostPage() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A] mb-1">Colorado Clinical Evaluation</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">Assessment by an active state-licensed therapist (Psy.D., LCSW, or LPC) compliant with Colorado HB26-1045.</p>
+                  <p className="text-base text-[#52616A]">Assessment by an active state-licensed therapist (Psy.D., LCSW, or LPC) compliant with Colorado HB26-1045.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A] mb-1">Official Clinical Housing Letter</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">Signed on professional letterhead with the clinician&apos;s active DORA license number and practice details.</p>
+                  <p className="text-base text-[#52616A]">Signed on professional letterhead with the clinician&apos;s active DORA license number and practice details.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A] mb-1">24/7 Landlord Verification Desk</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">Secure document ID for property manager portals and direct verification support.</p>
+                  <p className="text-base text-[#52616A]">Secure document ID for property manager portals and direct verification support.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="font-bold text-base text-[#19354A] mb-1">100% Refund Guarantee</h3>
-                  <p className="text-xs sm:text-sm text-[#52616A]">If you do not qualify for an assistance animal, your entire evaluation fee is refunded immediately.</p>
+                  <p className="text-base text-[#52616A]">If you do not qualify for an assistance animal, your entire evaluation fee is refunded immediately.</p>
                 </div>
               </div>
             </section>
@@ -101,7 +101,7 @@ export default function CostPage() {
               <p>
                 The internet is saturated with websites offering &ldquo;instant ESA letters&rdquo; for $29 or $39. Here is why Colorado property managers reject them:
               </p>
-              <div className="space-y-3 mt-4 text-xs sm:text-sm text-[#52616A]">
+              <div className="text-base space-y-3 mt-4 text-[#52616A]">
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
                   <strong className="text-[#A33E35] block mb-1">No Colorado In-State License</strong>
                   <p>Cheap websites use out-of-state clinicians with no Colorado credentials. Colorado HB26-1045 gives landlords the explicit right to reject out-of-state letters.</p>

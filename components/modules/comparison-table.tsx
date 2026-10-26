@@ -95,7 +95,7 @@ export function ComparisonTable({
             {title}
           </h3>
           {subtitle && (
-            <p className="mt-1.5 text-xs sm:text-sm text-[#D5DFDB]">
+            <p className="text-base mt-1.5 text-[#D5DFDB]">
               {subtitle}
             </p>
           )}
