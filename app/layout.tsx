@@ -62,6 +62,13 @@ export const metadata: Metadata = {
       "100% compliant Colorado ESA letters issued by state-licensed mental health professionals. No pet rent or pet deposits.",
     images: ["/esa-letter-colorado-logo-image.webp"],
   },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 import { Suspense } from "react";
