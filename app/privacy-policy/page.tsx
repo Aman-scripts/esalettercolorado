@@ -28,7 +28,7 @@ export default function PrivacyPolicyPage() {
             <section>
               <h2 className="h3 mb-3 text-navy">1. Introduction</h2>
               <p className="leading-relaxed">
-                At ESA Letter Colorado ("we," "our," or "us"), your personal and health information is safeguarded with strict industry standards. This Privacy Policy details how we collect, process, maintain, and protect information when you visit <strong>esalettercolorado.com</strong> or complete an emotional support animal (ESA) telehealth assessment.
+                At ESA Letter Colorado (&quot;we,&quot; &quot;our,&quot; or &quot;us&quot;), your personal and health information is safeguarded with strict industry standards. This Privacy Policy details how we collect, process, maintain, and protect information when you visit <strong>esalettercolorado.com</strong> or complete an emotional support animal (ESA) telehealth assessment.
               </p>
             </section>
 

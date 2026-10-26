@@ -2,7 +2,7 @@ import React from "react";
 import { siteConfig } from "@/data/site-config";
 
 interface JsonLdProps {
-  data?: any;
+  data?: Record<string, unknown> | Record<string, unknown>[] | unknown;
   type?: "organization" | "article" | "howto" | "service";
   title?: string;
   description?: string;

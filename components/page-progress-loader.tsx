@@ -14,15 +14,20 @@ export function PageProgressLoader() {
   // Complete progress on pathname or searchParams change
   useEffect(() => {
     if (loading) {
-      setProgress(100);
-      const timer = setTimeout(() => {
+      const timer1 = setTimeout(() => {
+        setProgress(100);
+      }, 0);
+      const timer2 = setTimeout(() => {
         setVisible(false);
         setLoading(false);
         setProgress(0);
       }, 250);
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      };
     }
-  }, [pathname, searchParams]);
+  }, [pathname, searchParams, loading]);
 
   // Intercept click on internal links
   useEffect(() => {

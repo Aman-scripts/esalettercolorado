@@ -151,7 +151,7 @@ export default function ReviewsPage() {
                       <span className="text-xs text-muted">{rev.date}</span>
                     </div>
 
-                    <p className="body-small text-ink italic mb-4">"{rev.text}"</p>
+                    <p className="body-small text-ink italic mb-4">&ldquo;{rev.text}&rdquo;</p>
                   </div>
 
                   <div className="pt-4 border-t border-line">
