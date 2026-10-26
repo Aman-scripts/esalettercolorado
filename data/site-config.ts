@@ -39,7 +39,7 @@ export const siteConfig: SiteConfig = {
   },
   pricing: {
     single: 149,
-    renewal: 99,
+    renewal: 129,
     currency: "USD",
   },
   disclaimer:

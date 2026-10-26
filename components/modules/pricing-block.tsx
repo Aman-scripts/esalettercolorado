@@ -160,7 +160,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
                 href="/renewal/"
                 className="btn-secondary w-full text-center"
               >
-                Learn About Renewals ($99)
+                Learn About Renewals ($129)
               </Link>
               <p className="text-sm text-[#52616A] text-center mt-2">
                 Available to any renter needing an updated 12-month letter

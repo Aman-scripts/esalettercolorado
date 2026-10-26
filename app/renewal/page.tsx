@@ -24,7 +24,7 @@ export default function RenewalPage() {
     },
     {
       question: "How much does a renewal cost?",
-      answer: "Our annual Colorado ESA renewal evaluation is discounted to $99 for returning clients and renters with an existing 12-month letter.",
+      answer: "Our annual Colorado ESA renewal evaluation is discounted to $129 for returning clients and renters with an existing 12-month letter.",
     },
     {
       question: "What if I got my original letter from a different therapist?",
@@ -56,7 +56,7 @@ export default function RenewalPage() {
         variant="compact"
         h1={seo.h1}
         subhead="Avoid gaps in housing documentation. Maintain uninterrupted protections against pet rent, deposits, and animal restrictions across Colorado."
-        ctaText="Renew Your Colorado Letter ($99)"
+        ctaText="Renew Your Colorado Letter ($129)"
         ctaHref="/how-it-works/#get-started"
       />
 
@@ -110,9 +110,9 @@ export default function RenewalPage() {
             </section>
 
             <InlineCta
-              headline="Renew Your Colorado ESA Letter for $99"
+              headline="Renew Your Colorado ESA Letter for $129"
               subhead="Ensure uninterrupted housing protection before your upcoming lease renewal."
-              buttonText="Renew Your Letter ($99)"
+              buttonText="Renew Your Letter ($129)"
             />
 
             {/* Cost */}
@@ -121,7 +121,7 @@ export default function RenewalPage() {
                 Renewal Cost vs. New Client Cost
               </h2>
               <p>
-                While first-time comprehensive clinical evaluations are $149, our annual renewal fee is discounted to a flat <strong>$99</strong>. This includes:
+                While first-time comprehensive clinical evaluations are $149, our annual renewal fee is discounted to a flat <strong>$129</strong>. This includes:
               </p>
               <ul className="text-base mt-3 space-y-2 text-[#24333B]">
                 <li className="flex items-center gap-2">
@@ -151,7 +151,7 @@ export default function RenewalPage() {
         <InlineCta
           headline="Keep Your Colorado ESA Documentation Current"
           subhead="Protect yourself from landlord pushback and unauthorized pet fees."
-          buttonText="Start Your $99 Renewal"
+          buttonText="Start Your $129 Renewal"
         />
       </div>
     </>

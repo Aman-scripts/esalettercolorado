@@ -38,7 +38,7 @@ export const allFaqs: FAQItem[] = [
   {
     category: "Cost & Refunds",
     question: "How much does a Colorado ESA letter cost?",
-    answer: "Our single emotional support animal clinical evaluation and official housing letter is $149 all-inclusive. Annual renewals are $99. There are no recurring monthly fees or surprise charges.",
+    answer: "Our single emotional support animal clinical evaluation and official housing letter is $149 all-inclusive. Annual renewals are $129. There are no recurring monthly fees or surprise charges.",
   },
   {
     category: "Cost & Refunds",

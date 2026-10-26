@@ -35,7 +35,7 @@ export default function CostPage() {
 
   const related = [
     { title: "Colorado ESA Letter Requirements", href: "/requirements/", note: "Checklist of mandatory elements" },
-    { title: "ESA Letter Renewal Guide", href: "/renewal/", note: "Annual renewal process ($99)" },
+    { title: "ESA Letter Renewal Guide", href: "/renewal/", note: "Annual renewal process ($129)" },
     { title: "Pet Deposits & Pet Rent in Colorado", href: "/rights/pet-deposits-and-fees/", note: "Compare savings" },
     { title: "How to Get an ESA Letter", href: "/how-to-get-an-esa-letter-in-colorado/", note: "Step-by-step process" },
   ];
@@ -49,7 +49,7 @@ export default function CostPage() {
       <Hero
         variant="compact"
         h1={seo.h1}
-        subhead="Clear, flat-rate pricing. $149 for first-time evaluations, $99 for annual lease renewals. No subscriptions, no hidden fees, and a 100% money-back guarantee."
+        subhead="Clear, flat-rate pricing. $149 for first-time evaluations, $129 for annual lease renewals. No subscriptions, no hidden fees, and a 100% money-back guarantee."
         ctaText="Start Evaluation ($149)"
       />
 

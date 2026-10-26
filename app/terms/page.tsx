@@ -55,7 +55,7 @@ export default function TermsPage() {
             <section>
               <h2 className="h3 mb-3 text-navy">5. Fees and Payment</h2>
               <p className="leading-relaxed">
-                The fee for a standard single-animal evaluation and housing letter is $149. Annual renewals are $99. Fees cover clinical review time and letter issuance. There are no recurring subscription fees.
+                The fee for a standard single-animal evaluation and housing letter is $149. Annual renewals are $129. Fees cover clinical review time and letter issuance. There are no recurring subscription fees.
               </p>
             </section>
 
