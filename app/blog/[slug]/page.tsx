@@ -216,12 +216,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
                   {/* Mid-content CTA after section 1 */}
                   {idx === 0 && (
-                    <div className="my-8 p-6 sm:p-7 rounded-2xl bg-[#E8F0ED]/60 border border-[#D5DFDB] shadow-xs">
-                      <p className="font-bold text-base text-[#19354A] mb-1.5">Need a legally sound ESA letter in Colorado?</p>
-                      <p className="text-sm text-[#52616A] mb-4 leading-relaxed font-normal">
-                        Connect with a licensed Colorado telehealth provider who verifies your eligibility under state guidelines.
-                      </p>
-                      <Link href="/how-it-works/#get-started" className="btn-primary py-2 px-5 inline-flex items-center gap-1.5">
+                    <div className="my-8 p-6 sm:p-7 rounded-2xl bg-[#E8F0ED]/60 border border-[#D5DFDB] shadow-xs flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-8">
+                      <div>
+                        <p className="font-bold text-base text-[#19354A] mb-1.5">Need a legally sound ESA letter in Colorado?</p>
+                        <p className="text-sm text-[#52616A] leading-relaxed font-normal">
+                          Connect with a licensed Colorado telehealth provider who verifies your eligibility under state guidelines.
+                        </p>
+                      </div>
+                      <Link href="/how-it-works/#get-started" className="btn-primary py-2 px-5 inline-flex items-center gap-1.5 self-start md:self-auto shrink-0 whitespace-nowrap">
                         <span>Start Your Assessment</span>
                         <span>→</span>
                       </Link>

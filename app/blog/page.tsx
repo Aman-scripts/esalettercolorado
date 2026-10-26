@@ -50,8 +50,8 @@ export default function BlogHubPage() {
 
           {/* Featured Post Card */}
           {featuredPost && (
-            <div className="mb-14 card-theme bg-gradient-to-br from-[#F7F5F0] to-[#E8F0ED] border-2 border-[#347C78] p-8 sm:p-10 shadow-sm">
-              <div className="max-w-3xl">
+            <div className="mb-14 card-theme bg-gradient-to-br from-[#F7F5F0] to-[#E8F0ED] border-2 border-[#347C78] p-8 sm:p-10 shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+              <div className="lg:col-span-7">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-xs font-bold text-white bg-[#347C78] px-3 py-1 rounded-full uppercase tracking-wider">
                     Featured Guide
@@ -78,6 +78,29 @@ export default function BlogHubPage() {
                   <span>Read Full Article</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
+              </div>
+
+              {/* In-this-guide panel fills the right side on desktop */}
+              <div className="hidden lg:block lg:col-span-5 bg-white/80 border border-[#D5DFDB] rounded-2xl p-6 shadow-xs">
+                <p className="text-xs font-bold uppercase tracking-wider text-[#347C78] mb-4 flex items-center gap-1.5">
+                  <BookOpen className="w-4 h-4" /> In This Guide
+                </p>
+                <ol className="space-y-3">
+                  {featuredPost.sections.map((section, idx) => (
+                    <li key={idx} className="flex items-start gap-3 text-sm font-semibold text-[#19354A] leading-snug">
+                      <span className="w-6 h-6 shrink-0 rounded-full bg-[#E8F0ED] text-[#347C78] text-xs font-bold flex items-center justify-center">
+                        {idx + 1}
+                      </span>
+                      <span className="pt-0.5">{section.heading}</span>
+                    </li>
+                  ))}
+                </ol>
+                <div className="mt-5 pt-4 border-t border-[#D5DFDB] flex items-center justify-between gap-3 text-xs text-[#52616A]">
+                  <span className="flex items-center gap-1">
+                    <Clock className="w-3.5 h-3.5 text-[#347C78]" /> {featuredPost.readTime}
+                  </span>
+                  <span className="truncate">By {featuredPost.authorName}</span>
+                </div>
               </div>
             </div>
           )}
