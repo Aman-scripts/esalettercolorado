@@ -24,12 +24,12 @@ export function Footer() {
                 />
               </div>
             </Link>
-            <p className="mt-4 text-sm text-[#D5DFDB] leading-relaxed max-w-md">
+            <p className="mt-4 text-base text-[#D5DFDB] leading-relaxed max-w-md">
               Connecting Colorado renters with state-licensed mental health professionals for legitimate,
               legally compliant emotional support animal housing evaluations under Colorado HB26-1045,
               C.R.S. 24-34-502, and the federal Fair Housing Act.
             </p>
-            <div className="mt-4 flex flex-wrap gap-4 text-sm text-[#E8F0ED]">
+            <div className="mt-4 flex flex-wrap gap-4 text-base text-[#E8F0ED]">
               <span className="flex items-center gap-1.5">
                 <ShieldCheck className="w-4 h-4 text-[#347C78]" /> 100% Legal Housing Compliance
               </span>
@@ -40,10 +40,10 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <p className="text-sm font-semibold tracking-wider uppercase text-white/90">
+            <p className="text-base font-semibold tracking-wider uppercase text-white/90">
               Colorado Office &amp; Telehealth
             </p>
-            <div className="space-y-2 text-sm text-[#E8F0ED]">
+            <div className="space-y-2 text-base text-[#E8F0ED]">
               <p className="flex items-start gap-2 text-[#E8F0ED]">
                 <MapPin className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
                 <span className="text-[#E8F0ED]">{siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}</span>
@@ -64,15 +64,15 @@ export function Footer() {
           </div>
 
           <div className="space-y-3">
-            <p className="text-sm font-semibold tracking-wider uppercase text-white/90">
+            <p className="text-base font-semibold tracking-wider uppercase text-white/90">
               Provider Verification
             </p>
-            <p className="text-sm text-[#E8F0ED] leading-relaxed">
+            <p className="text-base text-[#E8F0ED] leading-relaxed">
               Every evaluator holds an active Colorado DORA license. Landlords can verify authentic letters 24/7.
             </p>
             <Link
               href="/verify-esa-letter/"
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#F7F5F0] bg-[#2A6763] hover:bg-[#235653] px-3.5 py-2 rounded-md transition-colors"
+              className="inline-flex items-center gap-1.5 text-base font-semibold text-[#F7F5F0] bg-[#2A6763] hover:bg-[#235653] px-3.5 py-2 rounded-md transition-colors"
             >
               <FileCheck className="w-4 h-4" /> Landlord Verification Tool
             </Link>
@@ -83,10 +83,10 @@ export function Footer() {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 py-12 border-b border-[#347C78]/30">
           {/* Column 1: Core Pages */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-base font-bold uppercase tracking-wider text-white mb-4">
               Core Guides
             </p>
-            <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
+            <ul className="space-y-2.5 text-base text-[#E8F0ED]">
               <li>
                 <Link href="/what-is-an-esa-letter/" className="hover:text-white transition-colors">
                   What Is an ESA Letter?
@@ -122,10 +122,10 @@ export function Footer() {
 
           {/* Column 2: Your Rights */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-base font-bold uppercase tracking-wider text-white mb-4">
               Your Rights
             </p>
-            <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
+            <ul className="space-y-2.5 text-base text-[#E8F0ED]">
               <li>
                 <Link href="/rights/fair-housing-act/" className="hover:text-white transition-colors">
                   Fair Housing Act Rights
@@ -166,10 +166,10 @@ export function Footer() {
 
           {/* Column 3: Qualifying Conditions */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-base font-bold uppercase tracking-wider text-white mb-4">
               Qualifying Conditions
             </p>
-            <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
+            <ul className="space-y-2.5 text-base text-[#E8F0ED]">
               <li>
                 <Link href="/conditions/anxiety/" className="hover:text-white transition-colors">
                   Anxiety
@@ -210,10 +210,10 @@ export function Footer() {
 
           {/* Column 4: Company & Support */}
           <div>
-            <p className="text-sm font-bold uppercase tracking-wider text-white mb-4">
+            <p className="text-base font-bold uppercase tracking-wider text-white mb-4">
               Company &amp; Support
             </p>
-            <ul className="space-y-2.5 text-sm text-[#E8F0ED]">
+            <ul className="space-y-2.5 text-base text-[#E8F0ED]">
               <li>
                 <Link href="/about-our-therapists/" className="hover:text-white transition-colors">
                   About Our Therapists
@@ -254,7 +254,7 @@ export function Footer() {
         </div>
 
         {/* Legal Row */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-[#E8F0ED]">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-base text-[#E8F0ED]">
           <div className="flex flex-wrap items-center justify-center md:justify-start gap-x-6 gap-y-2">
             <Link href="/privacy-policy/" className="hover:text-white transition-colors">
               Privacy Policy
@@ -284,7 +284,7 @@ export function Footer() {
         </div>
 
         {/* Medical & Legal Disclaimer Notice */}
-        <div className="mt-8 pt-6 border-t border-[#347C78]/30 text-sm leading-relaxed text-center md:text-left">
+        <div className="mt-8 pt-6 border-t border-[#347C78]/30 text-base leading-relaxed text-center md:text-left">
           <p className="text-[#E8F0ED]">
             <strong className="text-white font-semibold">Medical &amp; Legal Disclaimer: </strong>
             <span className="text-[#E8F0ED]">

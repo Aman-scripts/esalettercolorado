@@ -615,6 +615,13 @@ footer span:not([class*="text-"]) {
   color: #E8F0ED;
 }
 
+/* All footer text is 16px site-wide, overriding the 14px text-sm/text-xs clamp above */
+footer .text-xs,
+footer .text-sm {
+  font-size: 16px !important;
+  line-height: 26px !important;
+}
+
 /* Cards: White surface, 1px line border, 18px radius, 24-28px padding */
 .card-theme {
   background-color: #FFFFFF;
