@@ -290,7 +290,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               reviewerName={post.authorName}
               credentials={post.authorCredentials}
               reviewedDate={post.updatedDate}
-              verificationUrl={post.authorVerificationUrl}
             />
 
             {/* Closing CTA to /how-it-works/#get-started [REQUIRED by Spec Section 8 & 9] */}

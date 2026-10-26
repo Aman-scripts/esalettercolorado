@@ -35,7 +35,7 @@ import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { LatestBlog } from "@/components/modules/latest-blog";
 import { AssessmentForm } from "@/components/modules/assessment-form";
 import { CalloutBox } from "@/components/modules/callout-box";
-import { therapists } from "@/data/therapists-data";
+import { doctors } from "@/data/therapists-data";
 import { coloradoCities } from "@/data/locations-data";
 import { conditionsList } from "@/data/conditions-data";
 import { rightsSpokes } from "@/data/rights-data";
@@ -393,38 +393,40 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {therapists.map((therapist) => (
-              <div key={therapist.id} className="card-theme bg-[#F7F5F0] flex flex-col justify-between">
+            {doctors.map((doctor) => (
+              <div key={doctor.slug} className="card-theme bg-[#F7F5F0] flex flex-col justify-between">
                 <div>
-                  <div className="w-14 h-14 rounded-full bg-gradient-to-br from-[#19354A] to-[#347C78] text-white font-serif font-bold text-lg flex items-center justify-center mb-4 shadow-xs ring-4 ring-[#E8F0ED]">
-                    {therapist.initials}
+                  <div className="relative w-20 h-20 rounded-full overflow-hidden bg-[#E8F0ED] mb-4 shadow-xs ring-4 ring-[#E8F0ED]">
+                    <Image
+                      src={doctor.photo}
+                      alt={doctor.name}
+                      fill
+                      sizes="80px"
+                      quality={90}
+                      className="object-cover object-top"
+                    />
                   </div>
                   <h3 className="text-lg font-bold text-[#19354A]">
-                    {therapist.name}
+                    {doctor.name}
                   </h3>
-                  <p className="text-sm font-semibold text-[#2A6763] mt-0.5">
-                    {therapist.credentials}
-                  </p>
-                  <p className="text-sm text-[#52616A] mt-1 font-mono">
-                    {therapist.licenseNumber} ({therapist.licenseState})
+                  <p className="text-base font-semibold text-[#2A6763] mt-0.5">
+                    {doctor.title}
                   </p>
                   <p className="text-base text-[#52616A] mt-3 leading-relaxed">
-                    {therapist.bio}
+                    {doctor.hubBio}
                   </p>
                 </div>
 
-                <div className="mt-6 pt-3 border-t border-[#D5DFDB] flex items-center justify-between text-xs">
+                <div className="mt-6 pt-3 border-t border-[#D5DFDB] flex items-center justify-between text-base">
                   <span className="text-[#27654F] font-semibold flex items-center gap-1">
-                    <CheckCircle2 className="w-3.5 h-3.5" /> DORA Verified
+                    <CheckCircle2 className="w-4 h-4" /> Verified
                   </span>
-                  <a
-                    href={therapist.verificationUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <Link
+                    href={`/about-our-therapists/${doctor.slug}/`}
                     className="text-[#2A6763] hover:underline font-semibold"
                   >
-                    Verify License →
-                  </a>
+                    View Profile →
+                  </Link>
                 </div>
               </div>
             ))}

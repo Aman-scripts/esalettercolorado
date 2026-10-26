@@ -1,19 +1,20 @@
 import React from "react";
-import { ExternalLink, Calendar, CheckCircle2, ShieldCheck } from "lucide-react";
+import Link from "next/link";
+import { Calendar, CheckCircle2, ShieldCheck } from "lucide-react";
 import { defaultReviewer } from "@/data/therapists-data";
 
 interface ReviewerBoxProps {
   reviewerName?: string;
   credentials?: string;
   reviewedDate?: string;
-  verificationUrl?: string;
+  profileUrl?: string;
 }
 
 export function ReviewerBox({
   reviewerName = defaultReviewer.name,
   credentials = defaultReviewer.credentials,
   reviewedDate = defaultReviewer.reviewedDate,
-  verificationUrl = defaultReviewer.verificationUrl,
+  profileUrl = reviewerName === defaultReviewer.name ? defaultReviewer.profileUrl : undefined,
 }: ReviewerBoxProps) {
   const initials =
     reviewerName
@@ -42,18 +43,19 @@ export function ReviewerBox({
               <strong className="text-[#19354A] font-semibold">{reviewedDate}</strong>
             </span>
           </span>
-          <span className="text-[#D5DFDB] hidden sm:inline" aria-hidden="true">
-            •
-          </span>
-          <a
-            href={verificationUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 font-semibold text-[#347C78] hover:text-[#19354A] hover:underline"
-          >
-            <span>Verify CO License</span>
-            <ExternalLink className="w-3 h-3 shrink-0" />
-          </a>
+          {profileUrl && (
+            <>
+              <span className="text-[#D5DFDB] hidden sm:inline" aria-hidden="true">
+                •
+              </span>
+              <Link
+                href={profileUrl}
+                className="inline-flex items-center gap-1 font-semibold text-[#347C78] hover:text-[#19354A] hover:underline"
+              >
+                View Reviewer Profile →
+              </Link>
+            </>
+          )}
         </div>
       </div>
 
@@ -73,10 +75,7 @@ export function ReviewerBox({
             {reviewerName}
           </h4>
           <p className="text-xs sm:text-sm text-[#52616A] mt-1 leading-snug">
-            {credentials}{" "}
-            <span className="inline-block text-[#347C78] font-medium">
-              • Active Colorado Telehealth License
-            </span>
+            {credentials}
           </p>
         </div>
       </div>
