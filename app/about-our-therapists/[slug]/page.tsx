@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
@@ -30,7 +31,16 @@ function LinkedInIcon({ className }: { className?: string }) {
   );
 }
 
-export default async function DoctorProfilePage({ params }: DoctorProfileProps) {
+// params is URL data, so it's read inside Suspense to keep the App Shell URL-independent
+export default function DoctorProfilePage({ params }: DoctorProfileProps) {
+  return (
+    <Suspense fallback={null}>
+      <DoctorProfile params={params} />
+    </Suspense>
+  );
+}
+
+async function DoctorProfile({ params }: DoctorProfileProps) {
   const { slug } = await params;
   const doctor = getDoctor(slug);
   if (!doctor) notFound();
