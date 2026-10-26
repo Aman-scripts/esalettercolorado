@@ -233,12 +233,11 @@ export default function ContactPage() {
         </main>
 
         {/* Short FAQ */}
-        <section className="section-padding py-16 bg-ivory">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="h2 text-center mb-10">Frequently Asked Inquiries</h2>
-            <FaqAccordion items={contactFaqs} />
-          </div>
-        </section>
+        <FaqAccordion
+          items={contactFaqs}
+          title="Frequently Asked Inquiries"
+          subtitle="Quick answers about reaching our team, response times, and support."
+        />
       </div>
     </>
   );

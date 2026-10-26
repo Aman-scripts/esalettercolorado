@@ -246,12 +246,11 @@ export default function HowItWorksPage() {
         </section>
 
         {/* M5 FAQ */}
-        <section className="section-padding py-16 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="h2 text-center mb-10">Frequently Asked Process Questions</h2>
-            <FaqAccordion items={processFaqs} />
-          </div>
-        </section>
+        <FaqAccordion
+          items={processFaqs}
+          title="Frequently Asked Process Questions"
+          subtitle="What to expect at each step, from your assessment to receiving your Colorado ESA letter."
+        />
 
         {/* M8 Related pages */}
         <div className="py-12 bg-ivory">
