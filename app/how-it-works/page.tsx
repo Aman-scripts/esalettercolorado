@@ -81,7 +81,7 @@ export default function HowItWorksPage() {
               alt=""
               fill
               sizes="100vw"
-              quality={80}
+              quality={90}
               className="object-cover object-center opacity-25"
               priority
             />

@@ -51,7 +51,7 @@ export function Hero({
           alt=""
           fill
           sizes="100vw"
-          quality={80}
+          quality={90}
           className="object-cover object-center opacity-30"
           priority
           fetchPriority="high"
@@ -149,7 +149,7 @@ export function Hero({
                   width={1376}
                   height={768}
                   sizes="(min-width: 1024px) 580px, 100vw"
-                  quality={85}
+                  quality={90}
                   priority
                   fetchPriority="high"
                   className="w-full h-auto object-cover object-center max-h-[500px] transform hover:scale-102 transition-transform duration-500"
