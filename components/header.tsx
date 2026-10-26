@@ -19,11 +19,9 @@ export function Header() {
         <div className="max-w-[1200px] mx-auto flex items-center justify-between gap-2 sm:gap-4">
           <div className="flex items-center gap-1.5 sm:gap-2 font-medium min-w-0">
             <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#347C78] shrink-0" />
-            <span className="sm:hidden whitespace-nowrap">CO HB26-1045 Compliant</span>
-            <span className="hidden sm:inline md:hidden whitespace-nowrap">Colorado HB26-1045 Compliant</span>
-            <span className="hidden md:inline whitespace-nowrap">Colorado HB26-1045 &amp; C.R.S. 24-34-502 Compliant</span>
+            <span className="whitespace-nowrap">Official Colorado ESA Evaluations</span>
             <span className="hidden lg:inline text-white/40">•</span>
-            <span className="hidden lg:inline text-[#E8F0ED] whitespace-nowrap">Licensed Colorado Mental Health Professionals</span>
+            <span className="hidden lg:inline text-[#E8F0ED] whitespace-nowrap">Licensed In-State Mental Health Professionals</span>
           </div>
           <div className="flex items-center gap-3 sm:gap-4 text-xs sm:text-sm font-semibold shrink-0">
             <a
@@ -285,7 +283,7 @@ export function Header() {
           {/* Desktop CTA Button */}
           <div className="hidden lg:flex items-center gap-4 shrink-0">
             <Link
-              href="/how-it-works/#get-started"
+              href={siteConfig.surveyUrl}
               className="btn-primary text-sm font-bold px-5 py-2.5 min-h-[44px] whitespace-nowrap shadow-xs hover:shadow-md"
             >
               Get Your ESA Letter
@@ -365,7 +363,7 @@ export function Header() {
             </Link>
             <div className="pt-2">
               <Link
-                href="/how-it-works/#get-started"
+                href={siteConfig.surveyUrl}
                 className="btn-primary w-full text-center"
                 onClick={() => setMobileMenuOpen(false)}
               >
