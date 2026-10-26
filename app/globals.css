@@ -472,15 +472,15 @@
   }
 }
 
-/* Primary CTA Button: Amber #A65331, White text, 52px min-height, 9px radius, 5.38:1 contrast */
+/* Primary CTA Button: Aqua #99DDE4, Navy text, 52px min-height, 9px radius, 8.4:1 contrast */
 .btn-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 52px;
   padding: 0 24px;
-  background-color: #A65331;
-  color: #FFFFFF;
+  background-color: #99DDE4;
+  color: #19354A;
   font-family: var(--font-sans), system-ui, sans-serif;
   font-weight: 700;
   font-size: 16px;
@@ -491,7 +491,7 @@
   cursor: pointer;
 }
 .btn-primary:hover {
-  background-color: #934628;
+  background-color: #7FD1DA;
 }
 .btn-primary:focus-visible {
   outline: 3px solid #347C78;

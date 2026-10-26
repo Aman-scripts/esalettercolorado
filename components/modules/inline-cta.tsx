@@ -84,7 +84,7 @@ export function InlineCta({
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 w-full">
           <Link
             href="/how-it-works/#get-started"
-            className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold text-center justify-center text-white"
+            className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 shadow-lg hover:shadow-xl gap-2 font-bold text-center justify-center"
           >
             <span className="leading-snug">{buttonText}</span>
             <ArrowRight className="w-4 h-4 shrink-0" />
