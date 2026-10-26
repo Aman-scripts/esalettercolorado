@@ -120,8 +120,10 @@ export default function HowItWorksPage() {
                     src="/images/colorado-intake-telehealth.webp"
                     alt="Colorado renter completing a confidential telehealth ESA evaluation from their living room"
                     fill
-                    sizes="(min-width: 1024px) 560px, 100vw"
-                    quality={85}
+                    sizes="(min-width: 1024px) 650px, 100vw"
+                    quality={90}
+                    priority
+                    fetchPriority="high"
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-sm z-10">

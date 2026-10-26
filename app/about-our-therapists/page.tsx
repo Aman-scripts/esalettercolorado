@@ -83,8 +83,10 @@ export default function AboutOurTherapistsPage() {
                     src="/images/colorado-therapist-consultation.webp"
                     alt="Licensed Colorado mental health professional in telehealth consultation"
                     fill
-                    sizes="(min-width: 1024px) 480px, 100vw"
-                    quality={85}
+                    sizes="(min-width: 1024px) 600px, 100vw"
+                    quality={90}
+                    priority
+                    fetchPriority="high"
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-xs z-10">
