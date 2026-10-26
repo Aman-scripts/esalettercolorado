@@ -1,17 +1,39 @@
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { InlineCta } from "@/components/modules/inline-cta";
-import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
-import { therapists } from "@/data/therapists-data";
+import { doctors } from "@/data/therapists-data";
 import { siteConfig } from "@/data/site-config";
-import { ShieldCheck, ExternalLink, Award, FileBadge, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, CheckCircle2, Video, Stethoscope, ArrowRight, Info } from "lucide-react";
 import { buildMetadata, getPageSeo } from "@/lib/seo";
 
 const seo = getPageSeo("/about-our-therapists/");
 
 export const metadata: Metadata = buildMetadata(seo);
+
+const processSteps = [
+  {
+    title: "Start Evaluation",
+    text: "Begin your secure online evaluation through our HIPAA-compliant platform.",
+  },
+  {
+    title: "Get Matched",
+    text: "We connect you with a licensed professional authorized to practice in your state.",
+  },
+  {
+    title: "Receive Decision",
+    text: "Your therapist provides their independent clinical assessment.",
+  },
+];
+
+const disclosures = [
+  "Providers listed are independent professionals, not employees making platform decisions",
+  "Provider availability varies by state",
+  "Evaluations are conducted based on state licensure requirements",
+  "ESA approval is never guaranteed",
+  `${siteConfig.name} does not influence clinical decisions or documentation outcomes`,
+];
 
 export default function AboutOurTherapistsPage() {
   const jsonLdData = [
@@ -20,12 +42,14 @@ export default function AboutOurTherapistsPage() {
       "@type": "MedicalOrganization",
       name: siteConfig.name,
       url: siteConfig.url,
-      member: therapists.map((t) => ({
+      member: doctors.map((d) => ({
         "@type": "Person",
-        name: t.name,
-        jobTitle: t.title,
-        description: t.bio,
-        knowsAbout: ["Emotional Support Animals", "Psychological Evaluation", "Fair Housing Law"],
+        name: d.name,
+        jobTitle: d.title,
+        description: d.hubBio,
+        image: `${siteConfig.url}${d.photo}`,
+        url: `${siteConfig.url}/about-our-therapists/${d.slug}/`,
+        ...(d.linkedin && { sameAs: [d.linkedin] }),
       })),
     },
   ];
@@ -39,202 +63,190 @@ export default function AboutOurTherapistsPage() {
         {/* Hero Section */}
         <section className="relative overflow-hidden section-padding pt-10 pb-16 bg-[#F7F5F0] border-b border-[#D5DFDB]">
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
-            <Image
-              src="/images/colorado-apartment-peaceful-esa.webp"
-              alt=""
-              fill
-              sizes="100vw"
-              quality={90}
-              className="object-cover object-center opacity-25"
-              priority
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/90 to-[#F7F5F0]/85" />
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#347C78]/10 rounded-full blur-3xl" />
           </div>
-          <div className="max-w-5xl mx-auto relative z-10">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-              <div className="lg:col-span-7 flex flex-col justify-center">
-                <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#347C78] bg-[#E8F0ED] px-3 py-1 rounded-full border border-[#D5DFDB] mb-3 self-start">
-                  <ShieldCheck className="w-3.5 h-3.5" />
-                  DORA-Licensed Healthcare Professionals
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0 relative z-10">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-7">
+                <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#347C78] bg-[#E8F0ED] px-3 py-1 rounded-full border border-[#D5DFDB] mb-3">
+                  <ShieldCheck className="w-4 h-4" />
+                  Trusted Nationwide
                 </span>
                 <h1 className="h1 mb-4">{seo.h1}</h1>
                 <p className="body-large text-[#52616A] leading-relaxed">
-                  Every ESA evaluation on our platform is conducted by an actively licensed Colorado psychologist, clinical social worker (LCSW), or professional counselor (LPC) registered with the Colorado Division of Professions and Occupations (DORA).
+                  {siteConfig.name} works with a network of independent, state-licensed mental health
+                  professionals who conduct emotional support animal (ESA) evaluations through secure
+                  telehealth sessions.
                 </p>
-                <div className="flex flex-wrap gap-4 mt-6 text-xs text-[#52616A]">
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
-                    Direct Clinical Assessment
-                  </span>
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
-                    Colorado HB26-1045 Compliant
-                  </span>
-                  <span className="flex items-center gap-1.5 font-medium">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
-                    Public DORA License Records
-                  </span>
+                <div className="flex flex-wrap gap-3 mt-6">
+                  {[
+                    { value: "15+", label: "Years Experience" },
+                    { value: "100%", label: "Licensed" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="bg-white border border-[#D5DFDB] rounded-xl px-4 py-2.5">
+                      <span className="block font-serif text-2xl text-[#19354A] leading-tight">{stat.value}</span>
+                      <span className="block text-sm text-[#52616A]">{stat.label}</span>
+                    </div>
+                  ))}
+                  <div className="bg-white border border-[#D5DFDB] rounded-xl px-4 py-2.5 flex items-center gap-2">
+                    <CheckCircle2 className="w-5 h-5 text-[#27654F]" />
+                    <span className="text-base font-semibold text-[#19354A]">Verified Licensed Pros</span>
+                  </div>
                 </div>
               </div>
-              <div className="lg:col-span-5 flex flex-col">
-                <div className="rounded-2xl overflow-hidden border-2 border-[#D5DFDB] shadow-lg relative bg-[#E8F0ED] flex-1 min-h-[300px] sm:min-h-[340px]">
-                  <Image
-                    src="/images/colorado-therapist-consultation.webp"
-                    alt="Licensed Colorado mental health professional in telehealth consultation"
-                    fill
-                    sizes="(min-width: 1024px) 600px, 100vw"
-                    quality={90}
-                    priority
-                    fetchPriority="high"
-                    className="object-cover object-center"
-                  />
-                  <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-xs z-10">
-                    <span className="flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-                      Telehealth Evaluations
-                    </span>
-                    <span className="text-[#347C78]">State of Colorado</span>
-                  </div>
+
+              {/* Doctor photo stack */}
+              <div className="lg:col-span-5">
+                <div className="flex justify-center lg:justify-end -space-x-6">
+                  {doctors.map((d) => (
+                    <div
+                      key={d.slug}
+                      className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden bg-[#E8F0ED] ring-4 ring-white shadow-md"
+                    >
+                      <Image
+                        src={d.photo}
+                        alt={d.name}
+                        fill
+                        sizes="144px"
+                        quality={90}
+                        priority
+                        className="object-cover object-top"
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Clinical Provider Profiles */}
-        <main className="section-padding py-10 bg-white border-y border-line">
-          <div className="max-w-5xl mx-auto">
-            <div className="border-b border-line pb-4 mb-10">
-              <h2 className="h2">Direct Clinical Evaluators</h2>
+        {/* Our Team */}
+        <main className="section-padding py-14 bg-white border-y border-line">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-sm font-bold uppercase tracking-wider text-[#2A6763]">Our Team</span>
+              <h2 className="h2 mt-2 mb-3">Our Licensed Mental Health Professionals</h2>
+              <p className="body-normal text-[#52616A]">
+                Below are our licensed professionals who may conduct evaluations on our platform. Provider
+                availability may vary by state and scheduling.
+              </p>
             </div>
 
-            <div className="space-y-10">
-              {therapists.map((therapist) => (
-                <div
-                  key={therapist.id}
-                  className="card-theme p-6 sm:p-8 flex flex-col md:flex-row gap-6 items-start justify-between"
-                >
-                  <div className="flex gap-4 sm:gap-6 items-start">
-                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-[#19354A] to-[#347C78] text-white font-serif font-bold text-2xl sm:text-3xl flex items-center justify-center shrink-0 shadow-sm ring-4 ring-[#E8F0ED]">
-                      {therapist.initials}
-                    </div>
-                    <div>
-                      <div className="flex flex-wrap items-center gap-2 mb-1">
-                        <h3 className="h3 text-navy">{therapist.name}</h3>
-                        <span className="inline-flex items-center gap-1 text-xs font-semibold text-success bg-pale px-2.5 py-0.5 rounded-full border border-line">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-success" /> Active CO License
-                        </span>
-                      </div>
-                      <p className="text-base font-semibold text-teal mb-3">{therapist.title}</p>
-                      <p className="body-normal text-muted mb-4 max-w-2xl">{therapist.bio}</p>
-
-                      <div className="flex flex-wrap gap-4 text-xs text-muted">
-                        <span className="bg-softBlue px-3 py-1 rounded-md border border-line font-mono">
-                          License: <strong>{therapist.licenseNumber}</strong>
-                        </span>
-                        <span className="bg-softBlue px-3 py-1 rounded-md border border-line">
-                          Board: <strong>{therapist.licenseType}</strong>
-                        </span>
-                        <span className="bg-softBlue px-3 py-1 rounded-md border border-line">
-                          Experience: <strong>{therapist.yearsExperience}+ Years</strong>
-                        </span>
-                      </div>
-                    </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {doctors.map((d) => (
+                <article key={d.slug} className="card-theme p-0 overflow-hidden flex flex-col">
+                  <div className="relative aspect-square bg-[#E8F0ED]">
+                    <Image
+                      src={d.photo}
+                      alt={d.name}
+                      fill
+                      sizes="(min-width: 768px) 330px, 100vw"
+                      quality={90}
+                      className="object-cover object-top"
+                    />
+                    <span className="absolute top-3 left-3 inline-flex items-center gap-1 text-sm font-semibold text-[#27654F] bg-white/95 px-2.5 py-0.5 rounded-full border border-[#D5DFDB]">
+                      <CheckCircle2 className="w-4 h-4" /> Verified
+                    </span>
                   </div>
 
-                  <div className="shrink-0 w-full md:w-auto mt-4 md:mt-0 pt-4 md:pt-0 border-t md:border-t-0 border-line">
-                    <a
-                      href={therapist.verificationUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="btn-secondary flex items-center justify-center gap-1.5 w-full md:w-auto"
-                    >
-                      <span>Verify on DORA</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
+                  <div className="p-6 flex flex-col flex-1">
+                    <h3 className="h4">{d.cardName}</h3>
+                    <p className="text-base font-semibold text-[#2A6763] mb-3">{d.title}</p>
+                    <p className="body-normal text-[#52616A] mb-4">{d.hubBio}</p>
+
+                    <dl className="space-y-2 text-base mb-6 mt-auto">
+                      <div className="flex gap-2">
+                        <Video className="w-4 h-4 text-[#347C78] shrink-0 mt-1" />
+                        <div>
+                          <dt className="text-sm font-semibold text-[#19354A]">Evaluation Method</dt>
+                          <dd className="text-[#52616A]">{d.evaluationMethod}</dd>
+                        </div>
+                      </div>
+                      <div className="flex gap-2">
+                        <Stethoscope className="w-4 h-4 text-[#347C78] shrink-0 mt-1" />
+                        <div>
+                          <dt className="text-sm font-semibold text-[#19354A]">Focus Areas</dt>
+                          <dd className="text-[#52616A]">{d.focusAreasSummary}</dd>
+                        </div>
+                      </div>
+                    </dl>
+
+                    <div className="flex flex-col gap-2">
+                      <a href={siteConfig.surveyUrl} className="btn-primary w-full">
+                        Book Appointment →
+                      </a>
+                      <Link href={`/about-our-therapists/${d.slug}/`} className="btn-secondary w-full">
+                        View Profile →
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
           </div>
         </main>
 
-        {/* How Providers Are Vetted & Clinical Review Standards */}
-        <section className="section-padding py-16 bg-ivory">
-          <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-            <div className="card-theme">
-              <div className="w-12 h-12 rounded-xl bg-softBlue text-teal flex items-center justify-center mb-4">
-                <Award className="w-6 h-6" />
-              </div>
-              <h3 className="h3 mb-3">How Our Providers Are Vetted</h3>
-              <p className="body-normal text-muted mb-4">
-                Before joining our clinical network, every mental health professional undergoes strict primary-source credential verification:
+        {/* The Process */}
+        <section className="section-padding py-14 bg-ivory">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-0">
+            <div className="text-center max-w-2xl mx-auto mb-10">
+              <span className="text-sm font-bold uppercase tracking-wider text-[#2A6763]">The Process</span>
+              <h2 className="h2 mt-2 mb-3">How You&apos;re Matched With a Provider</h2>
+              <p className="body-normal text-[#52616A]">
+                When you begin an evaluation, you are matched with a licensed mental health professional
+                authorized in your state.
               </p>
-              <ul className="text-base space-y-2 text-ink">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Direct license verification via the Colorado Department of Regulatory Agencies (DORA).</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Clear disciplinary standing with zero adverse board actions or sanctions.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Demonstrated clinical focus on anxiety, depression, trauma, and emotional animal support.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Mandatory adherence to Colorado telehealth standards and HIPAA security.</span>
-                </li>
-              </ul>
             </div>
-
-            <div className="card-theme">
-              <div className="w-12 h-12 rounded-xl bg-softBlue text-teal flex items-center justify-center mb-4">
-                <FileBadge className="w-6 h-6" />
-              </div>
-              <h3 className="h3 mb-3">Clinical Review Standards</h3>
-              <p className="body-normal text-muted mb-4">
-                Our clinicians operate under the highest ethical standards of the American Psychological Association (APA) and National Association of Social Workers (NASW):
-              </p>
-              <ul className="text-base space-y-2 text-ink">
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Thorough assessment of functional impairment in major life activities within the residence.</span>
+            <ol className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {processSteps.map((step, i) => (
+                <li key={step.title} className="card-theme">
+                  <span className="w-10 h-10 rounded-full bg-[#19354A] text-white font-bold text-lg flex items-center justify-center mb-4">
+                    {i + 1}
+                  </span>
+                  <h3 className="h4 mb-2">{step.title}</h3>
+                  <p className="body-normal text-[#52616A]">{step.text}</p>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Validation of nexus between patient mental health disability and animal companionship.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Zero auto-approvals or computer-generated letters; every document is individually signed.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-teal shrink-0 mt-0.5" />
-                  <span>Readiness to provide landlord telephone or written verification when requested.</span>
-                </li>
-              </ul>
-            </div>
+              ))}
+            </ol>
           </div>
         </section>
 
-        {/* M11 Reviewer Box */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <ReviewerBox />
-        </div>
-
-        {/* M4 Inline CTA */}
-        <div className="section-padding pb-16">
-          <div className="max-w-4xl mx-auto">
-            <InlineCta
-              title="Connect with a Verified Colorado Clinician"
-              description="Get your housing rights protected today through a secure clinical telehealth assessment."
-            />
+        {/* Transparency */}
+        <section className="section-padding py-14 bg-white border-y border-line">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0">
+            <div className="text-center mb-8">
+              <span className="text-sm font-bold uppercase tracking-wider text-[#2A6763]">Transparency</span>
+              <h2 className="h2 mt-2 mb-3">Important Provider Disclosure</h2>
+              <p className="body-normal text-[#52616A]">How our network of independent professionals operates.</p>
+            </div>
+            <ul className="card-theme space-y-3">
+              {disclosures.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-base text-[#24333B]">
+                  <Info className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
+        </section>
+
+        {/* Learn More */}
+        <section className="section-padding py-14">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-0 text-center">
+            <h2 className="h2 mb-3">Learn More About ESA Evaluations</h2>
+            <p className="body-normal text-[#52616A] mb-6">
+              Explore our related pages or begin an evaluation when you&apos;re ready.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href={siteConfig.surveyUrl} className="btn-primary">
+                Start Your Evaluation Now <ArrowRight className="w-4 h-4 ml-1.5" />
+              </a>
+              <Link href="/what-is-an-esa-letter/" className="btn-secondary">
+                ESA Letter Online →
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

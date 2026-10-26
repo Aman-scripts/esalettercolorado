@@ -4,6 +4,7 @@ import { rightsSpokes } from "@/data/rights-data";
 import { conditionsList } from "@/data/conditions-data";
 import { coloradoCities } from "@/data/locations-data";
 import { blogCategories, blogPosts } from "@/data/blog-data";
+import { doctors } from "@/data/therapists-data";
 
 /** Every indexable URL, used by app/sitemap.ts */
 export function sitemapEntries(): MetadataRoute.Sitemap {
@@ -64,6 +65,14 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
+  // Doctor Profiles
+  const doctorUrls = doctors.map((doctor) => ({
+    url: `${baseUrl}/about-our-therapists/${doctor.slug}/`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   // Blog Categories
   const categoryUrls = blogCategories.map((cat) => ({
     url: `${baseUrl}/blog/category/${cat.slug}/`,
@@ -85,6 +94,7 @@ export function sitemapEntries(): MetadataRoute.Sitemap {
     ...rightsUrls,
     ...conditionUrls,
     ...cityUrls,
+    ...doctorUrls,
     ...categoryUrls,
     ...postUrls,
   ];
