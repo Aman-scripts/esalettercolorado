@@ -89,15 +89,15 @@ export function Hero({
                 {subhead}
               </p>
 
-              <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
+              <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
                 <Link
                   href={ctaHref}
-                  className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center"
+                  className="btn-primary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
                 >
                   <span className="leading-snug">{ctaText}</span>
                   <ArrowRight className="w-4 h-4 shrink-0" />
                 </Link>
-                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 text-center justify-center">
+                <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
                   How the Evaluation Works
                 </Link>
               </div>
@@ -140,7 +140,7 @@ export function Hero({
               )}
             </div>
 
-            {/* Right Column: Hero Visual with Real Colorado Photograph & Trust Floating Badges */}
+            {/* Right Column: Hero Visual with Real Colorado Photograph (50% Width on Desktop) */}
             <div className="lg:col-span-5 relative">
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#D5DFDB] shadow-2xl bg-[#E8F0ED]">
                 <Image
@@ -148,57 +148,27 @@ export function Hero({
                   alt="Colorado resident with emotional support golden retriever in sunlit Denver apartment"
                   width={1376}
                   height={768}
-                  sizes="(min-width: 1024px) 480px, 100vw"
-                  className="w-full h-auto object-cover object-center max-h-[460px] transform hover:scale-102 transition-transform duration-500"
+                  sizes="(min-width: 1024px) 580px, 100vw"
+                  className="w-full h-auto object-cover object-center max-h-[500px] transform hover:scale-102 transition-transform duration-500"
                 />
 
                 {/* Subtle gradient overlay at bottom of photo */}
                 <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#19354A]/80 to-transparent pointer-events-none" />
 
                 {/* Bottom caption overlay */}
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between gap-2 text-white text-xs">
-                  <span className="font-medium drop-shadow-md flex items-center gap-1.5 min-w-0">
-                    <Sparkles className="w-3.5 h-3.5 text-[#347C78] shrink-0" />
-                    <span className="truncate">Denver, CO &bull; Protected under FHA</span>
-                  </span>
-                  {/* Hidden from sm up, where the floating bottom badge covers this corner */}
-                  <span className="sm:hidden shrink-0 bg-[#347C78]/90 text-white font-bold px-2 py-0.5 rounded text-[11px] shadow-xs">
-                    Fair Housing Act
-                  </span>
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 z-10 flex items-center gap-2 bg-[#19354A]/75 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/15 shadow-md">
+                  <div className="w-6 h-6 rounded-full bg-[#347C78] flex items-center justify-center shrink-0">
+                    <Sparkles className="w-3.5 h-3.5 text-white" />
+                  </div>
+                  <div className="flex flex-col text-left">
+                    <span className="text-xs font-bold leading-tight text-white whitespace-nowrap">
+                      Denver, CO
+                    </span>
+                    <span className="text-[11px] font-medium text-[#E8F0ED] leading-tight whitespace-nowrap">
+                      Protected under FHA
+                    </span>
+                  </div>
                 </div>
-              </div>
-
-              {/* Trust badges: a row below the photo on mobile, floating over its corners from sm up */}
-              <div className="mt-3 grid grid-cols-2 gap-2 sm:contents">
-              {/* Floating Top Trust Pill */}
-              <div className="sm:absolute sm:-top-3 sm:-left-4 bg-white/95 backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-sm sm:shadow-lg flex items-center gap-2 min-w-0">
-                <div className="w-7 h-7 shrink-0 rounded-full bg-[#E8F0ED] text-[#347C78] flex items-center justify-center font-bold">
-                  <CheckCircle2 className="w-4 h-4" />
-                </div>
-                <div className="text-left">
-                  <p className="text-[11px] font-bold text-[#19354A] leading-tight">
-                    100% Legal In Colorado
-                  </p>
-                  <p className="text-[10px] text-[#52616A] leading-tight">
-                    C.R.S. 24-34-502 &amp; HB26-1045
-                  </p>
-                </div>
-              </div>
-
-              {/* Floating Bottom Right Badge */}
-              <div className="sm:absolute sm:-bottom-3 sm:-right-4 bg-white/95 backdrop-blur-md px-3 sm:px-3.5 py-2 rounded-2xl border border-[#D5DFDB] shadow-sm sm:shadow-lg flex items-center gap-2 min-w-0">
-                <div className="w-7 h-7 shrink-0 rounded-full bg-[#E8F0ED] text-[#A65331] flex items-center justify-center">
-                  <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-                </div>
-                <div className="text-left">
-                  <p className="text-[11px] font-bold text-[#19354A] leading-tight">
-                    Licensed Providers
-                  </p>
-                  <p className="text-[10px] text-[#52616A] leading-tight">
-                    Verifiable DORA Credentials
-                  </p>
-                </div>
-              </div>
               </div>
             </div>
           </div>
@@ -221,15 +191,15 @@ export function Hero({
               {subhead}
             </p>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-3 w-full sm:w-auto">
               <Link
                 href={ctaHref}
-                className="btn-primary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center"
+                className="btn-primary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 shadow-md hover:shadow-lg gap-2 text-center justify-center sm:whitespace-nowrap"
               >
                 <span className="leading-snug">{ctaText}</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />
               </Link>
-              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm sm:text-base px-6 sm:px-8 py-3.5 sm:py-4 text-center justify-center">
+              <Link href="/how-it-works/" className="btn-secondary w-full sm:w-auto text-sm lg:text-[13px] xl:text-sm px-6 sm:px-5 lg:px-4 xl:px-5 py-3.5 sm:py-4 text-center justify-center sm:whitespace-nowrap">
                 How the Evaluation Works
               </Link>
             </div>
