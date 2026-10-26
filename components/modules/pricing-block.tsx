@@ -53,7 +53,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
           {/* Plan 1: First-Time Evaluation (Featured) */}
           <div className="card-theme relative border-2 border-[#347C78] shadow-lg flex flex-col justify-between bg-white">
-            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#347C78] text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-xs">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#347C78] text-white text-xs font-bold uppercase tracking-wider py-1 px-4 rounded-full shadow-xs whitespace-nowrap">
               Most Popular • Colorado Housing
             </div>
 
@@ -63,7 +63,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
                   New Client Clinical Evaluation
                 </span>
                 <div className="mt-2 flex items-baseline justify-center gap-1">
-                  <span className="text-4xl sm:text-5xl font-serif font-bold text-[#19354A]">
+                  <span className="text-[28px] md:text-[32px] lg:text-[36px] leading-none font-serif font-bold text-[#19354A]">
                     ${siteConfig.pricing.single}
                   </span>
                   <span className="text-sm font-medium text-[#52616A]">/ one-time</span>
@@ -112,7 +112,7 @@ export function PricingBlock({ showSnapshotOnly = false }: PricingBlockProps) {
                   Annual Lease Renewal
                 </span>
                 <div className="mt-2 flex items-baseline justify-center gap-1">
-                  <span className="text-4xl sm:text-5xl font-serif font-bold text-[#19354A]">
+                  <span className="text-[28px] md:text-[32px] lg:text-[36px] leading-none font-serif font-bold text-[#19354A]">
                     ${siteConfig.pricing.renewal}
                   </span>
                   <span className="text-sm font-medium text-[#52616A]">/ annual</span>
