@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { blogPosts } from "@/data/blog-data";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { InlineCta } from "@/components/modules/inline-cta";
+import { RichText } from "@/components/modules/rich-text";
 import { ReviewerBox } from "@/components/modules/reviewer-box";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteConfig } from "@/data/site-config";
@@ -210,7 +211,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 <section key={idx} id={`section-${idx}`} className="scroll-mt-24">
                   <h2 className="h2 mb-4">{section.heading}</h2>
                   <div className="body-normal text-[#24333B] leading-relaxed space-y-4">
-                    <p>{section.content}</p>
+                    <RichText text={section.content} />
                   </div>
 
                   {/* Mid-content CTA after section 1 */}

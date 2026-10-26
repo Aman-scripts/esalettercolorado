@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { Hero } from "@/components/modules/hero";
 import { CalloutBox } from "@/components/modules/callout-box";
+import { RichText } from "@/components/modules/rich-text";
 import { InlineCta } from "@/components/modules/inline-cta";
 import { FAQAccordion } from "@/components/modules/faq-accordion";
 import { RelatedPages } from "@/components/modules/related-pages";
@@ -87,8 +88,8 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
                 <h2 className="text-h2 text-[#19354A] mb-3">
                   {section.title}
                 </h2>
-                <div className="text-base text-[#24333B] leading-relaxed whitespace-pre-line">
-                  {section.content}
+                <div className="text-base text-[#24333B] leading-relaxed whitespace-pre-line space-y-3">
+                  <RichText text={section.content} />
                 </div>
               </section>
             ))}

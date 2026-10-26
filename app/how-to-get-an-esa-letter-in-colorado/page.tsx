@@ -63,7 +63,12 @@ export default function HowToGetAnEsaLetterPage() {
       <article className="section-padding bg-white">
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 lg:px-8">
           <CalloutBox type="quick-answer" title="Quick Answer: 3 Steps to a Valid Letter">
-            To get a valid ESA letter in Colorado: 1. Complete an online clinical intake describing your symptoms and companion animal bond. 2. Meet with or have your intake reviewed by an active Colorado-licensed mental health professional. 3. Receive your signed official recommendation letter on clinical letterhead containing the provider&apos;s DORA license number.
+            <p>To get a valid ESA letter in Colorado:</p>
+            <ol className="list-decimal pl-6 mt-2 space-y-1.5 marker:font-bold marker:text-[#347C78]">
+              <li>Complete an online clinical intake describing your symptoms and companion animal bond.</li>
+              <li>Meet with or have your intake reviewed by an active Colorado-licensed mental health professional.</li>
+              <li>Receive your signed official recommendation letter on clinical letterhead containing the provider&apos;s DORA license number.</li>
+            </ol>
           </CalloutBox>
 
           <div className="space-y-10 text-base text-[#24333B] leading-relaxed">
