@@ -72,6 +72,7 @@ export default function RightsHubPage() {
                   alt="Colorado tenant happily holding apartment keys with her assistance animals in modern Denver home"
                   fill
                   sizes="(min-width: 1024px) 560px, 100vw"
+                  quality={85}
                   className="object-cover object-center"
                 />
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-sm z-10">

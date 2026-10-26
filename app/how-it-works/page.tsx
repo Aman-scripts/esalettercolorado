@@ -80,13 +80,12 @@ export default function HowItWorksPage() {
               src="/images/colorado-intake-telehealth.webp"
               alt=""
               fill
-              sizes="(max-width: 768px) 200px, 1920px"
-              quality={50}
-              fetchPriority="high"
+              sizes="100vw"
+              quality={80}
               className="object-cover object-center opacity-25"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/90 to-[#F7F5F0]/85 backdrop-blur-[1px]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/90 to-[#F7F5F0]/85" />
             <div className="absolute -top-20 -right-20 w-80 h-80 bg-[#347C78]/10 rounded-full blur-3xl" />
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -122,6 +121,7 @@ export default function HowItWorksPage() {
                     alt="Colorado renter completing a confidential telehealth ESA evaluation from their living room"
                     fill
                     sizes="(min-width: 1024px) 560px, 100vw"
+                    quality={85}
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-sm z-10">

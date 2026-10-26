@@ -50,17 +50,17 @@ export function Hero({
           src={resolvedBgImage}
           alt=""
           fill
-          sizes="(max-width: 768px) 200px, 1920px"
-          quality={50}
-          fetchPriority="high"
+          sizes="100vw"
+          quality={80}
           className="object-cover object-center opacity-30"
           priority
+          fetchPriority="high"
         />
         <div
           className={`absolute inset-0 ${
             bgOverlay === "navy"
               ? "bg-gradient-to-r from-[#19354A]/95 via-[#19354A]/90 to-[#19354A]/85"
-              : "bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/92 to-[#F7F5F0]/85 backdrop-blur-[1px]"
+              : "bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/92 to-[#F7F5F0]/85"
           }`}
         />
         {/* Soft atmospheric gradient accents */}
@@ -75,7 +75,7 @@ export function Hero({
             <div className="lg:col-span-7 text-left">
               {badge && (
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap max-w-full mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
-                  <ShieldCheck className="w-4 h-4 shrink-0 text-[#347C78]" />
+                  <ShieldCheck className="w-4 h-4 shrink-0 text-[#2A6763]" />
                   <span className="sm:hidden truncate">{shortBadge}</span>
                   <span className="hidden sm:inline">{badge}</span>
                 </div>
@@ -105,19 +105,19 @@ export function Hero({
               {/* Trust Guarantees Strip */}
               <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs sm:text-sm text-[#52616A]">
                 <span className="flex items-center gap-1.5 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                   Colorado HB26-1045 Compliant
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                   100% Money-Back Guarantee
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <Clock className="w-4 h-4 text-[#347C78] shrink-0" />
+                  <Clock className="w-4 h-4 text-[#2A6763] shrink-0" />
                   Delivered within 24–48 Hours
                 </span>
                 <span className="flex items-center gap-1.5 font-medium">
-                  <Lock className="w-4 h-4 text-[#347C78] shrink-0" />
+                  <Lock className="w-4 h-4 text-[#2A6763] shrink-0" />
                   Encrypted &amp; HIPAA Compliant
                 </span>
               </div>
@@ -149,6 +149,9 @@ export function Hero({
                   width={1376}
                   height={768}
                   sizes="(min-width: 1024px) 580px, 100vw"
+                  quality={85}
+                  priority
+                  fetchPriority="high"
                   className="w-full h-auto object-cover object-center max-h-[500px] transform hover:scale-102 transition-transform duration-500"
                 />
 
@@ -177,7 +180,7 @@ export function Hero({
           <div className="max-w-3xl mx-auto">
             {badge && (
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold whitespace-nowrap max-w-full mb-6 bg-white border border-[#D5DFDB] text-[#19354A] shadow-2xs">
-                <ShieldCheck className="w-4 h-4 shrink-0 text-[#347C78]" />
+                <ShieldCheck className="w-4 h-4 shrink-0 text-[#2A6763]" />
                 <span className="sm:hidden truncate">{shortBadge}</span>
                 <span className="hidden sm:inline">{badge}</span>
               </div>
@@ -207,19 +210,19 @@ export function Hero({
             {/* Trust Guarantees Strip */}
             <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-sm text-[#52616A]">
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
+                <CheckCircle2 className="w-4 h-4 text-[#2A6763]" />
                 Colorado HB26-1045 Compliant
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <CheckCircle2 className="w-4 h-4 text-[#347C78]" />
+                <CheckCircle2 className="w-4 h-4 text-[#2A6763]" />
                 100% Money-Back Guarantee
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <Clock className="w-4 h-4 text-[#347C78]" />
+                <Clock className="w-4 h-4 text-[#2A6763]" />
                 Delivered within 24–48 Hours
               </span>
               <span className="flex items-center gap-1.5 font-medium">
-                <Lock className="w-4 h-4 text-[#347C78]" />
+                <Lock className="w-4 h-4 text-[#2A6763]" />
                 Encrypted &amp; HIPAA Compliant
               </span>
             </div>

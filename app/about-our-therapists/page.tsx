@@ -43,13 +43,12 @@ export default function AboutOurTherapistsPage() {
               src="/images/colorado-apartment-peaceful-esa.webp"
               alt=""
               fill
-              sizes="(max-width: 768px) 200px, 1920px"
-              quality={50}
-              fetchPriority="high"
+              sizes="100vw"
+              quality={80}
               className="object-cover object-center opacity-25"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/90 to-[#F7F5F0]/85 backdrop-blur-[1px]" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F7F5F0]/95 via-[#F7F5F0]/90 to-[#F7F5F0]/85" />
             <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#347C78]/10 rounded-full blur-3xl" />
           </div>
           <div className="max-w-5xl mx-auto relative z-10">
@@ -85,6 +84,7 @@ export default function AboutOurTherapistsPage() {
                     alt="Licensed Colorado mental health professional in telehealth consultation"
                     fill
                     sizes="(min-width: 1024px) 480px, 100vw"
+                    quality={85}
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-xs z-10">

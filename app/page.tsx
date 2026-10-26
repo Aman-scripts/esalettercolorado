@@ -115,7 +115,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="card-theme bg-[#F7F5F0]">
-              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#347C78] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#2A6763] flex items-center justify-center mb-4">
                 <ShieldCheck className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
@@ -127,7 +127,7 @@ export default function HomePage() {
             </div>
 
             <div className="card-theme bg-[#F7F5F0]">
-              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#347C78] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#2A6763] flex items-center justify-center mb-4">
                 <Building className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
@@ -139,7 +139,7 @@ export default function HomePage() {
             </div>
 
             <div className="card-theme bg-[#F7F5F0]">
-              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#347C78] flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-[#E8F0ED] text-[#2A6763] flex items-center justify-center mb-4">
                 <Award className="w-6 h-6" />
               </div>
               <h3 className="text-lg font-bold text-[#19354A] mb-2">
@@ -166,15 +166,15 @@ export default function HomePage() {
               </p>
               <div className="text-base space-y-3 mt-6 text-[#24333B]">
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
                   <span><strong>Housing Classification:</strong> ESAs are classified as assistance animals under the Fair Housing Act, not pets.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
                   <span><strong>Fee Exemptions:</strong> Landlords cannot charge pet security deposits, move-in pet fees, or monthly pet rent.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
-                  <CheckCircle2 className="w-5 h-5 text-[#347C78] shrink-0 mt-0.5" />
+                  <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
                   <span><strong>Policy Overrides:</strong> Valid letters override &ldquo;no pets&rdquo; rules and breed or weight restrictions.</span>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function HomePage() {
                   <span>Read Full Renter Guide</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
-                <Link href="/sample-letter/" className="text-xs font-bold text-[#347C78] hover:underline">
+                <Link href="/sample-letter/" className="text-xs font-bold text-[#2A6763] hover:underline">
                   View Annotated Sample Letter →
                 </Link>
               </div>
@@ -229,6 +229,7 @@ export default function HomePage() {
             alt="Colorado tenant enjoying apartment living with their emotional support animals"
             fill
             sizes="100vw"
+            quality={85}
             className="object-cover"
           />
         </div>
@@ -298,14 +299,14 @@ export default function HomePage() {
                         Mental Health
                       </span>
                     </div>
-                    <h3 className="text-xl font-bold text-[#19354A] group-hover:text-[#347C78] transition-colors">
+                    <h3 className="text-xl font-bold text-[#19354A] group-hover:text-[#2A6763] transition-colors">
                       {cond.name}
                     </h3>
                     <p className="text-base text-[#52616A] mt-2 line-clamp-3 leading-relaxed">
                       {cond.shortDesc}
                     </p>
                   </div>
-                  <div className="mt-6 pt-3 border-t border-[#D5DFDB]/60 flex items-center justify-between text-xs font-semibold text-[#347C78] group-hover:text-[#19354A]">
+                  <div className="mt-6 pt-3 border-t border-[#D5DFDB]/60 flex items-center justify-between text-xs font-semibold text-[#2A6763] group-hover:text-[#19354A]">
                     <span>Learn How {cond.name} Qualifies</span>
                     <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
                   </div>
@@ -345,20 +346,21 @@ export default function HomePage() {
                     alt="Licensed Colorado mental health professional conducting a telehealth ESA consultation"
                     fill
                     sizes="(min-width: 1024px) 480px, 100vw"
+                    quality={85}
                     className="object-cover object-center"
                   />
                   <div className="absolute bottom-2 left-2 right-2 bg-white/95 backdrop-blur-xs px-3 py-1.5 rounded-lg text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-xs z-10">
                     <span className="flex items-center gap-1.5">
-                      <ShieldCheck className="w-4 h-4 text-[#347C78]" />
+                      <ShieldCheck className="w-4 h-4 text-[#2A6763]" />
                       Direct 1-on-1 Clinical Assessment
                     </span>
-                    <span className="text-[#347C78]">CO DORA</span>
+                    <span className="text-[#2A6763]">CO DORA</span>
                   </div>
                 </div>
               </div>
 
               <div className="lg:col-span-7 flex flex-col justify-center">
-                <span className="text-xs font-bold text-[#347C78] bg-[#E8F0ED] px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
+                <span className="text-xs font-bold text-[#2A6763] bg-[#E8F0ED] px-3 py-1 rounded-full uppercase tracking-wider inline-block mb-3">
                   Colorado HB26-1045 Standard
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#19354A]">
@@ -370,19 +372,19 @@ export default function HomePage() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 text-xs text-[#24333B]">
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                     <span>Active DORA credentials on public record</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                     <span>Direct phone/video telehealth consultation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                     <span>Compliant with C.R.S. 24-34-502 &amp; FHA</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-[#2A6763] shrink-0" />
                     <span>Direct clinician email &amp; phone on letterhead</span>
                   </div>
                 </div>
@@ -400,7 +402,7 @@ export default function HomePage() {
                   <h3 className="text-lg font-bold text-[#19354A]">
                     {therapist.name}
                   </h3>
-                  <p className="text-sm font-semibold text-[#347C78] mt-0.5">
+                  <p className="text-sm font-semibold text-[#2A6763] mt-0.5">
                     {therapist.credentials}
                   </p>
                   <p className="text-sm text-[#52616A] mt-1 font-mono">
@@ -419,7 +421,7 @@ export default function HomePage() {
                     href={therapist.verificationUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#347C78] hover:underline font-semibold"
+                    className="text-[#2A6763] hover:underline font-semibold"
                   >
                     Verify License →
                   </a>
@@ -450,34 +452,34 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="card-theme bg-white">
-              <Scale className="w-8 h-8 text-[#347C78] mb-3" />
+              <Scale className="w-8 h-8 text-[#2A6763] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">Fair Housing Act (FHA)</h3>
               <p className="text-base text-[#52616A] leading-relaxed">
                 Federal law establishes that assistance animals are auxiliary aids. Landlords are legally required to provide reasonable accommodation in housing.
               </p>
-              <Link href="/rights/fair-housing-act/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
+              <Link href="/rights/fair-housing-act/" className="text-xs font-bold text-[#2A6763] mt-4 inline-block hover:underline">
                 Read FHA Protections →
               </Link>
             </div>
 
             <div className="card-theme bg-white">
-              <Building className="w-8 h-8 text-[#347C78] mb-3" />
+              <Building className="w-8 h-8 text-[#2A6763] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">Colorado HB26-1045</h3>
               <p className="text-base text-[#52616A] leading-relaxed">
                 Colorado&apos;s updated assistance animal statute mandates that letters be issued by clinicians with active Colorado licenses, protecting legitimate tenants.
               </p>
-              <Link href="/rights/colorado-hb26-1045-explained/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
+              <Link href="/rights/colorado-hb26-1045-explained/" className="text-xs font-bold text-[#2A6763] mt-4 inline-block hover:underline">
                 Explore HB26-1045 →
               </Link>
             </div>
 
             <div className="card-theme bg-white">
-              <ShieldCheck className="w-8 h-8 text-[#347C78] mb-3" />
+              <ShieldCheck className="w-8 h-8 text-[#2A6763] mb-3" />
               <h3 className="text-lg font-bold text-[#19354A] mb-2">No Pet Fees or Rent</h3>
               <p className="text-base text-[#52616A] leading-relaxed">
                 Landlords cannot charge pet security deposits or monthly pet rent for emotional support animals under HUD guidelines and Colorado HB23-1068.
               </p>
-              <Link href="/rights/pet-deposits-and-fees/" className="text-xs font-bold text-[#347C78] mt-4 inline-block hover:underline">
+              <Link href="/rights/pet-deposits-and-fees/" className="text-xs font-bold text-[#2A6763] mt-4 inline-block hover:underline">
                 Pet Deposit Rules →
               </Link>
             </div>
@@ -511,7 +513,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/locations/"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#347C78] hover:text-[#19354A] transition-colors shrink-0"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#2A6763] hover:text-[#19354A] transition-colors shrink-0"
             >
               <span>View All 12 City Guides</span>
               <ArrowRight className="w-4 h-4" />
@@ -525,13 +527,13 @@ export default function HomePage() {
                 href={`/locations/${city.slug}/`}
                 className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] hover:border-[#347C78] hover:bg-[#E8F0ED] transition-all group text-center"
               >
-                <h3 className="font-serif font-bold text-base text-[#19354A] group-hover:text-[#347C78] transition-colors">
+                <h3 className="font-serif font-bold text-base text-[#19354A] group-hover:text-[#2A6763] transition-colors">
                   {city.name}
                 </h3>
                 <span className="text-sm text-[#52616A] mt-1 block">
                   {city.rentalStats.avgRent}
                 </span>
-                <span className="text-sm text-[#347C78] font-semibold mt-2 inline-block">
+                <span className="text-sm text-[#2A6763] font-semibold mt-2 inline-block">
                   Renter Guide →
                 </span>
               </Link>
