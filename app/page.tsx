@@ -325,7 +325,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-white border border-[#D5DFDB] text-xs sm:text-sm text-[#52616A] leading-relaxed max-w-4xl mx-auto">
+          <div className="mt-8 card-theme text-sm sm:text-base text-[#52616A] leading-relaxed">
             <strong className="text-[#19354A]">Note:</strong> Having a mental, emotional, or psychological condition does not automatically qualify you for an ESA. Eligibility depends on an individualized evaluation by a licensed mental health professional, who determines whether an ESA is appropriate based on your needs and how your condition affects daily life.
           </div>
         </div>
