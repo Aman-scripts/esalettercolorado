@@ -82,9 +82,9 @@ export default function RightsHubPage() {
                   className="object-cover object-center"
                 />
                 <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center border border-[#D5DFDB] shadow-sm z-10">
-                  <span className="flex items-center gap-1.5 text-[#347C78]">
-                    <ShieldCheck className="w-4 h-4" />
-                    Exempt from All Pet Fees &amp; Deposits
+                  <span className="flex items-start gap-1.5 text-[#347C78]">
+                    <ShieldCheck className="w-4 h-4 shrink-0 mt-0.5" />
+                    <span>Know Your Colorado Assistance Animal Rights</span>
                   </span>
                 </div>
               </div>
@@ -92,11 +92,8 @@ export default function RightsHubPage() {
 
             <div className="lg:col-span-6 flex flex-col justify-center">
               <h2 className="text-h2 text-[#19354A]">
-                Know Your Colorado Assistance Animal Rights
-              </h2>
-              <h3 className="text-lg font-bold text-[#19354A] mt-4">
                 Colorado Assistance Animal Housing Protections
-              </h3>
+              </h2>
               <p className="text-body-large text-[#52616A] mt-3 leading-relaxed">
                 Under Colorado HB26-1045, emotional support animals are defined as assistance animals, and allowing an assistance animal in housing is presumed to be a reasonable accommodation. Housing providers may request reasonable documentation and may hold tenants responsible for actual damage caused by the animal.
               </p>
