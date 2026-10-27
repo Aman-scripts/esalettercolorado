@@ -8,6 +8,7 @@ interface InlineCtaProps {
   title?: string;
   description?: string;
   buttonText?: string;
+  badgeText?: string;
   variant?: "navy" | "ivory" | "teal";
 }
 
@@ -17,6 +18,7 @@ export function InlineCta({
   title,
   description,
   buttonText = "Get Your Colorado ESA Letter ($149)",
+  badgeText = "Professional ESA Evaluations for Housing Requests",
   variant = "navy",
 }: InlineCtaProps) {
   const displayHeadline =
@@ -59,7 +61,7 @@ export function InlineCta({
           }`}
         >
           <ShieldCheck className="w-4 h-4 text-[#347C78]" />
-          <span>Legitimate Housing Accommodation Guarantee</span>
+          <span>{badgeText}</span>
         </div>
 
         {/* Headline — Explicit high-contrast white text */}
