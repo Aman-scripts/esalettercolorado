@@ -109,7 +109,7 @@ export default function HomePage() {
               Why Colorado Renters Trust Our Clinical Team
             </h2>
             <p className="text-body-large text-[#52616A] mt-2">
-              Unlike generic online certificate mills, our evaluations are conducted exclusively by licensed Colorado mental health professionals.
+              Every evaluation is conducted by a licensed Colorado mental health professional, not an automated quiz or a generic certificate.
             </p>
           </div>
 

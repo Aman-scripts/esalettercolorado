@@ -20,8 +20,8 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
       num: "02",
       icon: Stethoscope,
       title: "Clinical Evaluation",
-      shortDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate. Every evaluation is conducted by a licensed Colorado mental health professional, not an automated quiz or a generic certificate.",
-      longDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate. Every evaluation is conducted by a licensed Colorado mental health professional, not an automated quiz or a generic certificate.",
+      shortDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate.",
+      longDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate.",
     },
     {
       num: "03",
