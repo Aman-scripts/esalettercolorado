@@ -116,9 +116,6 @@ export default function ConditionsHubPage() {
                   <span><strong>No Prior Records:</strong> Evaluation assesses your individual needs.</span>
                 </div>
               </div>
-              <p className="text-body-large text-[#52616A] mt-6 leading-relaxed">
-                Under Colorado House Bill 26-1045, an emotional support animal is an animal that provides solely emotional support to alleviate a symptom or effect of a disability and does not require task-training. Federal enforcement for untrained ESAs has narrowed since HUD&apos;s May 2026 guidance. The standard is whether a tenant has a disability and the animal is necessary to address a disability-related need.
-              </p>
             </div>
           </div>
         </div>
@@ -130,6 +127,9 @@ export default function ConditionsHubPage() {
           <div className="space-y-4 text-base text-[#24333B] leading-relaxed">
             <p className="text-lg font-medium text-[#19354A] leading-relaxed">
               Living with chronic anxiety, depression, trauma, or neurodevelopmental challenges can significantly impact how an individual functions in their private living space. In Colorado, individuals experiencing these emotional impairments have the legal right to request an emotional support animal as a reasonable accommodation in housing.
+            </p>
+            <p>
+              Under Colorado House Bill 26-1045, an emotional support animal is an animal that provides solely emotional support to alleviate a symptom or effect of a disability and does not require task-training. Federal enforcement for untrained ESAs has narrowed since HUD&apos;s May 2026 guidance. The standard is whether a tenant has a disability and the animal is necessary to address a disability-related need.
             </p>
             <p>
               Below is an overview of qualifying criteria, the clinical evaluation process conducted by our state-licensed mental health professionals, and detailed guides for each recognized condition.
@@ -188,13 +188,12 @@ export default function ConditionsHubPage() {
         title="Common Conditions That May Qualify for an ESA in Colorado"
         subtitle="Have a look at the most common mental health conditions that could qualify an individual to get an ESA in Colorado."
         type="conditions"
+        note={
+          <div className="card-theme text-sm sm:text-base text-[#52616A] leading-relaxed">
+            <strong className="text-[#19354A]">Note:</strong> Having any of the conditions listed above does not automatically qualify you for an ESA letter in Colorado. Eligibility requires an individualized clinical assessment by a Colorado-licensed mental health professional, who determines whether you have a qualifying disability-related need for an emotional support animal. An ESA letter is issued only if the professional finds it clinically appropriate.
+          </div>
+        }
       />
-
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-4">
-        <div className="card-theme text-sm sm:text-base text-[#52616A] leading-relaxed">
-          <strong className="text-[#19354A]">Note:</strong> Having any of the conditions listed above does not automatically qualify you for an ESA letter in Colorado. Eligibility requires an individualized clinical assessment by a Colorado-licensed mental health professional, who determines whether you have a qualifying disability-related need for an emotional support animal. An ESA letter is issued only if the professional finds it clinically appropriate.
-        </div>
-      </div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <InlineCta

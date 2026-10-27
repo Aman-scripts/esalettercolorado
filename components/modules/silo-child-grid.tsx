@@ -49,6 +49,7 @@ interface SiloChildGridProps {
   title?: string;
   subtitle?: string;
   type?: "rights" | "conditions" | "locations";
+  note?: React.ReactNode;
 }
 
 const conditionIcons: Record<string, LucideIcon> = {
@@ -113,6 +114,7 @@ export function SiloChildGrid({
   title = "Explore Guides & Topics",
   subtitle = "Comprehensive, state-specific resources to navigate Colorado assistance animal regulations.",
   type = "rights",
+  note,
 }: SiloChildGridProps) {
   return (
     <section className="section-padding bg-white border-y border-[#D5DFDB]">
@@ -161,6 +163,8 @@ export function SiloChildGrid({
             );
           })}
         </div>
+
+        {note && <div className="mt-8">{note}</div>}
       </div>
     </section>
   );
