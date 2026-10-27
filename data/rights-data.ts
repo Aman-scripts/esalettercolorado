@@ -15,6 +15,7 @@ export interface RightsPage {
   faqTitle?: string;
   faqSubtitle?: string;
   faqs: { question: string; answer: string }[];
+  ctaBadge?: string;
   relatedSlugs: string[];
 }
 
@@ -128,17 +129,23 @@ export const rightsSpokes: RightsPage[] = [
       },
       {
         title: "Public Access Rights vs. Housing Rights",
-        content: "Service animals can accompany their handlers into restaurants, grocery stores, hotels, airplanes, and public transportation. ESAs have protected access to residential housing without fees or breed restrictions, but businesses and public accommodations have no legal obligation to allow ESAs inside.",
+        content: "Service animals can accompany their handlers into restaurants, grocery stores, hotels, and public transportation. Air travel is governed separately by the Air Carrier Access Act, which covers trained service dogs. ESAs have protected access to residential housing without fees or breed restrictions, but businesses and public accommodations have no legal obligation to allow ESAs inside.",
       },
     ],
+    faqTitle: "FAQs About ESAs vs. Service Animals in Colorado",
+    faqSubtitle: "Know everything about how emotional support animal laws and public access differ from service animal laws in Colorado.",
     faqs: [
       {
-        question: "Can I bring my ESA into a Colorado restaurant?",
-        answer: "No. The Americans with Disabilities Act (ADA) does not grant public access rights to emotional support animals. Only trained service animals are legally permitted in food establishments and non-pet-friendly stores.",
+        question: "Can a Colorado landlord ask for proof that my animal is an ESA or a service animal?",
+        answer: "Yes. Depending on the circumstances, a landlord may request reliable documentation supporting an ESA accommodation if the disability-related need is not obvious. For service animals, businesses generally cannot demand documentation or certification under the ADA.",
       },
       {
-        question: "Does an ESA need specialized task training?",
-        answer: "No. Unlike service animals, an emotional support animal does not require task training. Their benefit comes from their continuous companion presence and the emotional bond they share with their handler.",
+        question: "Do ESAs in Colorado need to be trained like service animals?",
+        answer: "No. ESAs do not need specialized task training to provide emotional support. Service animals, however, must be trained to perform specific tasks related to a person's disability.",
+      },
+      {
+        question: "Can I use an ESA letter in Colorado to take my animal on public transportation?",
+        answer: "An ESA letter alone does not grant the same access rights as a service animal. Public transportation providers generally follow ADA rules for service animals, while ESA access depends on the applicable transportation policies and laws.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "no-pet-apartments", "fake-registries-warning"],
@@ -181,6 +188,7 @@ export const rightsSpokes: RightsPage[] = [
         answer: "No. Denying an ESA solely on the basis of a 'no-pets' rule is a direct violation of the federal Fair Housing Act and Colorado state civil rights statutes.",
       },
     ],
+    ctaBadge: "Professional ESA Evaluations for Housing Accommodation Requests",
     relatedSlugs: ["fair-housing-act", "landlord-denials", "pet-deposits-and-fees"],
   },
   {
@@ -189,8 +197,8 @@ export const rightsSpokes: RightsPage[] = [
     h1: "HOAs and Emotional Support Animals in Colorado",
     metaTitle: "HOAs and Emotional Support Animals in Colorado",
     metaDescription: "Can a Colorado HOA refuse your ESA? Learn the limits of HOA authority, how to request an accommodation, and what to do if the HOA says no.",
-    shortDesc: "Navigate Colorado Homeowners Association rules, CC&Rs, and assistance animal exemptions.",
-    quickAnswer: "Colorado HOAs and condo associations are subject to the Fair Housing Act and Colorado fair housing laws. Even if your HOA covenants (CC&Rs) prohibit pets, enforce strict weight limits, or restrict breeds, the HOA must grant an accommodation for a legitimate emotional support animal.",
+    shortDesc: "Learn about Colorado Homeowners Association rules, CC&Rs, and assistance animal accommodation requests.",
+    quickAnswer: "Colorado HOAs and condo associations are subject to the Fair Housing Act and Colorado fair housing laws. Even if your HOA covenants (CC&Rs) prohibit pets or restrict size or breed, Colorado law presumes that allowing an assistance animal is a reasonable accommodation, provided the HOA has had the opportunity to engage in the interactive process. The HOA may request reasonable documentation of the disability and the need for the animal.",
     statuteCitation: "Colorado Common Interest Ownership Act (CCIOA) C.R.S. § 38-33.3-101 et seq. & FHA.",
     sections: [
       {
@@ -206,10 +214,20 @@ export const rightsSpokes: RightsPage[] = [
         content: "If an HOA attempts to levy daily fines or threatens legal action over an ESA, inform them in writing that their action constitutes disability discrimination under the Fair Housing Act and Colorado C.R.S. 24-34-502. If they persist, you can file a complaint with the Colorado Civil Rights Division.",
       },
     ],
+    faqTitle: "FAQs About ESAs and HOA Rules",
+    faqSubtitle: "Learn how HOA rules apply to emotional support animals, including pet restrictions, fees, documentation requirements, and possible reasons for denial.",
     faqs: [
       {
-        question: "Can my HOA limit my ESA's weight to 25 pounds?",
-        answer: "No. Size and weight limitations in HOA covenants do not apply to verified assistance animals under HUD regulations.",
+        question: "Can an HOA require an ESA to be registered or certified?",
+        answer: "No government-issued ESA registration or certificate is required under the FHA. An HOA may request reliable documentation when legally permitted, but purchasing an ESA certificate, ID card, or online registration alone does not establish eligibility for a housing accommodation.",
+      },
+      {
+        question: "Can an HOA deny an ESA because of complaints from other residents?",
+        answer: "Complaints alone do not automatically justify denying an ESA accommodation. However, documented behavior that creates a genuine safety threat, substantial property damage, or other legally valid concern may be considered. The HOA should evaluate the specific facts rather than relying on assumptions about emotional support animals.",
+      },
+      {
+        question: "What should I do if my HOA refuses my ESA request?",
+        answer: "Ask the HOA to explain its decision in writing and review the community's governing documents and applicable fair housing protections. You may provide relevant supporting documentation or request reconsideration. If you believe the denial violates fair housing law, you can consider contacting the U.S. Department of Housing and Urban Development (HUD) or a fair housing organization for guidance.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "breed-and-size-restrictions", "landlord-denials"],
@@ -220,27 +238,41 @@ export const rightsSpokes: RightsPage[] = [
     h1: "ESA Breed & Size Restrictions in Colorado Housing",
     metaTitle: "ESA Breed & Size Restrictions in Colorado Housing",
     metaDescription: "Breed and weight limits usually cannot be applied to ESAs in Colorado. Learn the exceptions, how to respond to pushback, and what to document.",
-    shortDesc: "Why landlords cannot enforce breed bans (like Pit Bulls or German Shepherds) or weight caps on ESAs.",
-    quickAnswer: "Under federal and Colorado housing law, breed, weight, and size restrictions cannot be applied to emotional support animals. A landlord cannot deny your accommodation simply because your ESA is a Pit Bull, German Shepherd, or weighs over 50 pounds.",
-    statuteCitation: "HUD Notice FHEO-2020-01 (Assistance Animals in Housing).",
+    shortDesc: "Learn why landlords cannot enforce breed bans (like Pit Bulls or German Shepherds) or weight limitations on ESAs in Colorado.",
+    quickAnswer: "Under Colorado law, allowing an assistance animal is presumed to be a reasonable accommodation, and the mere presence of an assistance animal is not presumed to be a direct threat. A landlord generally cannot deny a request based on breed, size, or weight alone, but may consider documented, specific harmful conduct by the individual animal.",
+    statuteCitation: "Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045); Fair Housing Act (42 U.S.C. § 3604(f)).",
     sections: [
       {
         title: "Why Breed and Weight Restrictions Are Overridden",
-        content: "HUD rules stipulate that assistance animals are evaluated on an individualized basis rather than generalized breed stereotypes. Even if a Colorado apartment complex maintains an aggressive breed ban, that ban is legally suspended for an individual ESA.",
+        content: "Assistance animal requests are evaluated individually rather than on breed stereotypes. If a Colorado apartment complex maintains a breed ban, a resident can request a reasonable accommodation to that policy.",
       },
       {
-        title: "The Only Legal Exceptions",
-        content: "A landlord may only refuse a specific animal if it poses a direct, demonstrable threat to the health or safety of others, or would cause substantial physical damage to the property that cannot be mitigated by reasonable measures. This assessment must be based on objective evidence of the specific animal's actual conduct.",
+        title: "When a Landlord Can Deny or Question a Request",
+        content: "A landlord may request reasonable documentation of the disability and the need for the animal and engage in a good-faith interactive process. A landlord may deny a request for a specific animal that poses a direct threat to the health or safety of others, or would cause substantial physical damage to the property, based on objective evidence of that animal's actual conduct. Tenants remain responsible for actual damage caused by the animal.",
       },
       {
         title: "Handling Landlord Pushback",
-        content: "If a leasing manager claims their insurance company prohibits certain breeds, HUD guidance requires the landlord to seek an insurance waiver or demonstrate that the policy would be cancelled with no replacement available—a standard landlords can rarely meet.",
+        content: "If a leasing manager claims their insurance company prohibits certain breeds, HUD guidance requires the landlord to seek an insurance waiver or show the policy would be canceled with no replacement available, a standard landlords can rarely meet.",
       },
     ],
+    faqTitle: "FAQs About Breed & Size Restrictions on ESAs in Colorado",
+    faqSubtitle: "Get answers to common questions about breed and size restrictions, reasonable accommodation requests, and assistance animal rights in Colorado housing",
     faqs: [
       {
-        question: "Can an apartment in Denver ban my 70-pound dog as an ESA?",
-        answer: "No. Weight limits cannot be enforced against verified assistance animals under the Fair Housing Act.",
+        question: "Can a Colorado landlord deny an ESA because of its breed?",
+        answer: "Generally, no. Under the Fair Housing Act (FHA), a landlord cannot automatically deny an emotional support animal solely because of its breed. Landlords must assess each request individually, including any reliable evidence of a specific safety risk.",
+      },
+      {
+        question: "Can a landlord enforce weight limits against an ESA in Colorado?",
+        answer: "A landlord generally cannot rely only on a property's weight restriction to deny a reasonable ESA accommodation. However, the landlord may consider specific, objective evidence that the animal poses a genuine safety threat or substantial risk of property damage.",
+      },
+      {
+        question: "Are pit bulls or other restricted breeds allowed as ESAs in Colorado?",
+        answer: "A dog may qualify as an ESA even if it belongs to a breed restricted by a housing policy. Breed alone generally does not determine eligibility for a housing accommodation, but the animal's individual behavior and any documented risks may be relevant.",
+      },
+      {
+        question: "Can an HOA in Colorado reject an ESA because it is too large?",
+        answer: "An HOA generally must consider a reasonable accommodation request individually rather than automatically rejecting an ESA because of its size. However, accommodation is not guaranteed, and documented safety concerns or other legally valid reasons may affect the decision.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "no-pet-apartments", "landlord-denials"],
@@ -334,22 +366,36 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "Moving With an Emotional Support Animal in Colorado",
     metaDescription: "Moving to a new Colorado rental with your ESA? Learn how your rights carry over, what paperwork a new landlord may request, and a timing checklist.",
     shortDesc: "Guide to securing housing in a new Colorado apartment or rental property with your ESA.",
-    quickAnswer: "Your ESA housing rights carry over to every rental in Colorado. When moving, submit your accommodation request and ESA letter before signing the lease or immediately upon application to avoid misunderstandings, ensure no pet fees are written into the lease, and establish documentation upfront.",
-    statuteCitation: "Fair Housing Act Reasonable Accommodation Guidelines.",
+    quickAnswer: "Colorado law protects assistance animals, including emotional support animals, in housing. Each housing provider evaluates your request separately, so when you move, you will typically need to submit a new accommodation request with supporting documentation. A landlord may request reasonable documentation and engage in a good-faith interactive process.",
+    statuteCitation: "Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045); Fair Housing Act (42 U.S.C. § 3604(f))",
     sections: [
       {
         title: "Transferring Your Rights to a New Home",
-        content: "Your ESA letter is issued to you as an individual, not to a specific building. As long as your letter was issued by a Colorado-licensed professional within the past 12 months, it is valid for your new lease.",
+        content: "Your ESA letter is issued to you as an individual, not to a specific building, so you can generally provide it to a new housing provider. A new landlord may request reasonable documentation supporting your disability-related need, which can include a current letter (issued within the previous 12 months) from a licensed provider.",
       },
       {
         title: "Timing Your Accommodation Request",
-        content: "Best practice is to submit your ESA request after your rental application has been approved or alongside your initial lease review. This prevents covert discrimination during the application phase while ensuring all pet clauses are officially amended.",
+        content: "You can submit an accommodation request at any point, including with your application, after approval, or before move-in. Submit it in writing and keep a copy. Requesting early gives the landlord time to complete the interactive process before you move in.",
       },
     ],
+    faqTitle: "FAQs About Moving with an ESA in Colorado",
+    faqSubtitle: "Get answers to common questions about requesting an assistance animal accommodation when you move to a new home in Colorado.",
     faqs: [
       {
-        question: "Should I mention my ESA on the initial rental application?",
-        answer: "You are not legally required to mention an ESA on an application that asks 'Do you have pets?' because an ESA is legally not a pet. However, presenting your accommodation request prior to move-in ensures smooth onboarding.",
+        question: "Do I need a new ESA letter when moving to a different home in Colorado?",
+        answer: "Not necessarily. If your existing ESA documentation is still relevant and supports your disability-related need, you may be able to use it for a new housing accommodation request. The new housing provider may request reliable supporting information when legally permitted.",
+      },
+      {
+        question: "Can my new landlord deny my ESA because the property has a no-pet policy?",
+        answer: "Generally, no. Under the Fair Housing Act (FHA), eligible tenants can request a reasonable accommodation for an ESA even when a property has a no-pet policy. The landlord must assess the request individually, and certain legal exceptions may apply.",
+      },
+      {
+        question: "Should I tell my landlord about my ESA before moving into a new Colorado rental?",
+        answer: "It is generally helpful to request an accommodation before moving in. This gives the landlord time to review the request and any supporting documentation. Keep a written record of your request and the landlord's response.",
+      },
+      {
+        question: "Can a landlord charge an ESA pet deposit when I move into a new home in Colorado?",
+        answer: "Generally, no. A landlord cannot charge a pet deposit or pet fee for an ESA approved as a reasonable accommodation under fair housing law. However, you may still be responsible for actual damage caused by your animal, subject to applicable law.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "no-pet-apartments", "renewal"],
@@ -361,22 +407,36 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "ESAs in Colorado College Dorms & Student Housing",
     metaDescription: "How the Fair Housing Act applies to ESAs in university housing in Colorado, how to request an accommodation, and what schools may ask for.",
     shortDesc: "Navigating student housing and dorm accommodation policies at CU Boulder, CSU, DU, Mines, and UNC.",
-    quickAnswer: "The Fair Housing Act applies to university-operated dorms, residence halls, and Greek housing in Colorado. College students with documented mental or emotional disabilities have the right to keep an ESA in their dorm room without paying extra pet housing fees.",
-    statuteCitation: "FHA & Section 504 of the Rehabilitation Act of 1973 (29 U.S.C. § 794).",
+    quickAnswer: "Residence halls and other on-campus student housing are generally treated as dwellings under the Fair Housing Act. Students with a documented disability can request an assistance animal as a reasonable accommodation in university housing. Each university reviews requests through its own disability services process and may request supporting documentation.",
+    statuteCitation: "Fair Housing Act (42 U.S.C. § 3604(f)); Section 504 of the Rehabilitation Act of 1973 (29 U.S.C. § 794), which applies to programs receiving federal financial assistance; Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2)",
     sections: [
       {
         title: "University Housing Under the Fair Housing Act",
-        content: "Higher education residence halls are considered dwellings under the FHA. Colorado universities—including CU Boulder, Colorado State University, University of Denver, Colorado School of Mines, and UNC—maintain formal disability services processes for ESA dorm approvals.",
+        content: "Higher education residence halls are generally treated as dwellings under the FHA. Most Colorado universities have a disability services process for assistance animal requests in student housing. Policies differ by school and may have changed after HUD's May 2026 guidance, so check your university's current policy.",
       },
       {
         title: "The Campus Request Process",
-        content: "Students should contact their campus Disability Services office (often 30–60 days before semester move-in) and submit their Colorado ESA letter. The university will review the documentation and provide roommate notifications.",
+        content: "Students should contact their campus Disability Services office as early as possible before move-in, since deadlines vary by university. Most schools have their own request form and may ask for supporting documentation from a licensed provider. The university reviews the request and may notify roommates or neighbors, depending on its policy.",
       },
     ],
+    faqTitle: "FAQs About ESAs in College Dorms",
+    faqSubtitle: "Find answers to every question regarding emotional support animals in student housing and college dorm accommodations.",
     faqs: [
       {
-        question: "Can I take my ESA into college classrooms or the dining hall?",
-        answer: "No. ESAs in college settings are restricted to university housing (dorm rooms and surrounding residential grounds). Only service animals can attend classes or enter campus dining facilities.",
+        question: "Do college dorms have to allow emotional support animals?",
+        answer: "Residence halls are generally treated as dwellings under the Fair Housing Act, so students with a documented disability can request an assistance animal as a reasonable accommodation. Each university reviews requests under its own policy, and approval of an untrained ESA is not guaranteed since HUD's May 2026 guidance.",
+      },
+      {
+        question: "How do I request an ESA in a Colorado college dorm?",
+        answer: "Contact your campus Disability Services office early, since deadlines and forms vary by university. Submit your request with supporting documentation from a licensed provider, and do not bring the animal until you have written approval.",
+      },
+      {
+        question: "Can my college ask for documentation or deny my request?",
+        answer: "Yes. A university may request reasonable documentation of your disability-related need. It may deny or remove an animal that poses a direct threat or causes substantial damage, and you remain responsible for damage the animal causes.",
+      },
+      {
+        question: "Can I bring my ESA to classes or the dining hall?",
+        answer: "Generally not. An ESA accommodation covers university housing, usually your assigned room or suite. ADA public access rights in classrooms and dining areas apply to trained service dogs.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "esa-vs-service-animal", "anxiety"],
@@ -387,9 +447,9 @@ export const rightsSpokes: RightsPage[] = [
     h1: "ESA Registries Are Not Valid: Colorado Scam Warning",
     metaTitle: "ESA Registries Are Not Valid: Colorado Scam Warning",
     metaDescription: "No official ESA registry exists. Learn how online registries mislead Colorado renters, what a landlord actually needs, and how to verify a provider.",
-    shortDesc: "Protect yourself from illegal online registry scams, fake ID badges, and misleading certificate websites.",
+    shortDesc: "Learn why online ESA registries, ID badges, and certificates carry no legal status, and what documentation housing providers can actually request.",
     quickAnswer: "There is no such thing as an official ESA registry, government certification, or legally recognized ID card. Websites selling instant registration numbers, badges, or vests are scams that do not provide legal housing protection in Colorado. Landlords and HUD look only for a signed evaluation letter from a licensed mental health professional.",
-    statuteCitation: "HUD Notice FHEO-2020-01 (page 11: Internet Certificates) & C.R.S. § 18-13-107.3.",
+    statuteCitation: "Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045), which allows housing providers to request reasonable documentation. C.R.S. § 18-13-107.3 addresses intentional misrepresentation of entitlement to an assistance animal.",
     sections: [
       {
         title: "How Online ESA Registries Mislead Renters",

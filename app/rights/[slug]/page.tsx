@@ -104,6 +104,7 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
           <InlineCta
             headline="Protect Your Rental Housing Rights in Colorado"
             subhead="Evaluated by active Colorado-licensed mental health professionals. Fast 24–48 hour turnaround with 100% money-back guarantee."
+            badgeText={spoke.ctaBadge}
           />
 
           {/* M8 Related Pages (includes link up to hub [REQUIRED]) */}
