@@ -31,7 +31,7 @@ const processFaqs = [
     a: "We offer a 100% money-back guarantee. If our licensed therapist determines an ESA does not fit your clinical criteria or you do not qualify under Fair Housing guidelines, your evaluation fee is fully refunded.",
   },
   {
-    q: "Will my landlord accept this letter?",
+    q: "Will my landlord accept the ESA letter?",
     a: "Yes. Every letter is issued on official clinical letterhead by an actively licensed Colorado professional containing their state license number, DORA registration details, contact phone, and specific signature, strictly complying with Colorado HB26-1045 and HUD FHA rules.",
   },
 ];
@@ -92,7 +92,7 @@ export default function HowItWorksPage() {
             <span className="trust-chip mb-3">Transparent 3-Step Process</span>
             <h1 className="h1 mb-4">{seo.h1}</h1>
             <p className="body-large text-muted max-w-2xl mx-auto">
-              Follow our compliant, HIPAA-secure clinical workflow to connect with a licensed Colorado mental health provider and secure your housing rights.
+              Follow our secure, HIPAA-compliant clinical process to connect with a licensed Colorado mental health provider and support your housing accommodation request.
             </p>
           </div>
         </section>
@@ -101,7 +101,7 @@ export default function HowItWorksPage() {
         <section className="section-padding py-10 bg-white border-y border-line">
           <div className="max-w-6xl mx-auto">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <h2 className="h2 mb-3">Simple, Compliant &amp; Confidential</h2>
+              <h2 className="h2 mb-3">Simple, Secure &amp; Confidential</h2>
               <p className="body-normal text-muted">
                 No waiting weeks for office appointments. Get evaluated by a Colorado-licensed therapist from the comfort of home.
               </p>
@@ -190,7 +190,7 @@ export default function HowItWorksPage() {
                 </div>
                 <h3 className="h4 mb-2">Day 1: Intake &amp; Screening</h3>
                 <p className="body-small text-muted mb-3">
-                  Takes 5–10 minutes online. You share details on how your anxiety, depression, PTSD, or other symptoms affect your daily living.
+                  Share your symptoms and home challenges. A licensed professional reviews and decides on your eligibility. No records or referrals needed.
                 </p>
                 <div className="text-xs font-semibold text-teal flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4" /> 256-Bit Encrypted
@@ -201,9 +201,9 @@ export default function HowItWorksPage() {
                 <div className="w-12 h-12 rounded-xl bg-softBlue text-teal flex items-center justify-center mb-4">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h3 className="h4 mb-2">Day 1–2: Clinical Evaluation</h3>
+                <h3 className="h4 mb-2">Clinical Evaluation</h3>
                 <p className="body-small text-muted mb-3">
-                  A Colorado-licensed provider reviews your medical history, clinical indicators, and verifies the therapeutic connection with your animal.
+                  A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate.
                 </p>
                 <div className="text-xs font-semibold text-teal flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4" /> Active DORA License
@@ -214,9 +214,9 @@ export default function HowItWorksPage() {
                 <div className="w-12 h-12 rounded-xl bg-softBlue text-teal flex items-center justify-center mb-4">
                   <FileCheck className="w-6 h-6" />
                 </div>
-                <h3 className="h4 mb-2">Day 2: Letter Delivery</h3>
+                <h3 className="h4 mb-2">After Your Evaluation: Next Steps</h3>
                 <p className="body-small text-muted mb-3">
-                  Once approved, download your official Colorado letter containing therapist license details, verification ID, and submit it directly to your landlord.
+                  If approved, your ESA documentation will be prepared according to applicable requirements. Timing may vary based on your individual evaluation.
                 </p>
                 <div className="text-xs font-semibold text-teal flex items-center gap-1.5">
                   <CheckCircle2 className="w-4 h-4" /> 100% Money-Back Guarantee
@@ -248,7 +248,7 @@ export default function HowItWorksPage() {
         {/* M5 FAQ */}
         <FaqAccordion
           items={processFaqs}
-          title="Frequently Asked Process Questions"
+          title="Frequently Asked Questions About ESA Letter Colorado"
           subtitle="What to expect at each step, from your assessment to receiving your Colorado ESA letter."
         />
 

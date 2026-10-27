@@ -167,16 +167,19 @@ export default function HomePage() {
               <div className="text-base space-y-3 mt-6 text-[#24333B]">
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
-                  <span><strong>Housing Classification:</strong> ESAs are classified as assistance animals under the Fair Housing Act, not pets.</span>
+                  <span><strong>Housing Classification:</strong> Under Colorado law (HB26-1045), ESAs are classified as assistance animals, not pets.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
-                  <span><strong>Fee Exemptions:</strong> Landlords cannot charge pet security deposits, move-in pet fees, or monthly pet rent.</span>
+                  <span><strong>Fee Exemptions:</strong> Landlords generally cannot charge pet security deposits, move-in pet fees, or monthly pet rent.</span>
                 </div>
                 <div className="flex items-start gap-2.5">
                   <CheckCircle2 className="w-5 h-5 text-[#2A6763] shrink-0 mt-0.5" />
-                  <span><strong>Policy Overrides:</strong> Valid letters override &ldquo;no pets&rdquo; rules and breed or weight restrictions.</span>
+                  <span><strong>Policy Overrides:</strong> Valid letters generally override &ldquo;no pets&rdquo; rules and breed or weight restrictions.</span>
                 </div>
+              </div>
+              <div className="mt-4 p-3.5 rounded-lg bg-[#E8F0ED] border border-[#347C78]/30 text-xs sm:text-sm text-[#24333B] leading-relaxed">
+                <strong>Note:</strong> On May 22, 2026, HUD rescinded its 2020 assistance animal guidance and now enforces Fair Housing Act complaints mainly for individually trained animals, so federal backing for untrained ESAs is narrower. The Fair Housing Act itself hasn’t changed, and in Colorado, HB26-1045 still protects ESAs as assistance animals under state law.
               </div>
               <div className="mt-8 flex items-center gap-4">
                 <Link href="/what-is-an-esa-letter/" className="btn-secondary gap-2">
@@ -240,10 +243,10 @@ export default function HomePage() {
               Federal &amp; Colorado State Law
             </span>
             <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
-              Keep Your Companion Animal by Your Side Without Pet Rent or Weight Limits
+              Keep Your Companion Animal by Your Side, Protected Under Colorado Law
             </h2>
             <p className="text-base sm:text-lg text-[#D5DFDB] mt-4 leading-relaxed">
-              In Colorado, emotional support animals are classified as assistance animals under the Fair Housing Act and HB26-1045. Housing providers cannot deny your accommodation based on breed, size, or building pet quotas.
+              In Colorado, emotional support animals are classified as assistance animals under HB26-1045. Housing providers generally cannot deny your accommodation based on breed, size, or building pet quotas.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link href="/how-it-works/#get-started" className="btn-primary shadow-lg">
@@ -265,6 +268,9 @@ export default function HomePage() {
       <section className="py-12 bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <ComparisonTable />
+          <div className="mt-4 p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] text-xs sm:text-sm text-[#52616A] leading-relaxed">
+            <strong className="text-[#19354A]">Note:</strong> Having a mental, emotional, or psychological condition does not automatically qualify you for an ESA. Eligibility depends on an individualized evaluation by a licensed mental health professional, who determines whether an ESA is appropriate based on your needs and how your condition affects daily life.
+          </div>
         </div>
       </section>
 
@@ -364,10 +370,10 @@ export default function HomePage() {
                   Colorado HB26-1045 Standard
                 </span>
                 <h3 className="font-serif text-2xl font-bold text-[#19354A]">
-                  Real Clinical Telehealth Evaluations — Never Automated Quizzes
+                  Every ESA Evaluation in Colorado Starts With a Real Professional
                 </h3>
                 <p className="text-base text-[#52616A] mt-3 leading-relaxed">
-                  Unlike illegitimate online certificate mills that sell instant PDFs or lifetime registry cards, Colorado law requires a bona fide patient-provider relationship. Our evaluators are state-licensed clinicians (LPC, LCSW, LMFT, PsyD) who assess your real mental health needs and stand behind your letter if a landlord requests legal verification.
+                  Unlike online services that sell instant ESA certificates or registry cards without a proper evaluation, My ESA Therapist connects you with licensed mental health professionals who assess your individual needs. Colorado law requires qualifying providers to establish an appropriate patient-provider relationship and meet applicable professional standards before making an ESA determination. If you request an accommodation, the provider can document their clinical findings in accordance with applicable requirements.
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-5 text-xs text-[#24333B]">

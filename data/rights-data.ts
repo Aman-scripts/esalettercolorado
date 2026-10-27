@@ -12,6 +12,8 @@ export interface RightsPage {
     content: string;
     subsections?: { title: string; content: string }[];
   }[];
+  faqTitle?: string;
+  faqSubtitle?: string;
   faqs: { question: string; answer: string }[];
   relatedSlugs: string[];
 }
@@ -23,8 +25,8 @@ export const rightsSpokes: RightsPage[] = [
     h1: "The Fair Housing Act and Your ESA in Colorado",
     metaTitle: "Fair Housing Act & Your ESA: Colorado Renter Rights",
     metaDescription: "How the federal Fair Housing Act protects ESA owners in Colorado: reasonable accommodation, covered housing, exemptions, and filing a HUD complaint.",
-    shortDesc: "Understand federal protections under the FHA for assistance animals in Colorado rental housing.",
-    quickAnswer: "Under the federal Fair Housing Act (FHA) and Colorado law, emotional support animals (ESAs) are classified as assistance animals—not pets. Housing providers must grant reasonable accommodations allowing ESAs to live with their handlers free of pet fees, pet rent, and breed or weight restrictions, provided valid documentation from a licensed healthcare provider is submitted.",
+    shortDesc: "Everything you need to know about the Fair Housing Act and its implications for Colorado ESA owners.",
+    quickAnswer: "Under the federal Fair Housing Act (FHA) and Colorado law, emotional support animals (ESAs) are recognized as assistance animals, not pets. Eligible residents may request reasonable housing accommodations, including waivers of pet fees, pet rent, and breed or weight restrictions. Housing providers must assess these requests under applicable law, which may require reliable supporting documentation when the disability-related need is not apparent.",
     statuteCitation: "42 U.S.C. §§ 3601–3619 (Fair Housing Act) & HUD FHEO Notice FHEO-2020-01.",
     sections: [
       {
@@ -37,7 +39,7 @@ export const rightsSpokes: RightsPage[] = [
       },
       {
         title: "Covered vs. Exempt Housing",
-        content: "Nearly all multi-family apartment complexes, condominiums, rental homes, and campus residences in Colorado are covered under the FHA. Minor statutory exemptions exist for owner-occupied buildings with four or fewer units, and single-family homes rented directly by private owners without a real estate broker who own fewer than three such properties.",
+        content: "The Fair Housing Act has limited exemptions, including certain owner-occupied buildings with no more than four families and certain single-family homes rented without a real estate broker. These exemptions have additional statutory conditions, including restrictions relating to ownership, so they do not apply to every small landlord or rental property.",
       },
       {
         title: "Enforcement and Filing a HUD or CCRD Complaint",
@@ -67,12 +69,12 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "Colorado HB26-1045 Explained: ESA Housing Protections",
     metaDescription: "What Colorado's 2026 assistance animal housing law (HB26-1045) says about ESAs, documentation requests, and tenant and landlord responsibilities.",
     shortDesc: "Key updates on Colorado's assistance-animal housing legislation, provider standards, and verification requirements.",
-    quickAnswer: "Colorado HB26-1045 codifies standards for assistance animal documentation in rental housing. It affirms the rights of tenants with genuine disability-related needs while requiring that ESA letters be issued by healthcare providers holding an active Colorado license who have conducted a bona fide clinical evaluation.",
+    quickAnswer: "Colorado HB26-1045 clarifies housing protections and reasonable-accommodation standards for assistance animals. Separately, Colorado law establishes requirements for covered healthcare licensees making assistance-animal determinations, including an in-person meeting and sufficient familiarity with the patient and the disability.",
     statuteCitation: "Colorado House Bill 26-1045; C.R.S. § 24-34-502 & C.R.S. § 18-13-107.3.",
     sections: [
       {
         title: "What the Law Says: Assistance Animals in Colorado",
-        content: "HB26-1045 brings statutory clarity to Colorado housing regulations by aligning state definitions with federal HUD guidelines. It explicitly defines assistance animals to include emotional support animals and establishes explicit documentation standards that housing providers may request during the accommodation process.",
+        content: "HB26-1045 defines assistance animals to include emotional support animals and allows housing providers to request reasonable documentation supporting a disability-related need when that need is not obvious.",
       },
       {
         title: "Documentation a Housing Provider May Request",
@@ -80,14 +82,20 @@ export const rightsSpokes: RightsPage[] = [
       },
       {
         title: "How It Affects Valid ESA Letters",
-        content: "To be valid in Colorado under HB26-1045, your ESA letter must be issued by a therapist, counselor, or physician licensed by the Colorado Department of Regulatory Agencies (DORA) who has conducted a comprehensive assessment. Generic instant certificates purchased online without an evaluation fail this legal threshold.",
+        content: "A legitimate ESA recommendation should be based on an appropriate clinical assessment rather than an instant certificate or automated quiz. Colorado law requires covered licensees making assistance-animal determinations to meet with the patient in person, be sufficiently familiar with the patient and the disability, and be legally and professionally qualified to make the determination.",
       },
       {
         title: "Penalties for Misrepresentation",
-        content: "Colorado law takes animal misrepresentation seriously under C.R.S. 18-13-107.3. Knowingly misrepresenting an untrained pet as a service dog or purchasing fraudulent ESA certificates to deceive landlords carries civil penalties and undermines legitimate accommodations for people with disabilities.",
+        content: "Colorado law prohibits intentional misrepresentation of entitlement to an assistance animal for housing when the statutory requirements are met. Under C.R.S. § 18-13-107.3, the offense requires a prior warning and knowledge that the person does not have a disability or that the animal is not an assistance animal. Penalties range from $25 for a first offense to $100-$500 for a third or subsequent offense.",
       },
     ],
+    faqTitle: "Frequently Asked Questions About Colorado HB26-1045",
+    faqSubtitle: "Get answers to everything surrounding Colorado HB26-1045 and its impact on emotional support animals.",
     faqs: [
+      {
+        question: "Does Colorado law require an in-person meeting for an ESA determination?",
+        answer: "Yes. Under C.R.S. § 12-245-229, covered licensees must meet with the patient in person, be sufficiently familiar with the patient and the disability, and be legally and professionally qualified before making an assistance-animal determination.",
+      },
       {
         question: "Does HB26-1045 require my therapist to be licensed in Colorado?",
         answer: "Yes. In-state licensing ensures accountability through the Colorado Department of Regulatory Agencies (DORA). All evaluators at ESA Letter Colorado hold active Colorado licenses.",
@@ -140,13 +148,13 @@ export const rightsSpokes: RightsPage[] = [
     h1: "ESAs in No-Pet Apartments in Colorado: Your Rights",
     metaTitle: "ESAs in No-Pet Apartments in Colorado: Your Rights",
     metaDescription: "No-pet policies generally do not apply to valid ESAs in Colorado. Learn how to request an accommodation and what documentation to provide.",
-    shortDesc: "How to live with your emotional support animal in Colorado apartments with strict no-pet rules.",
-    quickAnswer: "No-pet rules do not apply to emotional support animals in Colorado. Because federal and Colorado fair housing laws classify ESAs as assistance animals rather than pets, landlords must modify their 'no pets' policy as a reasonable accommodation once you present a legitimate ESA letter.",
+    shortDesc: "Learn how Colorado renters can request a reasonable accommodation to live with an emotional support animal in an apartment with a no-pet policy.",
+    quickAnswer: "No-pet policies generally cannot prevent a qualified tenant from keeping an assistance animal when a reasonable accommodation is required under federal or Colorado fair housing law. Tenants can request an accommodation and provide reasonable supporting documentation when required. Housing providers must assess the request under applicable law, including any relevant exceptions.",
     statuteCitation: "HUD FHEO-2020-01 & Colorado Revised Statutes § 24-34-502.",
     sections: [
       {
         title: "Why No-Pet Policies Do Not Apply to ESAs",
-        content: "Under HUD guidelines and Colorado fair housing statutes, an assistance animal is an auxiliary aid necessary for the tenant to fully enjoy their residence. Therefore, landlords cannot enforce pet bans against individuals with valid ESA documentation.",
+        content: "Under federal and Colorado fair housing law, an assistance animal may qualify as a reasonable accommodation that allows a tenant with a disability to use and enjoy their home. Housing providers generally must consider such requests even when a property has a no-pet policy, subject to applicable legal exceptions.",
       },
       {
         title: "How to Request an Accommodation",
@@ -157,7 +165,16 @@ export const rightsSpokes: RightsPage[] = [
         content: "Provide your letter from a Colorado-licensed therapist or physician. You do not need to provide vet health certificates (beyond standard rabies vaccinations required by Colorado municipal codes) or disclose confidential medical histories.",
       },
     ],
+    faqTitle: "FAQs About ESAs in No-Pet Apartments",
     faqs: [
+      {
+        question: "Can I keep my ESA in an apartment that does not allow pets?",
+        answer: "Yes, you may be able to keep your emotional support animal in a no-pet apartment by requesting a reasonable accommodation under the Fair Housing Act and Colorado law. Your eligibility and the landlord's obligations depend on the circumstances and applicable legal requirements.",
+      },
+      {
+        question: "Do I need my landlord's permission to keep an ESA in a no-pet apartment?",
+        answer: "You should notify your landlord and request a reasonable accommodation for your ESA. If the disability-related need is not apparent, the landlord may request reasonable supporting documentation. A no-pet policy alone generally is not a valid reason to deny an otherwise qualifying request.",
+      },
       {
         question: "Can an apartment reject my ESA just because of a no-pets policy?",
         answer: "No. Denying an ESA solely on the basis of a 'no-pets' rule is a direct violation of the federal Fair Housing Act and Colorado state civil rights statutes.",
@@ -234,26 +251,36 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "Landlord Denied Your ESA in Colorado? What to Do",
     metaDescription: "Learn which landlord denial reasons are valid for ESAs in Colorado, how to respond in writing, and how to file a CCRD or HUD complaint.",
     shortDesc: "Step-by-step legal recourse when an accommodation request is improperly rejected by a Colorado landlord.",
-    quickAnswer: "If your landlord denies your ESA letter, request the denial in writing with specific statutory justifications. Compare their response against lawful grounds. In most cases, landlords deny requests out of ignorance of Colorado HB26-1045 and FHA laws, which can be quickly resolved with a formal response letter.",
+    quickAnswer: "If your landlord denies your ESA accommodation request, ask for the decision and reasons in writing. Review the explanation against applicable fair housing law and consider responding with relevant documentation or requesting further discussion through the interactive process.",
     statuteCitation: "Colorado Civil Rights Division (CCRD) & 24 C.F.R. § 100.204.",
     sections: [
       {
         title: "Valid vs. Invalid Denial Grounds",
-        content: "Valid grounds for denial are extremely narrow: owner-occupied 4-unit buildings, demonstrable direct physical threat by the specific animal, or unreasonable structural burden. Invalid grounds include 'no-pet' policies, breed bans, asking for medical charts, or demanding registration cards.",
+        content: "Housing providers generally cannot deny a qualifying ESA request solely because of a no-pet policy or an animal's breed or size. However, denial may be lawful if the request does not qualify, creates an undue burden, fundamentally alters operations, or the specific animal poses a documented threat or risk of substantial property damage.",
       },
       {
         title: "Steps to Take Immediately Following a Denial",
-        content: "1. Request the denial and reasoning in writing. 2. Send our formal Colorado Landlord Response Letter citing HUD FHEO-2020-01 and C.R.S. 24-34-502. 3. Contact your licensed therapist to ensure they can verify the letter if the landlord calls.",
+        content: "1. Request the denial and reasoning in writing.\n2. Consider responding in writing with reasons the denial may violate fair housing law, citing relevant HUD guidance and Colorado law and including supporting documentation.\n3. Keep your ESA letter and provider's contact details available for reasonable verification, while protecting your privacy.",
       },
       {
         title: "Filing a Complaint with HUD and the Colorado Civil Rights Division",
-        content: "If the landlord refuses to comply, you can file a formal complaint free of charge with the Colorado Civil Rights Division (CCRD) or HUD. These agencies investigate fair housing discrimination and can levy severe penalties against non-compliant landlords.",
+        content: "If you believe your landlord unlawfully denied your ESA accommodation request, you can file a housing discrimination complaint with HUD or the Colorado Civil Rights Division. The agency may investigate the allegations and pursue remedies available under applicable law if discrimination is established.",
       },
     ],
+    faqTitle: "FAQs About ESA Accommodation Denials in Colorado",
+    faqSubtitle: "Find answers to common questions about ESA accommodation denials in Colorado, including your rights as a tenant and the steps you can take if a landlord refuses your request.",
     faqs: [
       {
-        question: "Can a landlord evict me for getting an ESA?",
-        answer: "No. Retaliatory eviction against a tenant exercising their fair housing rights is illegal under both federal and Colorado state law.",
+        question: "Can a landlord evict me for requesting an ESA accommodation?",
+        answer: "A landlord cannot lawfully evict you simply for exercising your fair housing rights. However, ESA protections do not prevent eviction for unrelated lawful reasons. If you believe an eviction is discriminatory or retaliatory, consider contacting HUD or the Colorado Civil Rights Division.",
+      },
+      {
+        question: "Can a landlord ask for additional documentation for an ESA in Colorado?",
+        answer: "Yes. If your disability-related need for an ESA is not apparent, a landlord may request reliable supporting information. They generally cannot require your complete medical records or a specific diagnosis.",
+      },
+      {
+        question: "What should I do if my landlord ignores my ESA accommodation request?",
+        answer: "Follow up in writing and keep a record of your request and any responses. If the landlord continues to ignore it, consider contacting HUD or the Colorado Civil Rights Division for guidance.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "colorado-hb26-1045-explained", "landlord-request-letter-template"],
@@ -266,25 +293,35 @@ export const rightsSpokes: RightsPage[] = [
     metaDescription: "Can a Colorado landlord charge pet rent or a pet deposit for your ESA? Learn what cannot be charged, when damage costs apply, and how to recover fees.",
     shortDesc: "Financial protections: why emotional support animals are exempt from pet fees, deposits, and monthly rent.",
     quickAnswer: "Landlords in Colorado cannot charge upfront pet deposits, non-refundable pet fees, or ongoing monthly pet rent for emotional support animals. However, tenants are still responsible for paying for any actual damage the animal causes to the apartment upon move-out.",
-    statuteCitation: "HUD FHEO-2020-01 & Colorado HB23-1068 (Pet Rent/Deposit Limits).",
+    statuteCitation: "Fair Housing Act, HUD FHEO-2020-01 guidance, and Colorado HB26-1045.",
     sections: [
       {
         title: "What Fees Cannot Be Charged",
-        content: "Housing providers cannot charge pet application fees, pet security deposits, or monthly pet rent for emotional support animals. Doing so constitutes charging an individual with a disability an extra fee to access housing, which is explicitly prohibited.",
+        content: "Housing providers generally cannot charge pet application fees, pet security deposits, or monthly pet rent for an assistance animal approved as a reasonable accommodation. Such charges may unlawfully burden a tenant exercising their fair housing rights.",
       },
       {
         title: "What Can Be Charged (Actual Damages)",
-        content: "If your ESA chews baseboards, stains carpets, or damages blinds, the landlord may deduct the actual cost of repairs from your standard security deposit or invoice you upon move-out.",
+        content: "If your ESA damages baseboards, carpets, or blinds, the landlord may seek compensation for actual damage, subject to applicable law and the rules on ordinary wear and tear.",
       },
       {
         title: "How to Recover Wrongfully Paid Pet Fees in Colorado",
-        content: "If your landlord charged pet rent before you submitted your ESA letter, or continued charging after you provided documentation, you can request an accounting and credit for all fees paid since the accommodation request date.",
+        content: "If your landlord charged pet fees before or after your ESA accommodation request, you can request an accounting and a refund of any fees that were unlawfully charged.",
       },
     ],
+    faqTitle: "FAQs About ESA Pet Fees & Deposits in Colorado",
+    faqSubtitle: "Know whether ESA owners in Colorado are required to pay pet fees or deposit pet security for their emotional support animal.",
     faqs: [
       {
-        question: "Can a landlord require a pet deposit for an ESA?",
-        answer: "No. Under federal and state law, emotional support animals are not pets, so pet deposits cannot be collected.",
+        question: "Can a landlord require a pet deposit for an ESA in Colorado?",
+        answer: "Generally, no. When an emotional support animal qualifies for a reasonable housing accommodation, a landlord in Colorado cannot charge pet deposits for that animal.",
+      },
+      {
+        question: "Do I need to renew my ESA letter to keep my pet-fee exemption in Colorado?",
+        answer: "Not necessarily. Federal law does not set a universal annual renewal requirement for ESA documentation. Whether updated information is reasonably needed depends on the circumstances and applicable housing rules.",
+      },
+      {
+        question: "Can my landlord charge a fee for ESA-related cleaning in Colorado?",
+        answer: "A landlord generally cannot charge a special cleaning fee just because a tenant has an assistance animal. However, they may seek compensation for actual damage or unusual cleaning costs caused by the animal, subject to applicable law.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "no-pet-apartments", "landlord-denials"],

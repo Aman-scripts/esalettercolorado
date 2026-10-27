@@ -21,7 +21,7 @@ export function ComparisonTable({
 }: ComparisonTableProps) {
   const defaultRows: ComparisonRow[] = [
     {
-      feature: "Protected Under Fair Housing Act (Housing Rights)",
+      feature: "Protected Under FHA & Colorado Housing Law (HB26-1045)",
       esa: true,
       serviceAnimal: true,
       pet: false,
@@ -51,9 +51,9 @@ export function ComparisonTable({
       pet: false,
     },
     {
-      feature: "Requires Licensed Healthcare Provider Letter",
+      feature: "Documentation May Be Requested by Housing Provider",
       esa: true,
-      serviceAnimal: false,
+      serviceAnimal: true,
       pet: false,
     },
     {
@@ -139,11 +139,19 @@ export function ComparisonTable({
         </table>
       </div>
 
-      <div className="p-4 bg-[#F7F5F0] border-t border-[#D5DFDB] text-xs text-[#52616A] flex items-center gap-2">
-        <AlertCircle className="w-4 h-4 text-[#347C78] shrink-0" />
-        <span>
-          Note: Emotional support animals possess comprehensive housing rights in Colorado, but do not have public access rights to stores, restaurants, or airlines.
-        </span>
+      <div className="p-4 bg-[#F7F5F0] border-t border-[#D5DFDB] text-xs text-[#52616A] flex flex-col gap-2">
+        <div className="flex items-start gap-2">
+          <AlertCircle className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
+          <span>
+            <strong>Note:</strong> Emotional support animals have housing protections in Colorado but do not have public access rights to stores, restaurants, or airlines. Terms and exceptions apply.
+          </span>
+        </div>
+        <div className="flex items-start gap-2 pt-2 border-t border-[#D5DFDB]/60">
+          <AlertCircle className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
+          <span>
+            <strong>Note:</strong> Having a mental, emotional, or psychological condition does not automatically qualify you for an ESA. Eligibility depends on an individualized evaluation by a licensed mental health professional, who determines whether an ESA is appropriate based on your needs and how your condition affects daily life.
+          </span>
+        </div>
       </div>
     </div>
   );

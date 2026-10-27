@@ -12,23 +12,23 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
     {
       num: "01",
       icon: ClipboardList,
-      title: "Take 5-Minute Assessment",
-      shortDesc: "Complete our secure, confidential online intake questionnaire about your mental health and living situation.",
-      longDesc: "Answer targeted clinical questions regarding your daily symptoms, home challenges, and companion animal bond. No medical records or referrals required.",
+      title: "Start a 5-Minute Assessment",
+      shortDesc: "Share your symptoms and home challenges. A licensed professional reviews and decides on your eligibility. No records or referrals needed.",
+      longDesc: "Share your symptoms and home challenges. A licensed professional reviews and decides on your eligibility. No records or referrals needed.",
     },
     {
       num: "02",
       icon: Stethoscope,
-      title: "Licensed Therapist Review",
-      shortDesc: "A state-licensed Colorado mental health professional conducts your clinical telehealth evaluation.",
-      longDesc: "Your therapist evaluates your functional need under Colorado HB26-1045 and Fair Housing Act guidelines to determine clinical appropriateness.",
+      title: "Clinical Evaluation",
+      shortDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate. Every evaluation is conducted by a licensed Colorado mental health professional, not an automated quiz or a generic certificate.",
+      longDesc: "A licensed mental health professional reviews your assessment and evaluates whether an ESA recommendation is appropriate. Every evaluation is conducted by a licensed Colorado mental health professional, not an automated quiz or a generic certificate.",
     },
     {
       num: "03",
       icon: MailCheck,
-      title: "Receive Your Official Letter",
-      shortDesc: "Once approved, receive your signed, compliant Colorado ESA letter on official provider letterhead via secure PDF.",
-      longDesc: "Includes provider's active Colorado license number, contact details, issue date, and complete legal wording recognized by Colorado landlords.",
+      title: "After Your Evaluation: Next Steps",
+      shortDesc: "If approved, your ESA documentation will be prepared according to applicable requirements. Timing may vary based on your individual evaluation.",
+      longDesc: "If approved, your ESA documentation will be prepared according to applicable requirements. Timing may vary based on your individual evaluation.",
     },
   ];
 
@@ -37,10 +37,10 @@ export function ProcessSteps({ showCta = true, expanded = false }: ProcessStepsP
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-h2 text-[#19354A]">
-            How to Get Your Colorado ESA Letter
+            How to Obtain Your ESA Letter in Colorado
           </h2>
           <p className="text-body-large text-[#52616A] mt-3">
-            Fast, compliant telehealth evaluations by Colorado-licensed clinicians. 100% money-back guarantee.
+            Connect with a licensed mental health professional for an ESA evaluation. If eligible, receive documentation following your evaluation.
           </p>
         </div>
 

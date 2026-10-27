@@ -23,7 +23,7 @@ export const allFaqs: FAQItem[] = [
   {
     category: "Qualifying",
     question: "Who qualifies for an ESA letter in Colorado?",
-    answer: "Any Colorado resident who experiences a mental health or emotional condition—such as anxiety, depression, PTSD, panic disorder, ADHD, OCD, or insomnia—that substantially impairs their daily living or emotional functioning in the home may qualify following an evaluation with a licensed therapist.",
+    answer: "Any Colorado resident who experiences a mental health or emotional condition, such as anxiety, depression, PTSD, panic disorder, ADHD, OCD, or insomnia, that substantially impairs their daily living or emotional functioning in the home may qualify following an evaluation with a licensed therapist.",
   },
   {
     category: "Qualifying",

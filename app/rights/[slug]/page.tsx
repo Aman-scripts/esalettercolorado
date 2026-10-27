@@ -115,7 +115,12 @@ export default async function RightsSpokePage({ params }: SpokeProps) {
       </article>
 
       {/* M5 FAQ */}
-      <FAQAccordion items={spoke.faqs} title="Frequently Asked Questions" outputSchema={false} />
+      <FAQAccordion
+        items={spoke.faqs}
+        title={spoke.faqTitle || "Frequently Asked Questions"}
+        subtitle={spoke.faqSubtitle}
+        outputSchema={false}
+      />
 
       {/* Final CTA */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12">

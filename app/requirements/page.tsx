@@ -34,11 +34,11 @@ export default function RequirementsPage() {
       answer: "No. HUD guidance (FHEO-2020-01) clarifies that landlords cannot demand that your provider complete proprietary, extensive questionnaires or sign liability waivers. A standard, compliant clinical letter containing all required elements is legally sufficient.",
     },
     {
-      question: "Does the letter need to state my exact mental health diagnosis?",
+      question: "Does the ESA letter need to state my exact mental health diagnosis?",
       answer: "No. Federal privacy laws (HIPAA) and HUD rules explicitly protect your medical privacy. The letter only needs to confirm that you have an impairment meeting FHA criteria; it should never reveal your private psychiatric diagnosis.",
     },
     {
-      question: "Can a Colorado landlord reject a letter from a telehealth therapist?",
+      question: "Can a Colorado landlord reject an ESA letter from a telehealth therapist?",
       answer: "No. Telehealth is legally recognized in Colorado. As long as your evaluating therapist holds an active Colorado license and conducted a bona fide clinical evaluation, telehealth documentation carries the exact same legal weight as an in-person letter.",
     },
   ];
@@ -72,8 +72,8 @@ export default function RequirementsPage() {
 
       <article className="section-padding bg-white">
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 lg:px-8">
-          <CalloutBox type="legal-warning" title="Colorado Legal Standard: Active In-State License Required">
-            Under Colorado HB26-1045, letters for housing accommodations must be authored by a healthcare professional holding an active, unencumbered license issued by the State of Colorado. Letters from out-of-state clinicians with no Colorado credentials can be legally rejected by Colorado landlords.
+          <CalloutBox type="legal-warning" title="Colorado Legal Standard: Healthcare Professional Requirements">
+            Under Colorado law, healthcare professionals making ESA determinations must meet applicable licensing and professional requirements. Under C.R.S. § 12-245-229, covered licensees must meet with the patient in person, be sufficiently familiar with the patient and their disability, and be qualified to make the determination. Housing accommodation requests are assessed under applicable state and federal law.
           </CalloutBox>
 
           <div className="space-y-10 text-base text-[#24333B] leading-relaxed">
@@ -160,7 +160,7 @@ export default function RequirementsPage() {
         </div>
       </article>
 
-      <FAQAccordion items={faqs} title="Requirements FAQ" outputSchema={false} />
+      <FAQAccordion items={faqs} title="FAQs About Colorado ESA Letter Requirements" outputSchema={false} />
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <InlineCta
