@@ -29,16 +29,20 @@ export default function RightsHubPage() {
 
   const faqs = [
     {
-      question: "Are emotional support animals exempt from Colorado apartment pet rent?",
-      answer: "Yes. Under federal HUD guidelines and Colorado HB23-1068, emotional support animals are classified as assistance animals, not pets. Landlords cannot charge pet application fees, pet deposits, or monthly pet rent.",
+      question: "Are emotional support animals protected in Colorado housing?",
+      answer: "Yes. Colorado law (HB26-1045) defines emotional support animals as assistance animals, and allowing one in housing is presumed to be a reasonable accommodation. Complaints can be filed with the Colorado Civil Rights Division.",
     },
     {
-      question: "Can a Colorado HOA ban an emotional support animal?",
-      answer: "No. Federal and state fair housing protections supersede HOA rules, community bylaws, and CC&Rs. An HOA must grant a reasonable accommodation for a legitimate assistance animal.",
+      question: "Can a Colorado landlord or HOA ban assistance animals completely?",
+      answer: "No. Under Colorado law, a complete prohibition of assistance animals in housing is presumed to be discriminatory. Housing providers can still request reasonable documentation and engage in a good-faith interactive process.",
     },
     {
-      question: "What should I do if a Colorado landlord denies my ESA letter?",
-      answer: "Request the denial in writing with statutory justification. If the landlord violates the Fair Housing Act or Colorado C.R.S. 24-34-502, you can file an official discrimination complaint with the Colorado Civil Rights Division (CCRD) or HUD.",
+      question: "What documentation can a Colorado housing provider ask for?",
+      answer: "A housing provider may request reasonable documentation of your disability and your disability-related need for the animal, unless the disability or need is obvious. You do not need to disclose a specific diagnosis.",
+    },
+    {
+      question: "Am I responsible if my assistance animal causes damage?",
+      answer: "Yes. Housing providers may still hold tenants responsible for actual damage caused by an assistance animal. However, an animal's mere presence is not presumed to be a direct threat or to cause substantial damage.",
     },
   ];
 
@@ -217,7 +221,12 @@ export default function RightsHubPage() {
       <LatestBlog categorySlug="rights-housing" title="Latest Housing Rights Articles" />
 
       {/* M5 FAQ */}
-      <FAQAccordion items={faqs} title="Housing Rights FAQ" outputSchema={false} />
+      <FAQAccordion
+        items={faqs}
+        title="FAQs About Colorado Housing Rights"
+        subtitle="Learn how reasonable accommodation requests, documentation, and state law apply to renters and homeowners in Colorado."
+        outputSchema={false}
+      />
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <InlineCta
