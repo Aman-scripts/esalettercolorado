@@ -268,9 +268,6 @@ export default function HomePage() {
       <section className="py-12 bg-white">
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
           <ComparisonTable />
-          <div className="mt-4 p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] text-xs sm:text-sm text-[#52616A] leading-relaxed">
-            <strong className="text-[#19354A]">Note:</strong> Having a mental, emotional, or psychological condition does not automatically qualify you for an ESA. Eligibility depends on an individualized evaluation by a licensed mental health professional, who determines whether an ESA is appropriate based on your needs and how your condition affects daily life.
-          </div>
         </div>
       </section>
 
@@ -326,6 +323,10 @@ export default function HomePage() {
               <span>View All 11 Qualifying Conditions</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
+          </div>
+
+          <div className="mt-8 p-4 rounded-xl bg-white border border-[#D5DFDB] text-xs sm:text-sm text-[#52616A] leading-relaxed max-w-4xl mx-auto">
+            <strong className="text-[#19354A]">Note:</strong> Having a mental, emotional, or psychological condition does not automatically qualify you for an ESA. Eligibility depends on an individualized evaluation by a licensed mental health professional, who determines whether an ESA is appropriate based on your needs and how your condition affects daily life.
           </div>
         </div>
       </section>
