@@ -29,16 +29,20 @@ export default function ConditionsHubPage() {
 
   const faqs = [
     {
-      question: "Do I need a formal psychiatric diagnosis to qualify for an ESA?",
-      answer: "You do not need prior psychiatric records or a formal psychiatric diagnosis before applying. Our Colorado-licensed mental health professionals will conduct a comprehensive clinical evaluation during your telehealth assessment.",
+      question: "Which conditions qualify for an ESA in Colorado?",
+      answer: "Colorado law does not list specific qualifying conditions. What matters is whether you have a disability, such as a mental or emotional health condition that substantially limits a major life activity, and whether the animal is necessary to address a disability-related need. A licensed professional evaluates this individually.",
     },
     {
-      question: "Can an ESA letter be issued for mild or situational stress?",
-      answer: "Under federal Fair Housing Act rules, your condition must substantially limit one or more major life activities (such as sleep, mood stability, or concentration). Your evaluating therapist will determine whether your symptoms meet this threshold.",
+      question: "Do I need a formal diagnosis or prior records to qualify for an ESA in Colorado?",
+      answer: "You do not need prior psychiatric records to apply. A licensed mental health professional evaluates whether you have a disability-related need. Your landlord may request reasonable documentation but is not entitled to your diagnosis or treatment details.",
     },
     {
-      question: "Are cats and other small animals eligible as ESAs in Colorado?",
-      answer: "Yes. While dogs are the most common emotional support animals, cats, rabbits, birds, ferrets, and other domestic pets qualify when recommended by a licensed clinician.",
+      question: "Can I get an ESA letter in Colorado for mild or situational stress?",
+      answer: "It depends on your individual situation. A licensed professional decides whether your symptoms amount to a disability that substantially limits a major life activity. Everyday or temporary stress alone may not meet that standard.",
+    },
+    {
+      question: "Does my ESA in Colorado need to be trained?",
+      answer: "No. Under Colorado law, an emotional support animal is an animal that provides solely emotional support to alleviate a symptom or effect of a disability, and it does not need task training. Service animals, by contrast, must be individually trained to perform specific tasks.",
     },
   ];
 
@@ -56,7 +60,7 @@ export default function ConditionsHubPage() {
       <Hero
         variant="compact"
         h1={seo.h1}
-        subhead="Explore mental and emotional health conditions recognized under Colorado fair housing laws, how our clinicians evaluate clinical need, and how companion animals provide daily support."
+        subhead="Explore mental and emotional health conditions that may qualify as disabilities under Colorado housing law, how our clinicians evaluate clinical need, and how companion animals may provide daily support."
         ctaText="Check Your Eligibility ($149)"
         bgImage="/images/colorado-apartment-peaceful-esa.webp"
       />
@@ -94,28 +98,27 @@ export default function ConditionsHubPage() {
               <h2 className="text-h2 text-[#19354A]">
                 How Emotional Support Animals Provide Vital Home Stability
               </h2>
-              <p className="text-body-large text-[#52616A] mt-3 leading-relaxed">
-                Under fair housing law, qualifying for an ESA is based on whether an emotional impairment substantially limits major life activities (such as sleep, mood, or anxiety regulation) and whether an animal&apos;s companion presence mitigates those functional symptoms.
-              </p>
-
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 text-xs text-[#24333B]">
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>Tactile Grounding:</strong> Lowers heart rate &amp; interrupts panic spirals.</span>
+                  <span><strong>Tactile Grounding:</strong> May help ease physical anxiety symptoms.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>Circadian Routine:</strong> Enforces consistent waking and rest cycles.</span>
+                  <span><strong>Routine Support:</strong> May help encourage consistent daily routines.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>Sensory Soothing:</strong> Offers non-judgmental emotional safety.</span>
+                  <span><strong>Sensory Soothing:</strong> May offer a sense of calm and safety.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>No Prior Records:</strong> Intake evaluation establishes clinical nexus.</span>
+                  <span><strong>No Prior Records:</strong> Evaluation assesses your individual needs.</span>
                 </div>
               </div>
+              <p className="text-body-large text-[#52616A] mt-6 leading-relaxed">
+                Under Colorado House Bill 26-1045, an emotional support animal is an animal that provides solely emotional support to alleviate a symptom or effect of a disability and does not require task-training. Federal enforcement for untrained ESAs has narrowed since HUD&apos;s May 2026 guidance. The standard is whether a tenant has a disability and the animal is necessary to address a disability-related need.
+              </p>
             </div>
           </div>
         </div>
@@ -129,9 +132,6 @@ export default function ConditionsHubPage() {
               Living with chronic anxiety, depression, trauma, or neurodevelopmental challenges can significantly impact how an individual functions in their private living space. In Colorado, individuals experiencing these emotional impairments have the legal right to request an emotional support animal as a reasonable accommodation in housing.
             </p>
             <p>
-              Under both the federal Fair Housing Act and Colorado House Bill 26-1045, qualifying for an ESA does not require a severe physical disability or specialized task-training. Instead, the legal standard is whether a tenant experiences an identifiable mental or emotional impairment that substantially limits major life activities, and whether an animal provides therapeutic comfort that alleviates those symptoms.
-            </p>
-            <p>
               Below is an overview of qualifying criteria, the clinical evaluation process conducted by our state-licensed mental health professionals, and detailed guides for each recognized condition.
             </p>
           </div>
@@ -143,12 +143,12 @@ export default function ConditionsHubPage() {
                 1. Qualifying Criteria (Disability-Related Need)
               </h2>
               <p>
-                To qualify under HUD guidelines and Colorado statutes, two core criteria must be established:
+                To request an assistance animal accommodation under Colorado law, two core criteria generally apply:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="text-lg font-bold text-[#19354A] mb-1">Functional Impairment</h3>
-                  <p className="text-base text-[#52616A]">A diagnosed mental or emotional health condition that substantially limits life functions such as sleep, social interaction, mood stability, or concentration.</p>
+                  <p className="text-base text-[#52616A]">A mental or emotional health condition that substantially limits life functions such as sleep, social interaction, mood stability, or concentration.</p>
                 </div>
                 <div className="p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB]">
                   <h3 className="text-lg font-bold text-[#19354A] mb-1">Therapeutic Nexus</h3>
@@ -163,7 +163,7 @@ export default function ConditionsHubPage() {
                 2. Role of a Licensed Colorado Healthcare Provider
               </h2>
               <p>
-                Under Colorado HB26-1045, letters cannot be generated by algorithmic quizzes or automated platforms. A genuine clinical evaluation must be conducted by a clinician holding an active license issued by the Colorado Department of Regulatory Agencies (DORA), such as a licensed psychologist, clinical social worker (LCSW), or licensed professional counselor (LPC).
+                Housing providers may request reasonable documentation of a disability and disability-related need, typically a letter from a licensed healthcare professional. A genuine clinical evaluation by a licensed professional, such as a psychologist, clinical social worker (LCSW), or licensed professional counselor (LPC), helps support your request. Letters generated by automated quizzes alone may be questioned.
               </p>
             </section>
 
@@ -185,10 +185,16 @@ export default function ConditionsHubPage() {
       {/* M6 Silo Child Grid */}
       <SiloChildGrid
         items={childGridItems}
-        title="Browse All 11 Qualifying Conditions &amp; Eligible Species"
-        subtitle="Explore detailed guides explaining how each mental health condition qualifies and how an ESA provides daily support."
+        title="Common Conditions That May Qualify for an ESA in Colorado"
+        subtitle="Have a look at the most common mental health conditions that could qualify an individual to get an ESA in Colorado."
         type="conditions"
       />
+
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-4">
+        <div className="card-theme text-sm sm:text-base text-[#52616A] leading-relaxed">
+          <strong className="text-[#19354A]">Note:</strong> Having any of the conditions listed above does not automatically qualify you for an ESA letter in Colorado. Eligibility requires an individualized clinical assessment by a Colorado-licensed mental health professional, who determines whether you have a qualifying disability-related need for an emotional support animal. An ESA letter is issued only if the professional finds it clinically appropriate.
+        </div>
+      </div>
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8">
         <InlineCta
@@ -201,7 +207,12 @@ export default function ConditionsHubPage() {
       <LatestBlog categorySlug="qualifying-conditions" title="Articles on Qualifying Conditions" />
 
       {/* M5 FAQ */}
-      <FAQAccordion items={faqs} title="Condition Qualification FAQ" outputSchema={false} />
+      <FAQAccordion
+        items={faqs}
+        title="FAQs About ESA Qualifying Conditions in Colorado"
+        subtitle="Answers to common questions about qualifying conditions, clinical evaluations, and the disability-related need for an assistance animal in Colorado housing"
+        outputSchema={false}
+      />
 
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12">
         <InlineCta
