@@ -7,6 +7,7 @@ export interface ConditionPage {
   metaDescription: string;
   shortDesc: string;
   quickAnswer: string;
+  fromDoc?: boolean;
   howQualifies: string;
   howEsaHelps: string;
   supportPoints?: string[];
@@ -55,6 +56,7 @@ export const conditionsList: ConditionPage[] = [
     metaDescription: "Does Anxiety qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how daily worry and stress affect home life.",
     shortDesc: "How generalized anxiety disorder (GAD), chronic stress, and chronic worry may be considered for an ESA in Colorado.",
     quickAnswer: "Yes, it can. Anxiety may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    fromDoc: true,
     howQualifies: "Under the Fair Housing Act and the Colorado Anti-Discrimination Act, a mental impairment is a disability when it substantially limits one or more major life activities. Anxiety can limit sleep, concentration, and emotional well-being.\n\nTo request an ESA accommodation in Colorado, you must establish both a qualifying disability and a disability-related need for the animal. Housing providers may request reliable documentation when the disability or need is not readily apparent. The documentation should support the need for the animal without requiring unnecessary details about your diagnosis or medical history.",
     howEsaHelps: "An ESA may offer comfort, routine, and companionship that help some people manage anxiety symptoms at home.",
     supportPoints: [
@@ -97,6 +99,7 @@ export const conditionsList: ConditionPage[] = [
     metaDescription: "Does Depression qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how daily routines with an animal may support functioning.",
     shortDesc: "How major depressive disorder (MDD) and clinical depression may be considered for ESA housing accommodations.",
     quickAnswer: "Yes, it can. Depression may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    fromDoc: true,
     howQualifies: "Depression can substantially limit major life activities, including sleep, energy, social interaction, and daily self-care at home.",
     howEsaHelps: "An ESA may offer daily structure through feeding times and walks, along with companionship that helps some people feel less isolated.",
     supportPoints: [
@@ -106,6 +109,7 @@ export const conditionsList: ConditionPage[] = [
     ],
     therapistQuestions: "Your therapist will ask how depressive symptoms affect your daily schedule, energy, and mood, and how your companion animal helps you stay engaged and grounded.",
     landlordConsiderations: "Mental health conditions, including depression, are protected disabilities under fair housing law, and a disability does not need to be visible to be protected. Your landlord may request reasonable documentation of your disability-related need.",
+    privacyReminder: "",
     faqTitle: "FAQs About ESA Letter for Depression in Colorado",
     faqSubtitle: "Get answers to common questions about getting an ESA letter for depression in Colorado, including medication, documentation, and what your landlord can see.",
     faqs: [
@@ -137,6 +141,7 @@ export const conditionsList: ConditionPage[] = [
     metaDescription: "Does PTSD qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how an ESA may help with hypervigilance and sleep.",
     shortDesc: "How an ESA may support people living with post-traumatic stress disorder, including military trauma and hypervigilance, in Colorado housing.",
     quickAnswer: "Yes, it can. PTSD may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    fromDoc: true,
     howQualifies: "PTSD can affect sleep, emotional regulation, sense of security, and social functioning. It may qualify as a disability under fair housing law when it substantially limits a major life activity.",
     howEsaHelps: "An ESA may offer comfort and companionship that help some people feel safer and more settled at home.",
     supportPoints: [
@@ -146,6 +151,7 @@ export const conditionsList: ConditionPage[] = [
     ],
     therapistQuestions: "Your evaluator will conduct a trauma-informed assessment focusing on safety in your home, sleep quality, and how your animal assists you during triggering events.",
     landlordConsiderations: "Housing providers may request reasonable documentation of your disability-related need. Under Colorado law, an emotional support animal does not need task training.",
+    privacyReminder: "",
     faqTitle: "FAQs About ESA Letter for PTSD in Colorado",
     faqSubtitle: "Get answers to common questions about getting an ESA letter for PTSD in Colorado, including medication, documentation, and what your landlord can see.",
     faqs: [
@@ -260,17 +266,13 @@ export const conditionsList: ConditionPage[] = [
     metaTitle: "Can You Get an ESA Letter for ADHD in Colorado?",
     metaDescription: "Does ADHD qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how an ESA may support routine and focus at home.",
     shortDesc: "How an ESA may support people living with ADHD, including executive dysfunction and emotional regulation, in Colorado housing.",
-    quickAnswer: "Yes. Adults and students with ADHD qualify for an emotional support animal in Colorado when executive dysfunction, time blindness, sensory overload, and emotional dysregulation substantially impact daily apartment life.",
-    howQualifies: "ADHD is recognized as a neurodevelopmental disability under federal law when it creates chronic difficulties managing essential life tasks, focus, and emotional equilibrium.",
-    howEsaHelps: "An ESA provides predictable daily time anchors, tactile stimulation that boosts dopamine and norepinephrine naturally, and soothing sensory input during burnout periods.",
-    therapistQuestions: "Evaluators discuss how executive dysfunction affects home management, sleep cycles, and how an animal assists in maintaining structure.",
-    landlordConsiderations: "Property managers cannot refuse an ESA letter because ADHD is commonly perceived as an executive rather than psychiatric condition.",
-    faqs: [
-      {
-        question: "How does an ESA help with ADHD executive dysfunction?",
-        answer: "The non-negotiable needs of an animal (meals, walks, care) provide urgent external motivation and structural routines that help neurodivergent brains stay grounded.",
-      },
-    ],
+    quickAnswer: "Yes, it can. ADHD may qualify as a disability when it substantially limits a major life activity, such as concentrating or managing daily tasks. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    fromDoc: true,
+    howQualifies: "",
+    howEsaHelps: "",
+    therapistQuestions: "",
+    landlordConsiderations: "",
+    faqs: [],
     relatedConditions: ["anxiety", "autism-spectrum", "depression"],
   },
   {
