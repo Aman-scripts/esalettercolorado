@@ -77,43 +77,42 @@ export default function RightsHubPage() {
                   fetchPriority="high"
                   className="object-cover object-center"
                 />
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center justify-between border border-[#D5DFDB] shadow-sm z-10">
+                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-xs px-4 py-2.5 rounded-xl text-xs font-semibold text-[#19354A] flex items-center border border-[#D5DFDB] shadow-sm z-10">
                   <span className="flex items-center gap-1.5 text-[#347C78]">
                     <ShieldCheck className="w-4 h-4" />
                     Exempt from All Pet Fees &amp; Deposits
                   </span>
-                  <span className="text-[#52616A] font-mono">HUD FHEO-2020-01</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6 flex flex-col justify-center">
-              <span className="text-xs font-bold text-[#347C78] bg-[#E8F0ED] px-3 py-1 rounded-full border border-[#D5DFDB] uppercase tracking-wider inline-block mb-3 self-start">
-                Colorado Housing Law
-              </span>
               <h2 className="text-h2 text-[#19354A]">
-                Zero Pet Rent, Zero Pet Deposits, No Breed Restrictions
+                Know Your Colorado Assistance Animal Rights
               </h2>
+              <h3 className="text-lg font-bold text-[#19354A] mt-4">
+                Colorado Assistance Animal Housing Protections
+              </h3>
               <p className="text-body-large text-[#52616A] mt-3 leading-relaxed">
-                Under federal HUD guidelines and Colorado HB26-1045, emotional support animals are legally classified as assistance animals—not pets. Housing providers cannot demand monthly pet rent, charge extra security deposits, or ban animals based on breed or weight limits.
+                Under Colorado HB26-1045, emotional support animals are defined as assistance animals, and allowing an assistance animal in housing is presumed to be a reasonable accommodation. Housing providers may request reasonable documentation and may hold tenants responsible for actual damage caused by the animal.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 text-xs text-[#24333B]">
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>$0 Monthly Pet Rent:</strong> Saves an average of $400–$800 annually.</span>
+                  <span><strong>State-Law Protection:</strong> ESAs are protected under Colorado law.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>$0 Pet Security Deposit:</strong> Prohibits upfront pet deposits.</span>
+                  <span><strong>Ban Presumed Unlawful:</strong> Blanket no-animal policies presumed discriminatory.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>No Breed Prohibitions:</strong> Overrides apartment breed bans.</span>
+                  <span><strong>Defined in Statute:</strong> ESAs are now defined as assistance animals.</span>
                 </div>
                 <div className="p-3.5 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0" />
-                  <span><strong>Full HOA Compliance:</strong> Enforceable across condos and HOAs.</span>
+                  <span><strong>State Enforcement:</strong> Complaints go to the Colorado Civil Rights Division.</span>
                 </div>
               </div>
             </div>
@@ -126,13 +125,10 @@ export default function RightsHubPage() {
           {/* 200-300 word intro */}
           <div className="space-y-4 text-base text-[#24333B] leading-relaxed">
             <p className="text-lg font-medium text-[#19354A] leading-relaxed">
-              In Colorado, tenants with mental or emotional health conditions have robust statutory protections to live with their assistance animals without discrimination, extra charges, or arbitrary lease restrictions.
+              In Colorado, tenants with a disability, including mental or emotional health conditions, can request a reasonable accommodation to live with an assistance animal under the Colorado Anti-Discrimination Act.
             </p>
             <p>
-              Navigating landlord policies can be stressful, especially when leasing offices cite &ldquo;no pets&rdquo; rules or demand unlawful pet fees. Both federal law under the Fair Housing Act (FHA) and Colorado state legislation—including C.R.S. § 24-34-502 and House Bill 26-1045—prohibit housing providers from treating emotional support animals as standard pets.
-            </p>
-            <p>
-              Whether you are renting a multi-family apartment in Denver, a condo in Boulder with strict HOA covenants, or a suburban rental in Colorado Springs, understanding your rights ensures your documentation is respected and your home remains secure.
+              Dealing with landlord policies can be stressful, especially when leasing offices cite &ldquo;no pets&rdquo; rules or question assistance animal requests. Colorado law (C.R.S. §§ 24-34-502 and 24-34-502.2, as amended by HB26-1045) treats a complete prohibition of assistance animals in housing as presumptively discriminatory. Federal Fair Housing Act enforcement for untrained emotional support animals has narrowed since HUD rescinded its 2020 guidance in May 2026.
             </p>
           </div>
 
@@ -143,7 +139,7 @@ export default function RightsHubPage() {
                 1. The Federal Fair Housing Act (FHA)
               </h2>
               <p>
-                The Fair Housing Act governs residential rental accommodations across the United States. Under HUD Notice FHEO-2020-01, housing providers must grant reasonable accommodations for assistance animals when a tenant provides reliable documentation verifying an emotional impairment and a disability-related need for the animal.
+                The Fair Housing Act prohibits disability discrimination in most housing, including refusing reasonable accommodations in housing policies. Certain housing, such as some owner-occupied buildings with four or fewer units, is exempt. HUD rescinded its 2020 assistance animal guidance in May 2026 and now pursues federal complaints only for individually trained animals. State law continues to protect emotional support animals in Colorado.
               </p>
             </section>
 
@@ -153,7 +149,7 @@ export default function RightsHubPage() {
                 2. Colorado Law: HB26-1045 &amp; C.R.S. § 24-34-502
               </h2>
               <p>
-                Colorado state law reinforces federal standards while requiring that healthcare providers issuing ESA letters hold an active Colorado license and maintain a genuine clinical relationship with the tenant. This protects renters from fraudulent online registry scams while holding landlords accountable.
+                HB26-1045 amended the Colorado Anti-Discrimination Act to define assistance animals and emotional support animals, to presume that permitting an assistance animal is a reasonable accommodation, and to allow housing providers to request reasonable documentation of a disability and disability-related need. It also provides that an animal&apos;s mere presence is not presumed to be a direct threat.
               </p>
             </section>
 
@@ -168,9 +164,10 @@ export default function RightsHubPage() {
                     <CheckCircle2 className="w-4 h-4" /> What Landlords CAN Do:
                   </h3>
                   <ul className="text-base space-y-1.5 text-[#24333B]">
-                    <li>• Request a clinical letter from an active Colorado-licensed provider.</li>
-                    <li>• Contact the provider to authenticate that the letter is genuine.</li>
-                    <li>• Charge for actual physical property damage caused by the animal upon move-out.</li>
+                    <li>• Request reasonable documentation of your disability and need for the animal, unless the disability or need is obvious.</li>
+                    <li>• Engage in a good-faith interactive process.</li>
+                    <li>• Hold you responsible for actual damage caused by the animal.</li>
+                    <li>• Deny a request for a specific animal based on documented, specific harmful conduct.</li>
                   </ul>
                 </div>
                 <div className="p-4 rounded-xl bg-[#FDF0EE] border border-[#A33E35]/30">
@@ -178,9 +175,8 @@ export default function RightsHubPage() {
                     <AlertTriangle className="w-4 h-4" /> What Landlords CANNOT Do:
                   </h3>
                   <ul className="text-base space-y-1.5 text-[#24333B]">
-                    <li>• Cannot charge pet deposits, pet fees, or monthly pet rent.</li>
-                    <li>• Cannot demand medical records, diagnostic charts, or therapy notes.</li>
-                    <li>• Cannot enforce dog breed bans or weight caps on an individual ESA.</li>
+                    <li>• Prohibit assistance animals completely (presumed discriminatory under Colorado law).</li>
+                    <li>• Presume an assistance animal is a direct threat or will cause substantial damage based on its mere presence.</li>
                   </ul>
                 </div>
               </div>
@@ -191,12 +187,9 @@ export default function RightsHubPage() {
               <h2 className="text-h2 text-[#19354A] mb-3">
                 4. Enforcement Authorities (HUD &amp; CCRD)
               </h2>
-              <p>
-                Colorado renters who experience unlawful accommodation denials, retaliatory eviction threats, or unauthorized pet fees have two enforcement bodies available to investigate claims free of charge:
-              </p>
-              <ul className="text-base mt-2 space-y-1.5 text-[#24333B]">
-                <li>• <strong>Colorado Civil Rights Division (CCRD):</strong> Enforces C.R.S. § 24-34-502 across all Colorado municipalities.</li>
-                <li>• <strong>U.S. Department of Housing &amp; Urban Development (HUD):</strong> Enforces federal Fair Housing Act compliance.</li>
+              <ul className="text-base space-y-1.5 text-[#24333B]">
+                <li>• <strong>U.S. Department of Housing &amp; Urban Development (HUD):</strong> Accepts Fair Housing Act complaints, but currently pursues only cases involving individually trained animals.</li>
+                <li>• <strong>Colorado Civil Rights Division (CCRD):</strong> Enforces the Colorado Anti-Discrimination Act, including housing protections for assistance animals.</li>
               </ul>
             </section>
           </div>

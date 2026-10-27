@@ -448,22 +448,36 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "ESA Registries Are Not Valid: Colorado Scam Warning",
     metaDescription: "No official ESA registry exists. Learn how online registries mislead Colorado renters, what a landlord actually needs, and how to verify a provider.",
     shortDesc: "Learn why online ESA registries, ID badges, and certificates carry no legal status, and what documentation housing providers can actually request.",
-    quickAnswer: "There is no such thing as an official ESA registry, government certification, or legally recognized ID card. Websites selling instant registration numbers, badges, or vests are scams that do not provide legal housing protection in Colorado. Landlords and HUD look only for a signed evaluation letter from a licensed mental health professional.",
+    quickAnswer: "There is no official ESA registry, government certification, or legally recognized ID card in Colorado. Registration numbers, badges, and vests do not provide legal housing protection. Under Colorado law, a housing provider may request reasonable documentation of your disability and need for the animal, which is typically a letter from a licensed professional.",
     statuteCitation: "Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045), which allows housing providers to request reasonable documentation. C.R.S. § 18-13-107.3 addresses intentional misrepresentation of entitlement to an assistance animal.",
     sections: [
       {
         title: "How Online ESA Registries Mislead Renters",
-        content: "Many commercial websites advertise 'official lifetime ESA registration' for a fast fee. These certificates are completely worthless under federal law. HUD's official 2020 guidance explicitly instructs housing providers that websites selling instant certificates without a clinical relationship are insufficient to establish a disability-related need.",
+        content: "Many commercial websites advertise 'official lifetime ESA registration' for a fast fee. These certificates do not establish a disability or a disability-related need and carry no legal status. A housing provider may decline documentation that does not come from a licensed professional with knowledge of your condition.",
       },
       {
         title: "What Colorado Landlords Actually Require",
-        content: "A legitimate letter must be written on the professional letterhead of a therapist or doctor licensed in Colorado. It must state their license number, date of issue, and confirm that you have an emotional or psychological condition that benefits from an ESA.",
+        content: "Housing providers commonly look for a letter on the provider's letterhead that includes the provider's name, license information, and date and confirms a disability-related need for the animal. The letter does not need to disclose a specific diagnosis.",
       },
     ],
+    faqTitle: "Frequently Asked Questions About Why ESA Registries Are Not Valid in Colorado",
+    faqSubtitle: "Get answers to common questions about ESA registries, certificates, and ID cards in Colorado.",
     faqs: [
       {
-        question: "Do I need to register my ESA with the state of Colorado?",
-        answer: "No. The State of Colorado does not maintain an ESA registry, nor does any municipal government. Any website claiming to register your animal with the government is fraudulent.",
+        question: "Is there an official ESA registry in Colorado?",
+        answer: "No. There is no official state or federal ESA registry in Colorado, and registration is not required. Websites selling registration numbers, certificates, or ID cards do not provide legal housing protection.",
+      },
+      {
+        question: "Do I need an ESA certificate, vest, or ID card for my housing accommodation?",
+        answer: "No. Colorado law lets a housing provider request reasonable documentation of your disability and your need for the animal. This is typically a letter from a licensed professional, not a registry certificate, vest, or ID card.",
+      },
+      {
+        question: "What documentation can a Colorado landlord ask for?",
+        answer: "A landlord may request reasonable documentation of your disability and disability-related need for the animal, and may engage in a good-faith interactive process. They cannot require a registry listing, and a letter does not need to disclose a specific diagnosis.",
+      },
+      {
+        question: "Is it illegal to misrepresent my pet as an assistance animal in Colorado?",
+        answer: "Yes, in some cases. Colorado law (C.R.S. 18-13-107.3) penalizes intentionally misrepresenting an animal as an assistance animal to obtain housing accommodations when the person knows the animal or the disability is not genuine and has previously been warned. Check the current statute for penalties.",
       },
     ],
     relatedSlugs: ["colorado-hb26-1045-explained", "fair-housing-act", "verify-esa-letter"],
@@ -475,22 +489,32 @@ export const rightsSpokes: RightsPage[] = [
     metaTitle: "ESA Request Letter to Landlord: Colorado Template",
     metaDescription: "Use this free template to request an ESA accommodation from your Colorado landlord, plus tips on delivery, timing, and what to attach.",
     shortDesc: "Free copy-ready template and instructions for presenting your ESA letter to a Colorado property manager.",
-    quickAnswer: "When submitting your ESA letter to a landlord, use a professional, clear written request citing your rights under the Fair Housing Act and Colorado C.R.S. 24-34-502. Our free template includes all legally required elements to ensure rapid processing.",
-    statuteCitation: "Fair Housing Act Reasonable Accommodation Request Guidelines.",
+    quickAnswer: "When submitting your ESA letter to a landlord, a clear written request helps create a record. This free template references the Fair Housing Act and Colorado law. There is no legally required format for an accommodation request.",
+    statuteCitation: "Fair Housing Act (42 U.S.C. § 3604(f)(3)(B)); Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045).",
     sections: [
       {
         title: "Copy-Ready Colorado Landlord Request Template",
-        content: "Subject: Request for Reasonable Accommodation under the Fair Housing Act - [Your Name] - Unit [Your Unit #]\n\nDear [Landlord / Property Manager Name],\n\nI am writing to formally request a reasonable accommodation under the federal Fair Housing Act (42 U.S.C. §§ 3601–3619) and Colorado Revised Statutes § 24-34-502. I have a disability-related need for an emotional support animal (ESA).\n\nAttached is documentation from my licensed mental health professional, [Therapist Name, Credentials, CO License #], confirming my need for an ESA to support my daily functioning and equal enjoyment of my home.\n\nUnder federal HUD guidelines, assistance animals are not pets. Accordingly, I request that all pet restrictions, pet deposits, and monthly pet rent fees be waived for this animal.\n\nThank you for your prompt attention to this matter. I appreciate your cooperation and look forward to your confirmation in writing.\n\nSincerely,\n[Your Name]\n[Your Contact Information]",
-      },
-      {
-        title: "How and When to Deliver the Request",
-        content: "Deliver the letter via email so you have an electronic timestamp, or send it by certified mail with return receipt requested. Keep a complete copy of the letter, attachments, and all responses for your personal records.",
+        content: "Subject: Request for Reasonable Accommodation under the Fair Housing Act - [Your Name] - Unit [Your Unit #]\n\nDear [Landlord / Property Manager Name],\n\nI am writing to formally request a reasonable accommodation under the federal Fair Housing Act (42 U.S.C. §§ 3601–3619) and the Colorado Anti-Discrimination Act (C.R.S. §§ 24-34-502 and 24-34-502.2). I have a disability-related need for an assistance animal (an emotional support animal).\n\nAttached is documentation from my licensed mental health professional, [Therapist Name, Credentials, CO License #], confirming my need for an ESA to support my daily functioning and equal enjoyment of my home.\n\nUnder Colorado law, allowing an assistance animal in housing is presumed to be a reasonable accommodation. I request that the pet restrictions in my lease be waived for this animal, and I am happy to discuss any questions you have about this request.\n\nThank you for your prompt attention to this matter. I appreciate your cooperation and look forward to your confirmation in writing.\n\nSincerely,\n[Your Name]\n[Your Contact Information]",
       },
     ],
+    faqTitle: "FAQs About ESA Letter Template in Colorado",
+    faqSubtitle: "Get answers to everything regarding an ESA letter template in Colorado, what it should include, and what information landlords check first in the ESA letter.",
     faqs: [
       {
-        question: "How long does a landlord have to respond to my request?",
-        answer: "HUD requires housing providers to respond within a reasonable timeframe, generally considered 10 to 14 business days.",
+        question: "Do I have to use a specific template to request an ESA accommodation in Colorado?",
+        answer: "No. There is no legally required format for an accommodation request. A clear written request that identifies you, the animal, and your disability-related need helps create a record for your landlord and for you.",
+      },
+      {
+        question: "What should an ESA request letter to a Colorado landlord include?",
+        answer: "Include your name, address or unit number, a request for a reasonable accommodation for an assistance animal, and a reference to the Fair Housing Act and Colorado law. Attach supporting documentation from a licensed professional. You do not need to disclose a specific diagnosis.",
+      },
+      {
+        question: "How should I send my ESA request to my landlord?",
+        answer: "Send it by email for an electronic timestamp or by certified mail with return receipt requested. Keep a copy of the request, your attachments, and all responses.",
+      },
+      {
+        question: "How long does a Colorado landlord have to respond to my ESA request?",
+        answer: "There is no fixed deadline in the law. A housing provider is expected to respond within a reasonable time. If you do not hear back, follow up in writing.",
       },
     ],
     relatedSlugs: ["fair-housing-act", "no-pet-apartments", "landlord-denials"],
