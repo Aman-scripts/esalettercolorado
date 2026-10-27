@@ -46,6 +46,7 @@ export const rightsSpokes: RightsPage[] = [
         content: "If a Colorado housing provider unlawfully rejects your valid ESA documentation, charges illegal fees, or threatens eviction, you have legal recourse. You may file a formal complaint with the Colorado Civil Rights Division (CCRD) or the U.S. Department of Housing and Urban Development (HUD) Office of Fair Housing and Equal Opportunity.",
       },
     ],
+    faqSubtitle: "Everything you need to know about the Fair Housing Act and its implications for Colorado ESA owners.",
     faqs: [
       {
         question: "Does the Fair Housing Act override apartment pet policies?",
