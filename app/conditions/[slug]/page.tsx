@@ -134,15 +134,17 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
               subhead="Complete a confidential telehealth assessment with a Colorado-licensed therapist. 100% money-back guarantee."
             />
 
-            {!cond.fromDoc && (
+            {cond.therapistQuestions.trim() && (
               <section>
                 <h2 className="text-h2 text-[#19354A] mb-3">
                   What the Evaluating Therapist Will Ask
                 </h2>
                 <p>{cond.therapistQuestions}</p>
-                <p className="mt-3">
-                  Our Colorado-licensed clinicians approach evaluations with compassion and respect. You will not be interrogated or forced to recount traumatic memories in excessive detail. The focus remains on your current functional well-being and how an animal helps you navigate daily living.
-                </p>
+                {!cond.fromDoc && (
+                  <p className="mt-3">
+                    Our Colorado-licensed clinicians approach evaluations with compassion and respect. You will not be interrogated or forced to recount traumatic memories in excessive detail. The focus remains on your current functional well-being and how an animal helps you navigate daily living.
+                  </p>
+                )}
               </section>
             )}
 
