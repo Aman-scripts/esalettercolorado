@@ -89,10 +89,14 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
               <h2 className="text-h2 text-[#19354A] mb-3">
                 How {cond.name} Qualifies Under Federal and Colorado Law
               </h2>
-              <p>{cond.howQualifies}</p>
-              <p className="mt-3">
-                Under HUD regulations implementing the Fair Housing Act, a disability is defined broadly as a physical or mental impairment that substantially limits one or more major life activities. When symptoms impair sleeping, working, concentrating, or maintaining emotional stability in the home, the legal threshold for accommodation is satisfied.
-              </p>
+              {cond.howQualifies.split("\n\n").map((paragraph) => (
+                <p key={paragraph.slice(0, 24)} className="mt-3 first:mt-0">{paragraph}</p>
+              ))}
+              {!cond.supportPoints && (
+                <p className="mt-3">
+                  Under HUD regulations implementing the Fair Housing Act, a disability is defined broadly as a physical or mental impairment that substantially limits one or more major life activities. When symptoms impair sleeping, working, concentrating, or maintaining emotional stability in the home, the legal threshold for accommodation is satisfied.
+                </p>
+              )}
             </section>
 
             {/* How an ESA may help */}
@@ -102,18 +106,16 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
               </h2>
               <p>{cond.howEsaHelps}</p>
               <div className="text-base my-4 p-4 rounded-xl bg-[#F7F5F0] border border-[#D5DFDB] space-y-2 text-[#24333B]">
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
-                  <span>Provides physiological co-regulation and lowers acute sympathetic arousal.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
-                  <span>Establishes daily anchors and positive routines that mitigate emotional withdrawal.</span>
-                </div>
-                <div className="flex items-start gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
-                  <span>Delivers non-judgmental companionship that relieves isolation in private housing.</span>
-                </div>
+                {(cond.supportPoints ?? [
+                  "Provides physiological co-regulation and lowers acute sympathetic arousal.",
+                  "Establishes daily anchors and positive routines that mitigate emotional withdrawal.",
+                  "Delivers non-judgmental companionship that relieves isolation in private housing.",
+                ]).map((point) => (
+                  <div key={point} className="flex items-start gap-2">
+                    <CheckCircle2 className="w-4 h-4 text-[#347C78] shrink-0 mt-0.5" />
+                    <span>{point}</span>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -123,16 +125,17 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
               subhead="Complete a confidential telehealth assessment with a Colorado-licensed therapist. 100% money-back guarantee."
             />
 
-            {/* What the therapist will ask */}
-            <section>
-              <h2 className="text-h2 text-[#19354A] mb-3">
-                What the Evaluating Therapist Will Ask
-              </h2>
-              <p>{cond.therapistQuestions}</p>
-              <p className="mt-3">
-                Our Colorado-licensed clinicians approach evaluations with compassion and respect. You will not be interrogated or forced to recount traumatic memories in excessive detail. The focus remains on your current functional well-being and how an animal helps you navigate daily living.
-              </p>
-            </section>
+            {!cond.supportPoints && (
+              <section>
+                <h2 className="text-h2 text-[#19354A] mb-3">
+                  What the Evaluating Therapist Will Ask
+                </h2>
+                <p>{cond.therapistQuestions}</p>
+                <p className="mt-3">
+                  Our Colorado-licensed clinicians approach evaluations with compassion and respect. You will not be interrogated or forced to recount traumatic memories in excessive detail. The focus remains on your current functional well-being and how an animal helps you navigate daily living.
+                </p>
+              </section>
+            )}
 
             {/* Landlord considerations */}
             <section>
@@ -141,14 +144,14 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
               </h2>
               <p>{cond.landlordConsiderations}</p>
               <div className="p-4 rounded-xl bg-[#E8F0ED] border border-[#D5DFDB] text-xs sm:text-sm text-[#19354A] mt-3">
-                <strong className="block mb-1">HIPAA Privacy Reminder:</strong>
-                Your official ESA letter confirms that you are under the care of a licensed professional and have an impairment supporting an assistance animal. It deliberately does NOT disclose your confidential diagnosis or therapy history to your landlord.
+                <strong className="block mb-1">{cond.supportPoints ? "Privacy Reminder:" : "HIPAA Privacy Reminder:"}</strong>
+                {cond.privacyReminder ?? "Your official ESA letter confirms that you are under the care of a licensed professional and have an impairment supporting an assistance animal. It deliberately does NOT disclose your confidential diagnosis or therapy history to your landlord."}
               </div>
             </section>
 
             {/* M9 Legal callout */}
             <CalloutBox type="legal-warning" title="Non-Diagnostic & Fair Housing Legal Notice">
-              This guide provides educational information regarding assistance animal housing accommodations and does not constitute medical advice or a formal diagnostic finding. Eligibility determinations are made solely through individual clinical assessment by an actively licensed mental health provider.
+              {cond.legalNotice ?? "This guide provides educational information regarding assistance animal housing accommodations and does not constitute medical advice or a formal diagnostic finding. Eligibility determinations are made solely through individual clinical assessment by an actively licensed mental health provider."}
             </CalloutBox>
           </div>
 
@@ -161,7 +164,12 @@ export default async function ConditionSpokePage({ params }: ConditionSpokeProps
       </article>
 
       {/* M5 FAQ */}
-      <FAQAccordion items={cond.faqs} title={`Frequently Asked Questions: ${cond.name}`} outputSchema={false} />
+      <FAQAccordion
+        items={cond.faqs}
+        title={cond.faqTitle || `Frequently Asked Questions: ${cond.name}`}
+        subtitle={cond.faqSubtitle}
+        outputSchema={false}
+      />
 
       {/* Final CTA */}
       <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 pb-12">

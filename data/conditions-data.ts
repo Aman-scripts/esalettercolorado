@@ -9,8 +9,13 @@ export interface ConditionPage {
   quickAnswer: string;
   howQualifies: string;
   howEsaHelps: string;
+  supportPoints?: string[];
   therapistQuestions: string;
   landlordConsiderations: string;
+  privacyReminder?: string;
+  legalNotice?: string;
+  faqTitle?: string;
+  faqSubtitle?: string;
   faqs: { question: string; answer: string }[];
   relatedConditions: string[];
 }
@@ -49,19 +54,36 @@ export const conditionsList: ConditionPage[] = [
     metaTitle: "Can You Get an ESA Letter for Anxiety in Colorado?",
     metaDescription: "Does Anxiety qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how daily worry and stress affect home life.",
     shortDesc: "How generalized anxiety disorder (GAD), chronic stress, and chronic worry may be considered for an ESA in Colorado.",
-    quickAnswer: "Yes. Generalized anxiety disorder and severe chronic anxiety frequently qualify individuals for an emotional support animal in Colorado. When anxiety significantly impairs major life activities such as sleeping, concentrating, or maintaining emotional stability, an animal's calming presence can serve as a recognized therapeutic intervention.",
-    howQualifies: "Under the Americans with Disabilities Act and Fair Housing Act, a mental health impairment qualifies as a disability when it substantially limits one or more major life activities. Chronic anxiety often limits restful sleep, concentration, and emotional well-being.",
-    howEsaHelps: "An ESA provides physiological co-regulation, interrupting panic spirals, lowering elevated cortisol levels through petting, and offering unconditional security during severe episodes.",
+    quickAnswer: "Yes, it can. Anxiety may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    howQualifies: "Under the Fair Housing Act and the Colorado Anti-Discrimination Act, a mental impairment is a disability when it substantially limits one or more major life activities. Anxiety can limit sleep, concentration, and emotional well-being.\n\nTo request an ESA accommodation in Colorado, you must establish both a qualifying disability and a disability-related need for the animal. Housing providers may request reliable documentation when the disability or need is not readily apparent. The documentation should support the need for the animal without requiring unnecessary details about your diagnosis or medical history.",
+    howEsaHelps: "An ESA may offer comfort, routine, and companionship that help some people manage anxiety symptoms at home.",
+    supportPoints: [
+      "An ESA may offer calming comfort during anxious moments.",
+      "May encourage steady daily routines.",
+      "May provide companionship that eases isolation at home.",
+    ],
     therapistQuestions: "During your confidential telehealth evaluation, your Colorado-licensed therapist will explore your anxiety triggers, frequency of episodes, how worry impacts your home routine, and how your animal helps you regain calm.",
-    landlordConsiderations: "Landlords cannot demand to know the severity of your anxiety, request psychiatric treatment notes, or deny an accommodation because anxiety is an 'invisible disability.'",
+    landlordConsiderations: "Landlords may request reasonable documentation of your disability-related need, but a disability does not need to be visible to be protected.",
+    privacyReminder: "Your ESA letter confirms that you are under the care of a licensed professional and have a disability-related need for an assistance animal. It does not need to disclose your diagnosis or therapy history.",
+    legalNotice: "This guide provides educational information regarding assistance animal housing accommodations and does not constitute medical or legal advice. A licensed provider assesses your individual clinical need, and housing providers decide accommodation requests under the Fair Housing Act and the Colorado Anti-Discrimination Act (C.R.S. 24-34-502 and 24-34-502.2, as amended by HB26-1045).",
+    faqTitle: "FAQs About ESA Letter for Anxiety in Colorado",
+    faqSubtitle: "Get answers to common questions about getting an ESA letter for anxiety in Colorado, including medication, documentation, and what your landlord can see.",
     faqs: [
       {
-        question: "Do I need to be taking anti-anxiety medication to qualify?",
-        answer: "No. Prescription medication is not a prerequisite for an ESA letter. Qualification is based solely on your therapist's clinical evaluation of your symptoms and needs.",
+        question: "Can I get an ESA letter for anxiety in Colorado?",
+        answer: "It can be possible. Anxiety may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. A licensed professional evaluates whether an ESA is appropriate for your individual situation.",
+      },
+      {
+        question: "Do I need to take anxiety medication to qualify?",
+        answer: "No. Medication is not required for an ESA letter. Your licensed therapist evaluates your symptoms and needs, and your housing provider reviews your accommodation request.",
       },
       {
         question: "Will my landlord see that I have anxiety?",
-        answer: "No. A legally compliant ESA letter states that you are under the care of a licensed provider and have a disability-related need for an animal. It does not disclose your specific psychiatric diagnosis.",
+        answer: "Your ESA letter does not need to disclose your diagnosis or therapy history. A housing provider may request reasonable documentation of your disability-related need, but the letter can confirm that need without naming your condition.",
+      },
+      {
+        question: "Do I need a formal anxiety diagnosis to get an ESA letter?",
+        answer: "You do not need prior psychiatric records to apply. A licensed mental health professional assesses whether you have a disability-related need, which is based on how your symptoms affect your daily life.",
       },
     ],
     relatedConditions: ["panic-disorder", "social-anxiety", "depression", "ptsd"],
@@ -74,15 +96,34 @@ export const conditionsList: ConditionPage[] = [
     metaTitle: "Can You Get an ESA Letter for Depression in Colorado?",
     metaDescription: "Does Depression qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how daily routines with an animal may support functioning.",
     shortDesc: "How major depressive disorder (MDD) and clinical depression may be considered for ESA housing accommodations.",
-    quickAnswer: "Yes. Major depressive disorder and persistent depressive conditions are among the most recognized qualifying criteria for an emotional support animal in Colorado. Caring for an animal encourages healthy daily routines, combats isolation, and provides tangible emotional stability.",
-    howQualifies: "Clinical depression substantially limits major life activities, including motivation, energy levels, sleep patterns, social interaction, and daily self-care in home environments.",
-    howEsaHelps: "An ESA establishes a reliable anchor to the day: regular feeding times, outdoor walks, physical contact, and non-judgmental companionship that directly disrupts patterns of emotional withdrawal.",
+    quickAnswer: "Yes, it can. Depression may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    howQualifies: "Depression can substantially limit major life activities, including sleep, energy, social interaction, and daily self-care at home.",
+    howEsaHelps: "An ESA may offer daily structure through feeding times and walks, along with companionship that helps some people feel less isolated.",
+    supportPoints: [
+      "May add structure through daily care routines.",
+      "May encourage time outdoors and physical activity.",
+      "May provide companionship that eases isolation at home.",
+    ],
     therapistQuestions: "Your therapist will ask how depressive symptoms affect your daily schedule, energy, and mood, and how your companion animal helps you stay engaged and grounded.",
-    landlordConsiderations: "Your landlord must treat your depression-related accommodation request with the same legal respect as a physical disability accommodation.",
+    landlordConsiderations: "Mental health conditions, including depression, are protected disabilities under fair housing law, and a disability does not need to be visible to be protected. Your landlord may request reasonable documentation of your disability-related need.",
+    faqTitle: "FAQs About ESA Letter for Depression in Colorado",
+    faqSubtitle: "Get answers to common questions about getting an ESA letter for depression in Colorado, including medication, documentation, and what your landlord can see.",
     faqs: [
       {
-        question: "How does an ESA help with depressive episodes?",
-        answer: "Caring for an animal provides purpose, tactile soothing, routine structure, and social engagement that clinical research consistently links to improved emotional resilience.",
+        question: "Can I get an ESA letter for depression in Colorado?",
+        answer: "It can be possible. Depression may qualify as a disability when it substantially limits a major life activity, such as sleeping, concentrating, or caring for yourself. A licensed professional evaluates whether an ESA is appropriate for your individual situation.",
+      },
+      {
+        question: "How can an ESA help with depression?",
+        answer: "An ESA may offer daily routine, companionship, and a sense of purpose. The effect varies from person to person, and an ESA is not a substitute for professional treatment.",
+      },
+      {
+        question: "Will my landlord know I have depression?",
+        answer: "Your ESA letter does not need to disclose your diagnosis or therapy history. A housing provider may request reasonable documentation of your disability-related need, but the letter can confirm that need without naming your condition.",
+      },
+      {
+        question: "Do I need to be in treatment or take medication to qualify?",
+        answer: "No. Medication is not required for an ESA letter, and you do not need prior psychiatric records to apply. A licensed mental health professional evaluates whether you have a disability-related need based on how your symptoms affect your daily life.",
       },
     ],
     relatedConditions: ["anxiety", "bipolar-disorder", "ptsd"],
@@ -95,15 +136,34 @@ export const conditionsList: ConditionPage[] = [
     metaTitle: "Can You Get an ESA Letter for PTSD in Colorado?",
     metaDescription: "Does PTSD qualify you for an ESA letter in Colorado? See how a therapist evaluates it and how an ESA may help with hypervigilance and sleep.",
     shortDesc: "How an ESA may support people living with post-traumatic stress disorder, including military trauma and hypervigilance, in Colorado housing.",
-    quickAnswer: "Yes. Post-traumatic stress disorder (PTSD) qualifies individuals for emotional support animals in Colorado. ESAs provide a reassuring presence that helps alleviate hypervigilance, night terrors, flashback-related panic, and acute distress for veterans, first responders, and survivors.",
-    howQualifies: "PTSD impairs sleep, emotional regulation, sense of security, and social functioning, meeting the criteria for a protected psychological impairment under federal and state housing statutes.",
-    howEsaHelps: "An ESA offers constant grounding, disrupts intrusive thought cycles, signals safety during times of acute distress, and assists handlers in resting comfortably in their apartments.",
+    quickAnswer: "Yes, it can. PTSD may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. Whether an ESA is appropriate is decided through an individual evaluation by a licensed professional, and the housing provider may request reasonable documentation.",
+    howQualifies: "PTSD can affect sleep, emotional regulation, sense of security, and social functioning. It may qualify as a disability under fair housing law when it substantially limits a major life activity.",
+    howEsaHelps: "An ESA may offer comfort and companionship that help some people feel safer and more settled at home.",
+    supportPoints: [
+      "May offer calming comfort during stressful moments.",
+      "May help create a sense of safety and routine at home.",
+      "May provide companionship that eases isolation.",
+    ],
     therapistQuestions: "Your evaluator will conduct a trauma-informed assessment focusing on safety in your home, sleep quality, and how your animal assists you during triggering events.",
-    landlordConsiderations: "Housing providers are prohibited from asking about the trauma underlying your PTSD diagnosis or demanding service-dog task certifications for an ESA.",
+    landlordConsiderations: "Housing providers may request reasonable documentation of your disability-related need. Under Colorado law, an emotional support animal does not need task training.",
+    faqTitle: "FAQs About ESA Letter for PTSD in Colorado",
+    faqSubtitle: "Get answers to common questions about getting an ESA letter for PTSD in Colorado, including medication, documentation, and what your landlord can see.",
     faqs: [
       {
-        question: "Can Colorado veterans get an ESA letter for PTSD?",
-        answer: "Yes. Many Colorado veterans in Denver, Colorado Springs, and across the state utilize emotional support animals to maintain stability and peaceful home environments.",
+        question: "Can I get an ESA letter for PTSD in Colorado?",
+        answer: "It can be possible. PTSD may qualify as a disability when it substantially limits a major life activity, such as sleeping or concentrating. A licensed professional evaluates whether an ESA is appropriate for your individual situation.",
+      },
+      {
+        question: "Can veterans and first responders get an ESA letter for PTSD?",
+        answer: "Yes, it can be possible. Veterans and first responders are evaluated under the same standard as anyone else: a licensed professional assesses whether you have a disability-related need for an emotional support animal. Your housing provider may request reasonable documentation.",
+      },
+      {
+        question: "Will my landlord know I have PTSD or ask about my trauma?",
+        answer: "Your ESA letter does not need to disclose your diagnosis or therapy history. A housing provider may request reasonable documentation of your disability-related need, but the letter can confirm that need without naming your condition or describing your trauma.",
+      },
+      {
+        question: "Does my ESA need to be trained for PTSD?",
+        answer: "No. Under Colorado law, an emotional support animal provides solely emotional support to alleviate a symptom or effect of a disability and does not need task training. Service animals, by contrast, must be individually trained to perform specific tasks.",
       },
     ],
     relatedConditions: ["anxiety", "panic-disorder", "depression"],
